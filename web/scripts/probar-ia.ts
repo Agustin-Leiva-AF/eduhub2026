@@ -1,5 +1,5 @@
 // Prueba real de la capa de IA con los datos demo: npx tsx scripts/probar-ia.ts
-// Hace UNA llamada a la API (redactar) si hay ANTHROPIC_API_KEY (entorno o web/.env.local); sin clave verifica el camino por reglas.
+// Hace UNA llamada a la API (redactar) si hay ANTHROPIC_API_KEY u OPENROUTER_API_KEY (entorno o web/.env.local); sin clave verifica el camino por reglas.
 import fs from 'node:fs';
 import path from 'node:path';
 import { parseExtracto, parseComprobantes } from '../lib/parse';
@@ -33,7 +33,7 @@ const permitidos = new Set((datos.match(NUM) ?? []).map(norm));
 async function main() {
 const t0 = Date.now();
 const { texto, fuente } = await redactar(p, r);
-console.log(`fuente=${fuente} (${Date.now() - t0} ms, key=${process.env.ANTHROPIC_API_KEY ? 'configurada' : 'ausente'})\n`);
+console.log(`fuente=${fuente} (${Date.now() - t0} ms, proveedor=${process.env.ANTHROPIC_API_KEY ? 'anthropic' : process.env.OPENROUTER_API_KEY ? 'openrouter (modelos :free)' : 'ninguno'})\n`);
 console.log(texto, '\n');
 
 const palabras = texto.trim().split(/\s+/).filter(Boolean).length;

@@ -1,0 +1,23 @@
+{
+  "id": "/",
+  "name": "CFO de Bolsillo",
+  "short_name": "CFO Bolsillo",
+  "description": "Tu caja proyectada a 120 días, avisos de vencimientos y qué hacer con lo que falta o lo que sobra.",
+  "lang": "es-AR",
+  "start_url": "/?fuente=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f5f8",
+  "theme_color": "#f4f5f8",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Proyección", "url": "/proyeccion", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Excedente", "url": "/excedente", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Datos", "url": "/datos", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

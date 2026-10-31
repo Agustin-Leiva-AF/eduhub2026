@@ -1,0 +1,6006 @@
+{
+ "userId": 1000,
+ "pagos": [
+  {
+   "id": 95000223,
+   "status": "approved",
+   "operation_type": "account_fund",
+   "description": "Carga de saldo desde cuenta bancaria",
+   "date_created": "2026-05-01T09:25:00.000-03:00",
+   "date_approved": "2026-05-01T09:25:00.000-03:00",
+   "date_last_updated": "2026-05-01T09:25:00.000-03:00",
+   "transaction_amount": 10000000,
+   "transaction_details": {
+    "net_received_amount": 10000000
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000001,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ALQUILER taller INMOB DEL PARQUE",
+   "date_created": "2026-05-04T10:18:00.000-03:00",
+   "date_approved": "2026-05-04T10:18:00.000-03:00",
+   "date_last_updated": "2026-05-04T10:18:00.000-03:00",
+   "transaction_amount": 1359257,
+   "collector_id": 3083,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000131,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-05-04T11:53:00.000-03:00",
+   "date_approved": "2026-05-04T11:53:00.000-03:00",
+   "date_last_updated": "2026-05-04T11:53:00.000-03:00",
+   "transaction_amount": 171989,
+   "collector_id": 3052,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000003,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TASA municipal comercio Municipalidad de Cordoba",
+   "date_created": "2026-05-05T10:48:00.000-03:00",
+   "date_approved": "2026-05-05T10:48:00.000-03:00",
+   "date_last_updated": "2026-05-05T10:48:00.000-03:00",
+   "transaction_amount": 173332,
+   "collector_id": 3024,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000002,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PAGO HABERES NOMINA 5 EMPL",
+   "date_created": "2026-05-05T11:11:00.000-03:00",
+   "date_approved": "2026-05-05T11:11:00.000-03:00",
+   "date_last_updated": "2026-05-05T11:11:00.000-03:00",
+   "transaction_amount": 5013409,
+   "collector_id": 3037,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000002,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-05-06T11:35:00.000-03:00",
+   "date_approved": "2026-05-06T11:35:00.000-03:00",
+   "date_last_updated": "2026-05-06T11:35:00.000-03:00",
+   "transaction_amount": 89800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 84403.02
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2411
+   }
+  },
+  {
+   "id": 95000001,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-05-06T15:09:00.000-03:00",
+   "date_approved": "2026-05-06T15:09:00.000-03:00",
+   "date_last_updated": "2026-05-06T15:09:00.000-03:00",
+   "transaction_amount": 391400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 367876.86
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2486
+   }
+  },
+  {
+   "id": 95000005,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - link de pago",
+   "date_created": "2026-05-07T09:55:00.000-03:00",
+   "date_approved": "2026-05-07T09:55:00.000-03:00",
+   "date_last_updated": "2026-05-07T09:55:00.000-03:00",
+   "transaction_amount": 590200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 554728.98
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2035
+   }
+  },
+  {
+   "id": 95000004,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-05-07T10:42:00.000-03:00",
+   "date_approved": "2026-05-07T10:42:00.000-03:00",
+   "date_last_updated": "2026-05-07T10:42:00.000-03:00",
+   "transaction_amount": 397700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 373798.23
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2107
+   }
+  },
+  {
+   "id": 96000097,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-05-07T11:06:00.000-03:00",
+   "date_approved": "2026-05-07T11:06:00.000-03:00",
+   "date_last_updated": "2026-05-07T11:06:00.000-03:00",
+   "transaction_amount": 882055,
+   "collector_id": 3084,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000003,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-05-07T15:49:00.000-03:00",
+   "date_approved": "2026-05-07T15:49:00.000-03:00",
+   "date_last_updated": "2026-05-07T15:49:00.000-03:00",
+   "transaction_amount": 80200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 75379.98
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2145
+   }
+  },
+  {
+   "id": 96000004,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TELECOM internet y telefonia",
+   "date_created": "2026-05-08T11:30:00.000-03:00",
+   "date_approved": "2026-05-08T11:30:00.000-03:00",
+   "date_last_updated": "2026-05-08T11:30:00.000-03:00",
+   "transaction_amount": 70455,
+   "collector_id": 3037,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000006,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-05-08T12:16:00.000-03:00",
+   "date_approved": "2026-05-08T12:16:00.000-03:00",
+   "date_last_updated": "2026-05-08T12:16:00.000-03:00",
+   "transaction_amount": 79500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 74722.05
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2236
+   }
+  },
+  {
+   "id": 96000005,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA F931 CARGAS SOCIALES",
+   "date_created": "2026-05-11T13:22:00.000-03:00",
+   "date_approved": "2026-05-11T13:22:00.000-03:00",
+   "date_last_updated": "2026-05-11T13:22:00.000-03:00",
+   "transaction_amount": 1394973,
+   "collector_id": 3067,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000076,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Afilado y repuestos sierra",
+   "date_created": "2026-05-11T13:45:00.000-03:00",
+   "date_approved": "2026-05-11T13:45:00.000-03:00",
+   "date_last_updated": "2026-05-11T13:45:00.000-03:00",
+   "transaction_amount": 52414,
+   "collector_id": 3030,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000211,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "OFICINAS CUYO SA",
+   "date_created": "2026-05-11T13:51:00.000-03:00",
+   "date_approved": "2026-05-11T13:51:00.000-03:00",
+   "date_last_updated": "2026-05-11T13:51:00.000-03:00",
+   "transaction_amount": 3370985,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 3370985
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2342
+   }
+  },
+  {
+   "id": 95000007,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-05-11T14:46:00.000-03:00",
+   "date_approved": "2026-05-11T14:46:00.000-03:00",
+   "date_last_updated": "2026-05-11T14:46:00.000-03:00",
+   "transaction_amount": 370500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 348232.95
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2449
+   }
+  },
+  {
+   "id": 95000197,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ESTUDIO JURIDICO BUSTOS Y ASOCIADOS SRL",
+   "date_created": "2026-05-12T09:57:00.000-03:00",
+   "date_approved": "2026-05-12T09:57:00.000-03:00",
+   "date_last_updated": "2026-05-12T09:57:00.000-03:00",
+   "transaction_amount": 2784052,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2784052
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2299
+   }
+  },
+  {
+   "id": 95000008,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-05-12T10:35:00.000-03:00",
+   "date_approved": "2026-05-12T10:35:00.000-03:00",
+   "date_last_updated": "2026-05-12T10:35:00.000-03:00",
+   "transaction_amount": 75700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 71150.43
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2427
+   }
+  },
+  {
+   "id": 96000006,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "EPEC energia electrica",
+   "date_created": "2026-05-12T11:38:00.000-03:00",
+   "date_approved": "2026-05-12T11:38:00.000-03:00",
+   "date_last_updated": "2026-05-12T11:38:00.000-03:00",
+   "transaction_amount": 653576,
+   "collector_id": 3031,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000116,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PINTURAS ALBA SA CUIT 30718880003",
+   "date_created": "2026-05-12T15:07:00.000-03:00",
+   "date_approved": "2026-05-12T15:07:00.000-03:00",
+   "date_last_updated": "2026-05-12T15:07:00.000-03:00",
+   "transaction_amount": 478556,
+   "collector_id": 3078,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000009,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-05-12T17:45:00.000-03:00",
+   "date_approved": "2026-05-12T17:45:00.000-03:00",
+   "date_last_updated": "2026-05-12T17:45:00.000-03:00",
+   "transaction_amount": 192800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 181212.72
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2130
+   }
+  },
+  {
+   "id": 95000010,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-05-13T12:17:00.000-03:00",
+   "date_approved": "2026-05-13T12:17:00.000-03:00",
+   "date_last_updated": "2026-05-13T12:17:00.000-03:00",
+   "transaction_amount": 86500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 81301.35
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2088
+   }
+  },
+  {
+   "id": 96000084,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-05-13T14:37:00.000-03:00",
+   "date_approved": "2026-05-13T14:37:00.000-03:00",
+   "date_last_updated": "2026-05-13T14:37:00.000-03:00",
+   "transaction_amount": 1408680,
+   "collector_id": 3064,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000011,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-05-14T14:48:00.000-03:00",
+   "date_approved": "2026-05-14T14:48:00.000-03:00",
+   "date_last_updated": "2026-05-14T14:48:00.000-03:00",
+   "transaction_amount": 300500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 282439.95
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2267
+   }
+  },
+  {
+   "id": 96000122,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "FERRETERIA INDUSTRIAL CUYO SRL CUIT 30706660018",
+   "date_created": "2026-05-14T15:12:00.000-03:00",
+   "date_approved": "2026-05-14T15:12:00.000-03:00",
+   "date_last_updated": "2026-05-14T15:12:00.000-03:00",
+   "transaction_amount": 269072,
+   "collector_id": 3034,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000012,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - link de pago",
+   "date_created": "2026-05-14T16:32:00.000-03:00",
+   "date_approved": "2026-05-14T16:32:00.000-03:00",
+   "date_last_updated": "2026-05-14T16:32:00.000-03:00",
+   "transaction_amount": 68500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 64383.15
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2151
+   }
+  },
+  {
+   "id": 95000013,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-05-15T09:20:00.000-03:00",
+   "date_approved": "2026-05-15T09:20:00.000-03:00",
+   "date_last_updated": "2026-05-15T09:20:00.000-03:00",
+   "transaction_amount": 419200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 394006.08
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2027
+   }
+  },
+  {
+   "id": 95000014,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-05-15T11:41:00.000-03:00",
+   "date_approved": "2026-05-15T11:41:00.000-03:00",
+   "date_last_updated": "2026-05-15T11:41:00.000-03:00",
+   "transaction_amount": 190700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 179238.93
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2298
+   }
+  },
+  {
+   "id": 96000007,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP RENTAS CBA IIBB",
+   "date_created": "2026-05-15T12:33:00.000-03:00",
+   "date_approved": "2026-05-15T12:33:00.000-03:00",
+   "date_last_updated": "2026-05-15T12:33:00.000-03:00",
+   "transaction_amount": 531153,
+   "collector_id": 3012,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000216,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HOTEL BOUTIQUE LA SERRANIA SA",
+   "date_created": "2026-05-18T11:07:00.000-03:00",
+   "date_approved": "2026-05-18T11:07:00.000-03:00",
+   "date_last_updated": "2026-05-18T11:07:00.000-03:00",
+   "transaction_amount": 1877488,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 1877488
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2296
+   }
+  },
+  {
+   "id": 96000008,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA IVA DDJJ",
+   "date_created": "2026-05-18T11:30:00.000-03:00",
+   "date_approved": "2026-05-18T11:30:00.000-03:00",
+   "date_last_updated": "2026-05-18T11:30:00.000-03:00",
+   "transaction_amount": 1119992,
+   "collector_id": 3057,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000016,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - cobro QR",
+   "date_created": "2026-05-18T13:37:00.000-03:00",
+   "date_approved": "2026-05-18T13:37:00.000-03:00",
+   "date_last_updated": "2026-05-18T13:37:00.000-03:00",
+   "transaction_amount": 692900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 651256.71
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2328
+   }
+  },
+  {
+   "id": 95000203,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "CLINICA DENTAL SONRISA SRL",
+   "date_created": "2026-05-18T14:32:00.000-03:00",
+   "date_approved": "2026-05-18T14:32:00.000-03:00",
+   "date_last_updated": "2026-05-18T14:32:00.000-03:00",
+   "transaction_amount": 1635487,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 1635487
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2367
+   }
+  },
+  {
+   "id": 95000015,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-05-18T15:42:00.000-03:00",
+   "date_approved": "2026-05-18T15:42:00.000-03:00",
+   "date_last_updated": "2026-05-18T15:42:00.000-03:00",
+   "transaction_amount": 384800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 361673.52
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2325
+   }
+  },
+  {
+   "id": 96000132,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-05-19T11:15:00.000-03:00",
+   "date_approved": "2026-05-19T11:15:00.000-03:00",
+   "date_last_updated": "2026-05-19T11:15:00.000-03:00",
+   "transaction_amount": 173116,
+   "collector_id": 3047,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000017,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-05-19T17:54:00.000-03:00",
+   "date_approved": "2026-05-19T17:54:00.000-03:00",
+   "date_last_updated": "2026-05-19T17:54:00.000-03:00",
+   "transaction_amount": 360100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 338457.99
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2452
+   }
+  },
+  {
+   "id": 96000013,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "ECOGAS gas natural bimestral",
+   "date_created": "2026-05-20T10:29:00.000-03:00",
+   "date_approved": "2026-05-20T10:29:00.000-03:00",
+   "date_last_updated": "2026-05-20T10:29:00.000-03:00",
+   "transaction_amount": 266361,
+   "collector_id": 3008,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000110,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HERRAJES CORDOBA SRL CUIT 30715551114",
+   "date_created": "2026-05-20T11:36:00.000-03:00",
+   "date_approved": "2026-05-20T11:36:00.000-03:00",
+   "date_last_updated": "2026-05-20T11:36:00.000-03:00",
+   "transaction_amount": 815675,
+   "collector_id": 3034,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000018,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-05-20T16:26:00.000-03:00",
+   "date_approved": "2026-05-20T16:26:00.000-03:00",
+   "date_last_updated": "2026-05-20T16:26:00.000-03:00",
+   "transaction_amount": 202800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 190611.72
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2487
+   }
+  },
+  {
+   "id": 95000019,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-05-20T17:18:00.000-03:00",
+   "date_approved": "2026-05-20T17:18:00.000-03:00",
+   "date_last_updated": "2026-05-20T17:18:00.000-03:00",
+   "transaction_amount": 411600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 386862.84
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2205
+   }
+  },
+  {
+   "id": 96000098,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-05-21T10:50:00.000-03:00",
+   "date_approved": "2026-05-21T10:50:00.000-03:00",
+   "date_last_updated": "2026-05-21T10:50:00.000-03:00",
+   "transaction_amount": 968791,
+   "collector_id": 3039,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000020,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-05-21T12:59:00.000-03:00",
+   "date_approved": "2026-05-21T12:59:00.000-03:00",
+   "date_last_updated": "2026-05-21T12:59:00.000-03:00",
+   "transaction_amount": 82400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 77447.76
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2362
+   }
+  },
+  {
+   "id": 95000021,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-05-21T15:26:00.000-03:00",
+   "date_approved": "2026-05-21T15:26:00.000-03:00",
+   "date_last_updated": "2026-05-21T15:26:00.000-03:00",
+   "transaction_amount": 169000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 158843.1
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2376
+   }
+  },
+  {
+   "id": 95000022,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - link de pago",
+   "date_created": "2026-05-22T14:19:00.000-03:00",
+   "date_approved": "2026-05-22T14:19:00.000-03:00",
+   "date_last_updated": "2026-05-22T14:19:00.000-03:00",
+   "transaction_amount": 363500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 341653.65
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2081
+   }
+  },
+  {
+   "id": 96000009,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "AGUAS CORDOBESAS servicio de agua",
+   "date_created": "2026-05-22T15:22:00.000-03:00",
+   "date_approved": "2026-05-22T15:22:00.000-03:00",
+   "date_last_updated": "2026-05-22T15:22:00.000-03:00",
+   "transaction_amount": 81505,
+   "collector_id": 3051,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000023,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - cobro QR",
+   "date_created": "2026-05-23T14:52:00.000-03:00",
+   "date_approved": "2026-05-23T14:52:00.000-03:00",
+   "date_last_updated": "2026-05-23T14:52:00.000-03:00",
+   "transaction_amount": 617200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 580106.28
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2330
+   }
+  },
+  {
+   "id": 95000024,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-05-26T10:04:00.000-03:00",
+   "date_approved": "2026-05-26T10:04:00.000-03:00",
+   "date_last_updated": "2026-05-26T10:04:00.000-03:00",
+   "transaction_amount": 289600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 272195.04
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2314
+   }
+  },
+  {
+   "id": 96000010,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "SEGURO integral taller y ART Sancor",
+   "date_created": "2026-05-26T12:21:00.000-03:00",
+   "date_approved": "2026-05-26T12:21:00.000-03:00",
+   "date_last_updated": "2026-05-26T12:21:00.000-03:00",
+   "transaction_amount": 205732,
+   "collector_id": 3062,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000011,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HONORARIOS estudio contable",
+   "date_created": "2026-05-26T15:27:00.000-03:00",
+   "date_approved": "2026-05-26T15:27:00.000-03:00",
+   "date_last_updated": "2026-05-26T15:27:00.000-03:00",
+   "transaction_amount": 216681,
+   "collector_id": 3003,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000085,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-05-27T10:30:00.000-03:00",
+   "date_approved": "2026-05-27T10:30:00.000-03:00",
+   "date_last_updated": "2026-05-27T10:30:00.000-03:00",
+   "transaction_amount": 1293846,
+   "collector_id": 3076,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000025,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-05-27T15:11:00.000-03:00",
+   "date_approved": "2026-05-27T15:11:00.000-03:00",
+   "date_last_updated": "2026-05-27T15:11:00.000-03:00",
+   "transaction_amount": 79100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 74346.09
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2470
+   }
+  },
+  {
+   "id": 95000026,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-05-28T13:26:00.000-03:00",
+   "date_approved": "2026-05-28T13:26:00.000-03:00",
+   "date_last_updated": "2026-05-28T13:26:00.000-03:00",
+   "transaction_amount": 440600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 414119.94
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2447
+   }
+  },
+  {
+   "id": 96000012,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "RETIRO SOCIO TRANSF CTA PROPIA",
+   "date_created": "2026-05-28T15:51:00.000-03:00",
+   "date_approved": "2026-05-28T15:51:00.000-03:00",
+   "date_last_updated": "2026-05-28T15:51:00.000-03:00",
+   "transaction_amount": 1562415,
+   "collector_id": 3024,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000027,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-05-28T16:20:00.000-03:00",
+   "date_approved": "2026-05-28T16:20:00.000-03:00",
+   "date_last_updated": "2026-05-28T16:20:00.000-03:00",
+   "transaction_amount": 429600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 403781.04
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2060
+   }
+  },
+  {
+   "id": 95000029,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-05-29T10:05:00.000-03:00",
+   "date_approved": "2026-05-29T10:05:00.000-03:00",
+   "date_last_updated": "2026-05-29T10:05:00.000-03:00",
+   "transaction_amount": 377700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 355000.23
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2379
+   }
+  },
+  {
+   "id": 95000028,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-05-29T16:45:00.000-03:00",
+   "date_approved": "2026-05-29T16:45:00.000-03:00",
+   "date_last_updated": "2026-05-29T16:45:00.000-03:00",
+   "transaction_amount": 202800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 190611.72
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2151
+   }
+  },
+  {
+   "id": 95000031,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - link de pago",
+   "date_created": "2026-05-30T11:39:00.000-03:00",
+   "date_approved": "2026-05-30T11:39:00.000-03:00",
+   "date_last_updated": "2026-05-30T11:39:00.000-03:00",
+   "transaction_amount": 66800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 62785.32
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2070
+   }
+  },
+  {
+   "id": 95000030,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - cobro QR",
+   "date_created": "2026-05-30T12:36:00.000-03:00",
+   "date_approved": "2026-05-30T12:36:00.000-03:00",
+   "date_last_updated": "2026-05-30T12:36:00.000-03:00",
+   "transaction_amount": 676300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 635654.37
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2001
+   }
+  },
+  {
+   "id": 95000032,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-06-01T09:03:00.000-03:00",
+   "date_approved": "2026-06-01T09:03:00.000-03:00",
+   "date_last_updated": "2026-06-01T09:03:00.000-03:00",
+   "transaction_amount": 93300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 87692.67
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2295
+   }
+  },
+  {
+   "id": 95000033,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-06-02T17:23:00.000-03:00",
+   "date_approved": "2026-06-02T17:23:00.000-03:00",
+   "date_last_updated": "2026-06-02T17:23:00.000-03:00",
+   "transaction_amount": 343000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 322385.7
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2450
+   }
+  },
+  {
+   "id": 95000034,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-06-03T10:07:00.000-03:00",
+   "date_approved": "2026-06-03T10:07:00.000-03:00",
+   "date_last_updated": "2026-06-03T10:07:00.000-03:00",
+   "transaction_amount": 398600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 374644.14
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2465
+   }
+  },
+  {
+   "id": 96000014,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ALQUILER taller INMOB DEL PARQUE",
+   "date_created": "2026-06-03T10:35:00.000-03:00",
+   "date_approved": "2026-06-03T10:35:00.000-03:00",
+   "date_last_updated": "2026-06-03T10:35:00.000-03:00",
+   "transaction_amount": 1325419,
+   "collector_id": 3074,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000133,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-06-03T14:45:00.000-03:00",
+   "date_approved": "2026-06-03T14:45:00.000-03:00",
+   "date_last_updated": "2026-06-03T14:45:00.000-03:00",
+   "transaction_amount": 186375,
+   "collector_id": 3031,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000035,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-06-04T11:53:00.000-03:00",
+   "date_approved": "2026-06-04T11:53:00.000-03:00",
+   "date_last_updated": "2026-06-04T11:53:00.000-03:00",
+   "transaction_amount": 71400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 67108.86
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2308
+   }
+  },
+  {
+   "id": 96000123,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "FERRETERIA INDUSTRIAL CUYO SRL CUIT 30706660018",
+   "date_created": "2026-06-04T13:44:00.000-03:00",
+   "date_approved": "2026-06-04T13:44:00.000-03:00",
+   "date_last_updated": "2026-06-04T13:44:00.000-03:00",
+   "transaction_amount": 232791,
+   "collector_id": 3086,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000099,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-06-04T15:19:00.000-03:00",
+   "date_approved": "2026-06-04T15:19:00.000-03:00",
+   "date_last_updated": "2026-06-04T15:19:00.000-03:00",
+   "transaction_amount": 925264,
+   "collector_id": 3035,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000015,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PAGO HABERES NOMINA 5 EMPL",
+   "date_created": "2026-06-05T11:10:00.000-03:00",
+   "date_approved": "2026-06-05T11:10:00.000-03:00",
+   "date_last_updated": "2026-06-05T11:10:00.000-03:00",
+   "transaction_amount": 5101508,
+   "collector_id": 3042,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000036,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - cobro QR",
+   "date_created": "2026-06-05T11:54:00.000-03:00",
+   "date_approved": "2026-06-05T11:54:00.000-03:00",
+   "date_last_updated": "2026-06-05T11:54:00.000-03:00",
+   "transaction_amount": 591000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 555480.9
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2436
+   }
+  },
+  {
+   "id": 96000016,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TASA municipal comercio Municipalidad de Cordoba",
+   "date_created": "2026-06-05T14:42:00.000-03:00",
+   "date_approved": "2026-06-05T14:42:00.000-03:00",
+   "date_last_updated": "2026-06-05T14:42:00.000-03:00",
+   "transaction_amount": 169505,
+   "collector_id": 3003,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000038,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - cobro QR",
+   "date_created": "2026-06-06T12:02:00.000-03:00",
+   "date_approved": "2026-06-06T12:02:00.000-03:00",
+   "date_last_updated": "2026-06-06T12:02:00.000-03:00",
+   "transaction_amount": 579900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 545048.01
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2484
+   }
+  },
+  {
+   "id": 95000037,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-06-06T14:44:00.000-03:00",
+   "date_approved": "2026-06-06T14:44:00.000-03:00",
+   "date_last_updated": "2026-06-06T14:44:00.000-03:00",
+   "transaction_amount": 390400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 366936.96
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2285
+   }
+  },
+  {
+   "id": 96000077,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Afilado y repuestos sierra",
+   "date_created": "2026-06-08T11:00:00.000-03:00",
+   "date_approved": "2026-06-08T11:00:00.000-03:00",
+   "date_last_updated": "2026-06-08T11:00:00.000-03:00",
+   "transaction_amount": 102457,
+   "collector_id": 3064,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000017,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TELECOM internet y telefonia",
+   "date_created": "2026-06-08T12:15:00.000-03:00",
+   "date_approved": "2026-06-08T12:15:00.000-03:00",
+   "date_last_updated": "2026-06-08T12:15:00.000-03:00",
+   "transaction_amount": 71682,
+   "collector_id": 3080,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000039,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-06-08T14:30:00.000-03:00",
+   "date_approved": "2026-06-08T14:30:00.000-03:00",
+   "date_last_updated": "2026-06-08T14:30:00.000-03:00",
+   "transaction_amount": 575900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 541288.41
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2416
+   }
+  },
+  {
+   "id": 95000040,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-06-08T15:44:00.000-03:00",
+   "date_approved": "2026-06-08T15:44:00.000-03:00",
+   "date_last_updated": "2026-06-08T15:44:00.000-03:00",
+   "transaction_amount": 78500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 73782.15
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2113
+   }
+  },
+  {
+   "id": 95000041,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-06-09T12:50:00.000-03:00",
+   "date_approved": "2026-06-09T12:50:00.000-03:00",
+   "date_last_updated": "2026-06-09T12:50:00.000-03:00",
+   "transaction_amount": 336900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 316652.31
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2402
+   }
+  },
+  {
+   "id": 95000198,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ESTUDIO JURIDICO BUSTOS Y ASOCIADOS SRL",
+   "date_created": "2026-06-09T14:58:00.000-03:00",
+   "date_approved": "2026-06-09T14:58:00.000-03:00",
+   "date_last_updated": "2026-06-09T14:58:00.000-03:00",
+   "transaction_amount": 2627444,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2627444
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2084
+   }
+  },
+  {
+   "id": 95000042,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-06-09T17:19:00.000-03:00",
+   "date_approved": "2026-06-09T17:19:00.000-03:00",
+   "date_last_updated": "2026-06-09T17:19:00.000-03:00",
+   "transaction_amount": 406400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 381975.36
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2204
+   }
+  },
+  {
+   "id": 96000086,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-06-10T10:14:00.000-03:00",
+   "date_approved": "2026-06-10T10:14:00.000-03:00",
+   "date_last_updated": "2026-06-10T10:14:00.000-03:00",
+   "transaction_amount": 1300125,
+   "collector_id": 3013,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000018,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA F931 CARGAS SOCIALES",
+   "date_created": "2026-06-10T12:00:00.000-03:00",
+   "date_approved": "2026-06-10T12:00:00.000-03:00",
+   "date_last_updated": "2026-06-10T12:00:00.000-03:00",
+   "transaction_amount": 1439362,
+   "collector_id": 3029,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000043,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-06-10T12:28:00.000-03:00",
+   "date_approved": "2026-06-10T12:28:00.000-03:00",
+   "date_last_updated": "2026-06-10T12:28:00.000-03:00",
+   "transaction_amount": 75600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 71056.44
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2142
+   }
+  },
+  {
+   "id": 95000044,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-06-10T16:20:00.000-03:00",
+   "date_approved": "2026-06-10T16:20:00.000-03:00",
+   "date_last_updated": "2026-06-10T16:20:00.000-03:00",
+   "transaction_amount": 374900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 352368.51
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2476
+   }
+  },
+  {
+   "id": 95000204,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "CLINICA DENTAL SONRISA SRL",
+   "date_created": "2026-06-11T12:31:00.000-03:00",
+   "date_approved": "2026-06-11T12:31:00.000-03:00",
+   "date_last_updated": "2026-06-11T12:31:00.000-03:00",
+   "transaction_amount": 1679055,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 1679055
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2063
+   }
+  },
+  {
+   "id": 96000117,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PINTURAS ALBA SA CUIT 30718880003",
+   "date_created": "2026-06-11T13:37:00.000-03:00",
+   "date_approved": "2026-06-11T13:37:00.000-03:00",
+   "date_last_updated": "2026-06-11T13:37:00.000-03:00",
+   "transaction_amount": 593373,
+   "collector_id": 3016,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000045,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-06-11T14:36:00.000-03:00",
+   "date_approved": "2026-06-11T14:36:00.000-03:00",
+   "date_last_updated": "2026-06-11T14:36:00.000-03:00",
+   "transaction_amount": 201600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 189483.84
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2197
+   }
+  },
+  {
+   "id": 95000046,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-06-11T16:04:00.000-03:00",
+   "date_approved": "2026-06-11T16:04:00.000-03:00",
+   "date_last_updated": "2026-06-11T16:04:00.000-03:00",
+   "transaction_amount": 84000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 78951.6
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2479
+   }
+  },
+  {
+   "id": 96000019,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "EPEC energia electrica",
+   "date_created": "2026-06-12T11:59:00.000-03:00",
+   "date_approved": "2026-06-12T11:59:00.000-03:00",
+   "date_last_updated": "2026-06-12T11:59:00.000-03:00",
+   "transaction_amount": 608971,
+   "collector_id": 3074,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000047,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - link de pago",
+   "date_created": "2026-06-12T14:11:00.000-03:00",
+   "date_approved": "2026-06-12T14:11:00.000-03:00",
+   "date_last_updated": "2026-06-12T14:11:00.000-03:00",
+   "transaction_amount": 559700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 526062.03
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2476
+   }
+  },
+  {
+   "id": 95000048,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mueble de cocina a medida - cobro QR",
+   "date_created": "2026-06-13T16:02:00.000-03:00",
+   "date_approved": "2026-06-13T16:02:00.000-03:00",
+   "date_last_updated": "2026-06-13T16:02:00.000-03:00",
+   "transaction_amount": 1179000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 1108142.1
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2457
+   }
+  },
+  {
+   "id": 95000049,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-06-16T09:45:00.000-03:00",
+   "date_approved": "2026-06-16T09:45:00.000-03:00",
+   "date_last_updated": "2026-06-16T09:45:00.000-03:00",
+   "transaction_amount": 552100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 518918.79
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2153
+   }
+  },
+  {
+   "id": 96000020,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP RENTAS CBA IIBB",
+   "date_created": "2026-06-16T10:15:00.000-03:00",
+   "date_approved": "2026-06-16T10:15:00.000-03:00",
+   "date_last_updated": "2026-06-16T10:15:00.000-03:00",
+   "transaction_amount": 552981,
+   "collector_id": 3039,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000212,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "OFICINAS CUYO SA",
+   "date_created": "2026-06-16T11:33:00.000-03:00",
+   "date_approved": "2026-06-16T11:33:00.000-03:00",
+   "date_last_updated": "2026-06-16T11:33:00.000-03:00",
+   "transaction_amount": 3019407,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 3019407
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2144
+   }
+  },
+  {
+   "id": 95000050,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-06-16T12:13:00.000-03:00",
+   "date_approved": "2026-06-16T12:13:00.000-03:00",
+   "date_last_updated": "2026-06-16T12:13:00.000-03:00",
+   "transaction_amount": 78800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 74064.12
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2274
+   }
+  },
+  {
+   "id": 95000217,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HOTEL BOUTIQUE LA SERRANIA SA",
+   "date_created": "2026-06-16T12:59:00.000-03:00",
+   "date_approved": "2026-06-16T12:59:00.000-03:00",
+   "date_last_updated": "2026-06-16T12:59:00.000-03:00",
+   "transaction_amount": 2295228,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2295228
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2136
+   }
+  },
+  {
+   "id": 95000051,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-06-17T15:11:00.000-03:00",
+   "date_approved": "2026-06-17T15:11:00.000-03:00",
+   "date_last_updated": "2026-06-17T15:11:00.000-03:00",
+   "transaction_amount": 76400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 71808.36
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2498
+   }
+  },
+  {
+   "id": 95000052,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-06-17T17:59:00.000-03:00",
+   "date_approved": "2026-06-17T17:59:00.000-03:00",
+   "date_last_updated": "2026-06-17T17:59:00.000-03:00",
+   "transaction_amount": 362100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 340337.79
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2441
+   }
+  },
+  {
+   "id": 96000134,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-06-18T11:03:00.000-03:00",
+   "date_approved": "2026-06-18T11:03:00.000-03:00",
+   "date_last_updated": "2026-06-18T11:03:00.000-03:00",
+   "transaction_amount": 173706,
+   "collector_id": 3069,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000100,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-06-18T11:10:00.000-03:00",
+   "date_approved": "2026-06-18T11:10:00.000-03:00",
+   "date_last_updated": "2026-06-18T11:10:00.000-03:00",
+   "transaction_amount": 822008,
+   "collector_id": 3036,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000021,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA IVA DDJJ",
+   "date_created": "2026-06-18T13:56:00.000-03:00",
+   "date_approved": "2026-06-18T13:56:00.000-03:00",
+   "date_last_updated": "2026-06-18T13:56:00.000-03:00",
+   "transaction_amount": 1192946,
+   "collector_id": 3037,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000053,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-06-19T09:35:00.000-03:00",
+   "date_approved": "2026-06-19T09:35:00.000-03:00",
+   "date_last_updated": "2026-06-19T09:35:00.000-03:00",
+   "transaction_amount": 83900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 78857.61
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2356
+   }
+  },
+  {
+   "id": 96000111,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HERRAJES CORDOBA SRL CUIT 30715551114",
+   "date_created": "2026-06-19T10:07:00.000-03:00",
+   "date_approved": "2026-06-19T10:07:00.000-03:00",
+   "date_last_updated": "2026-06-19T10:07:00.000-03:00",
+   "transaction_amount": 887909,
+   "collector_id": 3013,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000054,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-06-20T17:35:00.000-03:00",
+   "date_approved": "2026-06-20T17:35:00.000-03:00",
+   "date_last_updated": "2026-06-20T17:35:00.000-03:00",
+   "transaction_amount": 87200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 81959.28
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2476
+   }
+  },
+  {
+   "id": 95000055,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-06-22T11:10:00.000-03:00",
+   "date_approved": "2026-06-22T11:10:00.000-03:00",
+   "date_last_updated": "2026-06-22T11:10:00.000-03:00",
+   "transaction_amount": 359100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 337518.09
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2037
+   }
+  },
+  {
+   "id": 96000022,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "AGUAS CORDOBESAS servicio de agua",
+   "date_created": "2026-06-22T11:54:00.000-03:00",
+   "date_approved": "2026-06-22T11:54:00.000-03:00",
+   "date_last_updated": "2026-06-22T11:54:00.000-03:00",
+   "transaction_amount": 89385,
+   "collector_id": 3008,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000056,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-06-22T14:49:00.000-03:00",
+   "date_approved": "2026-06-22T14:49:00.000-03:00",
+   "date_last_updated": "2026-06-22T14:49:00.000-03:00",
+   "transaction_amount": 199500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 187510.05
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2123
+   }
+  },
+  {
+   "id": 95000057,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-06-23T12:35:00.000-03:00",
+   "date_approved": "2026-06-23T12:35:00.000-03:00",
+   "date_last_updated": "2026-06-23T12:35:00.000-03:00",
+   "transaction_amount": 503400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 473145.66
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2387
+   }
+  },
+  {
+   "id": 95000058,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-06-23T16:00:00.000-03:00",
+   "date_approved": "2026-06-23T16:00:00.000-03:00",
+   "date_last_updated": "2026-06-23T16:00:00.000-03:00",
+   "transaction_amount": 87300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 82053.27
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2373
+   }
+  },
+  {
+   "id": 95000060,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - cobro QR",
+   "date_created": "2026-06-24T09:08:00.000-03:00",
+   "date_approved": "2026-06-24T09:08:00.000-03:00",
+   "date_last_updated": "2026-06-24T09:08:00.000-03:00",
+   "transaction_amount": 586400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 551157.36
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2035
+   }
+  },
+  {
+   "id": 96000087,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-06-24T10:59:00.000-03:00",
+   "date_approved": "2026-06-24T10:59:00.000-03:00",
+   "date_last_updated": "2026-06-24T10:59:00.000-03:00",
+   "transaction_amount": 1242888,
+   "collector_id": 3002,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000059,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-06-24T14:41:00.000-03:00",
+   "date_approved": "2026-06-24T14:41:00.000-03:00",
+   "date_last_updated": "2026-06-24T14:41:00.000-03:00",
+   "transaction_amount": 191800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 180272.82
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2229
+   }
+  },
+  {
+   "id": 95000061,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-06-25T09:46:00.000-03:00",
+   "date_approved": "2026-06-25T09:46:00.000-03:00",
+   "date_last_updated": "2026-06-25T09:46:00.000-03:00",
+   "transaction_amount": 203100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 190893.69
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2192
+   }
+  },
+  {
+   "id": 96000124,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "FERRETERIA INDUSTRIAL CUYO SRL CUIT 30706660018",
+   "date_created": "2026-06-25T12:04:00.000-03:00",
+   "date_approved": "2026-06-25T12:04:00.000-03:00",
+   "date_last_updated": "2026-06-25T12:04:00.000-03:00",
+   "transaction_amount": 280913,
+   "collector_id": 3072,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000023,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "SEGURO integral taller y ART Sancor",
+   "date_created": "2026-06-25T14:00:00.000-03:00",
+   "date_approved": "2026-06-25T14:00:00.000-03:00",
+   "date_last_updated": "2026-06-25T14:00:00.000-03:00",
+   "transaction_amount": 194859,
+   "collector_id": 3035,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000024,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HONORARIOS estudio contable",
+   "date_created": "2026-06-26T11:01:00.000-03:00",
+   "date_approved": "2026-06-26T11:01:00.000-03:00",
+   "date_last_updated": "2026-06-26T11:01:00.000-03:00",
+   "transaction_amount": 234253,
+   "collector_id": 3067,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000062,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-06-26T11:25:00.000-03:00",
+   "date_approved": "2026-06-26T11:25:00.000-03:00",
+   "date_last_updated": "2026-06-26T11:25:00.000-03:00",
+   "transaction_amount": 446300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 419477.37
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2208
+   }
+  },
+  {
+   "id": 96000025,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "RETIRO SOCIO TRANSF CTA PROPIA",
+   "date_created": "2026-06-29T11:51:00.000-03:00",
+   "date_approved": "2026-06-29T11:51:00.000-03:00",
+   "date_last_updated": "2026-06-29T11:51:00.000-03:00",
+   "transaction_amount": 1490809,
+   "collector_id": 3009,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000063,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-06-29T12:55:00.000-03:00",
+   "date_approved": "2026-06-29T12:55:00.000-03:00",
+   "date_last_updated": "2026-06-29T12:55:00.000-03:00",
+   "transaction_amount": 93200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 87598.68
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2059
+   }
+  },
+  {
+   "id": 96000078,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Afilado y repuestos sierra",
+   "date_created": "2026-06-29T14:30:00.000-03:00",
+   "date_approved": "2026-06-29T14:30:00.000-03:00",
+   "date_last_updated": "2026-06-29T14:30:00.000-03:00",
+   "transaction_amount": 52202,
+   "collector_id": 3052,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000065,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-06-30T12:56:00.000-03:00",
+   "date_approved": "2026-06-30T12:56:00.000-03:00",
+   "date_last_updated": "2026-06-30T12:56:00.000-03:00",
+   "transaction_amount": 80700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 75849.93
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2228
+   }
+  },
+  {
+   "id": 95000064,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-06-30T13:05:00.000-03:00",
+   "date_approved": "2026-06-30T13:05:00.000-03:00",
+   "date_last_updated": "2026-06-30T13:05:00.000-03:00",
+   "transaction_amount": 205600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 193243.44
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2330
+   }
+  },
+  {
+   "id": 96000083,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PAGO HABERES SAC 1ER SEM NOMINA 5 EMPL",
+   "date_created": "2026-06-30T15:06:00.000-03:00",
+   "date_approved": "2026-06-30T15:06:00.000-03:00",
+   "date_last_updated": "2026-06-30T15:06:00.000-03:00",
+   "transaction_amount": 2562500,
+   "collector_id": 3021,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000066,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-07-01T13:54:00.000-03:00",
+   "date_approved": "2026-07-01T13:54:00.000-03:00",
+   "date_last_updated": "2026-07-01T13:54:00.000-03:00",
+   "transaction_amount": 374900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 352368.51
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2246
+   }
+  },
+  {
+   "id": 95000067,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-07-02T12:51:00.000-03:00",
+   "date_approved": "2026-07-02T12:51:00.000-03:00",
+   "date_last_updated": "2026-07-02T12:51:00.000-03:00",
+   "transaction_amount": 85300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 80173.47
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2058
+   }
+  },
+  {
+   "id": 96000101,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-07-02T13:18:00.000-03:00",
+   "date_approved": "2026-07-02T13:18:00.000-03:00",
+   "date_last_updated": "2026-07-02T13:18:00.000-03:00",
+   "transaction_amount": 813061,
+   "collector_id": 3074,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000135,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-07-03T10:47:00.000-03:00",
+   "date_approved": "2026-07-03T10:47:00.000-03:00",
+   "date_last_updated": "2026-07-03T10:47:00.000-03:00",
+   "transaction_amount": 194902,
+   "collector_id": 3032,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000026,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ALQUILER taller INMOB DEL PARQUE",
+   "date_created": "2026-07-03T13:36:00.000-03:00",
+   "date_approved": "2026-07-03T13:36:00.000-03:00",
+   "date_last_updated": "2026-07-03T13:36:00.000-03:00",
+   "transaction_amount": 1424769,
+   "collector_id": 3032,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000068,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-07-03T17:20:00.000-03:00",
+   "date_approved": "2026-07-03T17:20:00.000-03:00",
+   "date_last_updated": "2026-07-03T17:20:00.000-03:00",
+   "transaction_amount": 429900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 404063.01
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2017
+   }
+  },
+  {
+   "id": 95000069,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - link de pago",
+   "date_created": "2026-07-04T14:11:00.000-03:00",
+   "date_approved": "2026-07-04T14:11:00.000-03:00",
+   "date_last_updated": "2026-07-04T14:11:00.000-03:00",
+   "transaction_amount": 355400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 334040.46
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2169
+   }
+  },
+  {
+   "id": 96000028,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TASA municipal comercio Municipalidad de Cordoba",
+   "date_created": "2026-07-06T10:11:00.000-03:00",
+   "date_approved": "2026-07-06T10:11:00.000-03:00",
+   "date_last_updated": "2026-07-06T10:11:00.000-03:00",
+   "transaction_amount": 166298,
+   "collector_id": 3017,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000199,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ESTUDIO JURIDICO BUSTOS Y ASOCIADOS SRL",
+   "date_created": "2026-07-06T11:53:00.000-03:00",
+   "date_approved": "2026-07-06T11:53:00.000-03:00",
+   "date_last_updated": "2026-07-06T11:53:00.000-03:00",
+   "transaction_amount": 2967107,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2967107
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2488
+   }
+  },
+  {
+   "id": 96000027,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PAGO HABERES NOMINA 5 EMPL",
+   "date_created": "2026-07-06T13:33:00.000-03:00",
+   "date_approved": "2026-07-06T13:33:00.000-03:00",
+   "date_last_updated": "2026-07-06T13:33:00.000-03:00",
+   "transaction_amount": 5207806,
+   "collector_id": 3046,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000205,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "CLINICA DENTAL SONRISA SRL",
+   "date_created": "2026-07-06T13:34:00.000-03:00",
+   "date_approved": "2026-07-06T13:34:00.000-03:00",
+   "date_last_updated": "2026-07-06T13:34:00.000-03:00",
+   "transaction_amount": 1791876,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 1791876
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2195
+   }
+  },
+  {
+   "id": 95000070,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-07-06T17:11:00.000-03:00",
+   "date_approved": "2026-07-06T17:11:00.000-03:00",
+   "date_last_updated": "2026-07-06T17:11:00.000-03:00",
+   "transaction_amount": 185300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 174163.47
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2367
+   }
+  },
+  {
+   "id": 95000072,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-07-07T14:30:00.000-03:00",
+   "date_approved": "2026-07-07T14:30:00.000-03:00",
+   "date_last_updated": "2026-07-07T14:30:00.000-03:00",
+   "transaction_amount": 466200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 438181.38
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2278
+   }
+  },
+  {
+   "id": 95000071,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - link de pago",
+   "date_created": "2026-07-07T17:19:00.000-03:00",
+   "date_approved": "2026-07-07T17:19:00.000-03:00",
+   "date_last_updated": "2026-07-07T17:19:00.000-03:00",
+   "transaction_amount": 78400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 73688.16
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2475
+   }
+  },
+  {
+   "id": 96000088,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-07-08T11:25:00.000-03:00",
+   "date_approved": "2026-07-08T11:25:00.000-03:00",
+   "date_last_updated": "2026-07-08T11:25:00.000-03:00",
+   "transaction_amount": 1439529,
+   "collector_id": 3065,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000074,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-07-08T11:33:00.000-03:00",
+   "date_approved": "2026-07-08T11:33:00.000-03:00",
+   "date_last_updated": "2026-07-08T11:33:00.000-03:00",
+   "transaction_amount": 78700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 73970.13
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2443
+   }
+  },
+  {
+   "id": 96000029,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TELECOM internet y telefonia",
+   "date_created": "2026-07-08T11:40:00.000-03:00",
+   "date_approved": "2026-07-08T11:40:00.000-03:00",
+   "date_last_updated": "2026-07-08T11:40:00.000-03:00",
+   "transaction_amount": 77260,
+   "collector_id": 3037,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000073,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mueble de cocina a medida - cobro QR",
+   "date_created": "2026-07-08T14:45:00.000-03:00",
+   "date_approved": "2026-07-08T14:45:00.000-03:00",
+   "date_last_updated": "2026-07-08T14:45:00.000-03:00",
+   "transaction_amount": 1038800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 976368.12
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2372
+   }
+  },
+  {
+   "id": 96000030,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA F931 CARGAS SOCIALES",
+   "date_created": "2026-07-10T14:43:00.000-03:00",
+   "date_approved": "2026-07-10T14:43:00.000-03:00",
+   "date_last_updated": "2026-07-10T14:43:00.000-03:00",
+   "transaction_amount": 1481756,
+   "collector_id": 3072,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000075,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-07-10T17:50:00.000-03:00",
+   "date_approved": "2026-07-10T17:50:00.000-03:00",
+   "date_last_updated": "2026-07-10T17:50:00.000-03:00",
+   "transaction_amount": 85100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 79985.49
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2307
+   }
+  },
+  {
+   "id": 95000218,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HOTEL BOUTIQUE LA SERRANIA SA",
+   "date_created": "2026-07-13T09:07:00.000-03:00",
+   "date_approved": "2026-07-13T09:07:00.000-03:00",
+   "date_last_updated": "2026-07-13T09:07:00.000-03:00",
+   "transaction_amount": 2259367,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2259367
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2412
+   }
+  },
+  {
+   "id": 95000076,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - link de pago",
+   "date_created": "2026-07-13T09:19:00.000-03:00",
+   "date_approved": "2026-07-13T09:19:00.000-03:00",
+   "date_last_updated": "2026-07-13T09:19:00.000-03:00",
+   "transaction_amount": 642900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 604261.71
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2135
+   }
+  },
+  {
+   "id": 96000118,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PINTURAS ALBA SA CUIT 30718880003",
+   "date_created": "2026-07-13T11:02:00.000-03:00",
+   "date_approved": "2026-07-13T11:02:00.000-03:00",
+   "date_last_updated": "2026-07-13T11:02:00.000-03:00",
+   "transaction_amount": 602567,
+   "collector_id": 3059,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000031,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "EPEC energia electrica",
+   "date_created": "2026-07-13T11:29:00.000-03:00",
+   "date_approved": "2026-07-13T11:29:00.000-03:00",
+   "date_last_updated": "2026-07-13T11:29:00.000-03:00",
+   "transaction_amount": 666862,
+   "collector_id": 3050,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000077,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-07-13T12:53:00.000-03:00",
+   "date_approved": "2026-07-13T12:53:00.000-03:00",
+   "date_last_updated": "2026-07-13T12:53:00.000-03:00",
+   "transaction_amount": 360800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 339115.92
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2484
+   }
+  },
+  {
+   "id": 95000079,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-07-14T10:10:00.000-03:00",
+   "date_approved": "2026-07-14T10:10:00.000-03:00",
+   "date_last_updated": "2026-07-14T10:10:00.000-03:00",
+   "transaction_amount": 208400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 195875.16
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2092
+   }
+  },
+  {
+   "id": 95000078,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-07-14T16:09:00.000-03:00",
+   "date_approved": "2026-07-14T16:09:00.000-03:00",
+   "date_last_updated": "2026-07-14T16:09:00.000-03:00",
+   "transaction_amount": 329300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 309509.07
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2352
+   }
+  },
+  {
+   "id": 96000032,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP RENTAS CBA IIBB",
+   "date_created": "2026-07-15T15:52:00.000-03:00",
+   "date_approved": "2026-07-15T15:52:00.000-03:00",
+   "date_last_updated": "2026-07-15T15:52:00.000-03:00",
+   "transaction_amount": 570029,
+   "collector_id": 3084,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000081,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-07-15T16:21:00.000-03:00",
+   "date_approved": "2026-07-15T16:21:00.000-03:00",
+   "date_last_updated": "2026-07-15T16:21:00.000-03:00",
+   "transaction_amount": 394300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 370602.57
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2419
+   }
+  },
+  {
+   "id": 95000080,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-07-15T17:32:00.000-03:00",
+   "date_approved": "2026-07-15T17:32:00.000-03:00",
+   "date_last_updated": "2026-07-15T17:32:00.000-03:00",
+   "transaction_amount": 406600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 382163.34
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2483
+   }
+  },
+  {
+   "id": 95000082,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-07-16T09:25:00.000-03:00",
+   "date_approved": "2026-07-16T09:25:00.000-03:00",
+   "date_last_updated": "2026-07-16T09:25:00.000-03:00",
+   "transaction_amount": 84100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 79045.59
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2329
+   }
+  },
+  {
+   "id": 96000125,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "FERRETERIA INDUSTRIAL CUYO SRL CUIT 30706660018",
+   "date_created": "2026-07-16T11:43:00.000-03:00",
+   "date_approved": "2026-07-16T11:43:00.000-03:00",
+   "date_last_updated": "2026-07-16T11:43:00.000-03:00",
+   "transaction_amount": 241020,
+   "collector_id": 3071,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000102,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-07-16T12:56:00.000-03:00",
+   "date_approved": "2026-07-16T12:56:00.000-03:00",
+   "date_last_updated": "2026-07-16T12:56:00.000-03:00",
+   "transaction_amount": 903884,
+   "collector_id": 3038,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000083,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-07-17T12:27:00.000-03:00",
+   "date_approved": "2026-07-17T12:27:00.000-03:00",
+   "date_last_updated": "2026-07-17T12:27:00.000-03:00",
+   "transaction_amount": 407200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 382727.28
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2175
+   }
+  },
+  {
+   "id": 96000136,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-07-20T10:48:00.000-03:00",
+   "date_approved": "2026-07-20T10:48:00.000-03:00",
+   "date_last_updated": "2026-07-20T10:48:00.000-03:00",
+   "transaction_amount": 186852,
+   "collector_id": 3083,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000112,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HERRAJES CORDOBA SRL CUIT 30715551114",
+   "date_created": "2026-07-20T11:02:00.000-03:00",
+   "date_approved": "2026-07-20T11:02:00.000-03:00",
+   "date_last_updated": "2026-07-20T11:02:00.000-03:00",
+   "transaction_amount": 859099,
+   "collector_id": 3007,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000033,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA IVA DDJJ",
+   "date_created": "2026-07-20T11:42:00.000-03:00",
+   "date_approved": "2026-07-20T11:42:00.000-03:00",
+   "date_last_updated": "2026-07-20T11:42:00.000-03:00",
+   "transaction_amount": 1195993,
+   "collector_id": 3083,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000084,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-07-20T12:29:00.000-03:00",
+   "date_approved": "2026-07-20T12:29:00.000-03:00",
+   "date_last_updated": "2026-07-20T12:29:00.000-03:00",
+   "transaction_amount": 84600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 79515.54
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2416
+   }
+  },
+  {
+   "id": 95000206,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "CLINICA DENTAL SONRISA SRL",
+   "date_created": "2026-07-20T12:35:00.000-03:00",
+   "date_approved": "2026-07-20T12:35:00.000-03:00",
+   "date_last_updated": "2026-07-20T12:35:00.000-03:00",
+   "transaction_amount": 2037880,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2037880
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2120
+   }
+  },
+  {
+   "id": 96000038,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "ECOGAS gas natural bimestral",
+   "date_created": "2026-07-20T14:00:00.000-03:00",
+   "date_approved": "2026-07-20T14:00:00.000-03:00",
+   "date_last_updated": "2026-07-20T14:00:00.000-03:00",
+   "transaction_amount": 235828,
+   "collector_id": 3037,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000085,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-07-21T16:30:00.000-03:00",
+   "date_approved": "2026-07-21T16:30:00.000-03:00",
+   "date_last_updated": "2026-07-21T16:30:00.000-03:00",
+   "transaction_amount": 301300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 283191.87
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2426
+   }
+  },
+  {
+   "id": 96000089,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-07-22T10:12:00.000-03:00",
+   "date_approved": "2026-07-22T10:12:00.000-03:00",
+   "date_last_updated": "2026-07-22T10:12:00.000-03:00",
+   "transaction_amount": 1448476,
+   "collector_id": 3071,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000034,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "AGUAS CORDOBESAS servicio de agua",
+   "date_created": "2026-07-22T11:28:00.000-03:00",
+   "date_approved": "2026-07-22T11:28:00.000-03:00",
+   "date_last_updated": "2026-07-22T11:28:00.000-03:00",
+   "transaction_amount": 89171,
+   "collector_id": 3052,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000086,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-07-22T12:41:00.000-03:00",
+   "date_approved": "2026-07-22T12:41:00.000-03:00",
+   "date_last_updated": "2026-07-22T12:41:00.000-03:00",
+   "transaction_amount": 97100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 91264.29
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2113
+   }
+  },
+  {
+   "id": 95000087,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-07-23T11:32:00.000-03:00",
+   "date_approved": "2026-07-23T11:32:00.000-03:00",
+   "date_last_updated": "2026-07-23T11:32:00.000-03:00",
+   "transaction_amount": 84900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 79797.51
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2276
+   }
+  },
+  {
+   "id": 95000089,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-07-24T10:30:00.000-03:00",
+   "date_approved": "2026-07-24T10:30:00.000-03:00",
+   "date_last_updated": "2026-07-24T10:30:00.000-03:00",
+   "transaction_amount": 306100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 287703.39
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2192
+   }
+  },
+  {
+   "id": 96000079,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Afilado y repuestos sierra",
+   "date_created": "2026-07-24T10:30:00.000-03:00",
+   "date_approved": "2026-07-24T10:30:00.000-03:00",
+   "date_last_updated": "2026-07-24T10:30:00.000-03:00",
+   "transaction_amount": 79383,
+   "collector_id": 3085,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000088,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - link de pago",
+   "date_created": "2026-07-24T13:08:00.000-03:00",
+   "date_approved": "2026-07-24T13:08:00.000-03:00",
+   "date_last_updated": "2026-07-24T13:08:00.000-03:00",
+   "transaction_amount": 393600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 369944.64
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2435
+   }
+  },
+  {
+   "id": 95000090,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - link de pago",
+   "date_created": "2026-07-25T10:21:00.000-03:00",
+   "date_approved": "2026-07-25T10:21:00.000-03:00",
+   "date_last_updated": "2026-07-25T10:21:00.000-03:00",
+   "transaction_amount": 369300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 347105.07
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2213
+   }
+  },
+  {
+   "id": 96000036,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HONORARIOS estudio contable",
+   "date_created": "2026-07-27T13:28:00.000-03:00",
+   "date_approved": "2026-07-27T13:28:00.000-03:00",
+   "date_last_updated": "2026-07-27T13:28:00.000-03:00",
+   "transaction_amount": 217847,
+   "collector_id": 3011,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000035,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "SEGURO integral taller y ART Sancor",
+   "date_created": "2026-07-27T15:25:00.000-03:00",
+   "date_approved": "2026-07-27T15:25:00.000-03:00",
+   "date_last_updated": "2026-07-27T15:25:00.000-03:00",
+   "transaction_amount": 206687,
+   "collector_id": 3003,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000091,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - link de pago",
+   "date_created": "2026-07-27T17:25:00.000-03:00",
+   "date_approved": "2026-07-27T17:25:00.000-03:00",
+   "date_last_updated": "2026-07-27T17:25:00.000-03:00",
+   "transaction_amount": 402900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 378685.71
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2138
+   }
+  },
+  {
+   "id": 96000037,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "RETIRO SOCIO TRANSF CTA PROPIA",
+   "date_created": "2026-07-28T14:16:00.000-03:00",
+   "date_approved": "2026-07-28T14:16:00.000-03:00",
+   "date_last_updated": "2026-07-28T14:16:00.000-03:00",
+   "transaction_amount": 1586389,
+   "collector_id": 3031,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000092,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-07-29T17:04:00.000-03:00",
+   "date_approved": "2026-07-29T17:04:00.000-03:00",
+   "date_last_updated": "2026-07-29T17:04:00.000-03:00",
+   "transaction_amount": 425400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 399833.46
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2044
+   }
+  },
+  {
+   "id": 95000093,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-07-30T09:12:00.000-03:00",
+   "date_approved": "2026-07-30T09:12:00.000-03:00",
+   "date_last_updated": "2026-07-30T09:12:00.000-03:00",
+   "transaction_amount": 209600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 197003.04
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2207
+   }
+  },
+  {
+   "id": 96000103,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-07-30T12:54:00.000-03:00",
+   "date_approved": "2026-07-30T12:54:00.000-03:00",
+   "date_last_updated": "2026-07-30T12:54:00.000-03:00",
+   "transaction_amount": 1041122,
+   "collector_id": 3086,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000094,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-07-31T13:03:00.000-03:00",
+   "date_approved": "2026-07-31T13:03:00.000-03:00",
+   "date_last_updated": "2026-07-31T13:03:00.000-03:00",
+   "transaction_amount": 433100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 407070.69
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2456
+   }
+  },
+  {
+   "id": 95000095,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-08-01T12:04:00.000-03:00",
+   "date_approved": "2026-08-01T12:04:00.000-03:00",
+   "date_last_updated": "2026-08-01T12:04:00.000-03:00",
+   "transaction_amount": 403400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 379155.66
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2038
+   }
+  },
+  {
+   "id": 96000039,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ALQUILER taller INMOB DEL PARQUE",
+   "date_created": "2026-08-03T14:07:00.000-03:00",
+   "date_approved": "2026-08-03T14:07:00.000-03:00",
+   "date_last_updated": "2026-08-03T14:07:00.000-03:00",
+   "transaction_amount": 1432769,
+   "collector_id": 3058,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000137,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-08-03T14:58:00.000-03:00",
+   "date_approved": "2026-08-03T14:58:00.000-03:00",
+   "date_last_updated": "2026-08-03T14:58:00.000-03:00",
+   "transaction_amount": 209393,
+   "collector_id": 3002,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000097,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-08-04T14:16:00.000-03:00",
+   "date_approved": "2026-08-04T14:16:00.000-03:00",
+   "date_last_updated": "2026-08-04T14:16:00.000-03:00",
+   "transaction_amount": 89500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 84121.05
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2047
+   }
+  },
+  {
+   "id": 95000096,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - link de pago",
+   "date_created": "2026-08-04T15:01:00.000-03:00",
+   "date_approved": "2026-08-04T15:01:00.000-03:00",
+   "date_last_updated": "2026-08-04T15:01:00.000-03:00",
+   "transaction_amount": 365900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 343909.41
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2158
+   }
+  },
+  {
+   "id": 95000098,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - link de pago",
+   "date_created": "2026-08-05T12:37:00.000-03:00",
+   "date_approved": "2026-08-05T12:37:00.000-03:00",
+   "date_last_updated": "2026-08-05T12:37:00.000-03:00",
+   "transaction_amount": 66500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 62503.35
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2088
+   }
+  },
+  {
+   "id": 96000040,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PAGO HABERES NOMINA 5 EMPL",
+   "date_created": "2026-08-05T12:58:00.000-03:00",
+   "date_approved": "2026-08-05T12:58:00.000-03:00",
+   "date_last_updated": "2026-08-05T12:58:00.000-03:00",
+   "transaction_amount": 5411579,
+   "collector_id": 3002,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000041,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TASA municipal comercio Municipalidad de Cordoba",
+   "date_created": "2026-08-05T13:55:00.000-03:00",
+   "date_approved": "2026-08-05T13:55:00.000-03:00",
+   "date_last_updated": "2026-08-05T13:55:00.000-03:00",
+   "transaction_amount": 182632,
+   "collector_id": 3055,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000090,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-08-05T15:58:00.000-03:00",
+   "date_approved": "2026-08-05T15:58:00.000-03:00",
+   "date_last_updated": "2026-08-05T15:58:00.000-03:00",
+   "transaction_amount": 1537817,
+   "collector_id": 3019,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000100,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - link de pago",
+   "date_created": "2026-08-06T12:45:00.000-03:00",
+   "date_approved": "2026-08-06T12:45:00.000-03:00",
+   "date_last_updated": "2026-08-06T12:45:00.000-03:00",
+   "transaction_amount": 76600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 71996.34
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2381
+   }
+  },
+  {
+   "id": 96000126,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "FERRETERIA INDUSTRIAL CUYO SRL CUIT 30706660018",
+   "date_created": "2026-08-06T15:52:00.000-03:00",
+   "date_approved": "2026-08-06T15:52:00.000-03:00",
+   "date_last_updated": "2026-08-06T15:52:00.000-03:00",
+   "transaction_amount": 286434,
+   "collector_id": 3062,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000099,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-08-06T16:08:00.000-03:00",
+   "date_approved": "2026-08-06T16:08:00.000-03:00",
+   "date_last_updated": "2026-08-06T16:08:00.000-03:00",
+   "transaction_amount": 433200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 407164.68
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2355
+   }
+  },
+  {
+   "id": 95000219,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HOTEL BOUTIQUE LA SERRANIA SA",
+   "date_created": "2026-08-07T13:32:00.000-03:00",
+   "date_approved": "2026-08-07T13:32:00.000-03:00",
+   "date_last_updated": "2026-08-07T13:32:00.000-03:00",
+   "transaction_amount": 2432250,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2432250
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2212
+   }
+  },
+  {
+   "id": 95000101,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - cobro QR",
+   "date_created": "2026-08-07T14:33:00.000-03:00",
+   "date_approved": "2026-08-07T14:33:00.000-03:00",
+   "date_last_updated": "2026-08-07T14:33:00.000-03:00",
+   "transaction_amount": 724500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 680957.55
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2427
+   }
+  },
+  {
+   "id": 95000102,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-08-08T15:45:00.000-03:00",
+   "date_approved": "2026-08-08T15:45:00.000-03:00",
+   "date_last_updated": "2026-08-08T15:45:00.000-03:00",
+   "transaction_amount": 95800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 90042.42
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2318
+   }
+  },
+  {
+   "id": 95000104,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-08-10T09:26:00.000-03:00",
+   "date_approved": "2026-08-10T09:26:00.000-03:00",
+   "date_last_updated": "2026-08-10T09:26:00.000-03:00",
+   "transaction_amount": 96800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 90982.32
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2179
+   }
+  },
+  {
+   "id": 95000103,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - link de pago",
+   "date_created": "2026-08-10T09:47:00.000-03:00",
+   "date_approved": "2026-08-10T09:47:00.000-03:00",
+   "date_last_updated": "2026-08-10T09:47:00.000-03:00",
+   "transaction_amount": 65700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 61751.43
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2493
+   }
+  },
+  {
+   "id": 95000200,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ESTUDIO JURIDICO BUSTOS Y ASOCIADOS SRL",
+   "date_created": "2026-08-10T11:46:00.000-03:00",
+   "date_approved": "2026-08-10T11:46:00.000-03:00",
+   "date_last_updated": "2026-08-10T11:46:00.000-03:00",
+   "transaction_amount": 2442936,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2442936
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2073
+   }
+  },
+  {
+   "id": 96000119,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PINTURAS ALBA SA CUIT 30718880003",
+   "date_created": "2026-08-10T12:45:00.000-03:00",
+   "date_approved": "2026-08-10T12:45:00.000-03:00",
+   "date_last_updated": "2026-08-10T12:45:00.000-03:00",
+   "transaction_amount": 577553,
+   "collector_id": 3080,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000043,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA F931 CARGAS SOCIALES",
+   "date_created": "2026-08-10T12:51:00.000-03:00",
+   "date_approved": "2026-08-10T12:51:00.000-03:00",
+   "date_last_updated": "2026-08-10T12:51:00.000-03:00",
+   "transaction_amount": 1509390,
+   "collector_id": 3029,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000213,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "OFICINAS CUYO SA",
+   "date_created": "2026-08-10T13:17:00.000-03:00",
+   "date_approved": "2026-08-10T13:17:00.000-03:00",
+   "date_last_updated": "2026-08-10T13:17:00.000-03:00",
+   "transaction_amount": 2782166,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2782166
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2372
+   }
+  },
+  {
+   "id": 96000042,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TELECOM internet y telefonia",
+   "date_created": "2026-08-10T14:43:00.000-03:00",
+   "date_approved": "2026-08-10T14:43:00.000-03:00",
+   "date_last_updated": "2026-08-10T14:43:00.000-03:00",
+   "transaction_amount": 76583,
+   "collector_id": 3052,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000105,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-08-12T14:18:00.000-03:00",
+   "date_approved": "2026-08-12T14:18:00.000-03:00",
+   "date_last_updated": "2026-08-12T14:18:00.000-03:00",
+   "transaction_amount": 646500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 607645.35
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2467
+   }
+  },
+  {
+   "id": 96000044,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "EPEC energia electrica",
+   "date_created": "2026-08-12T15:15:00.000-03:00",
+   "date_approved": "2026-08-12T15:15:00.000-03:00",
+   "date_last_updated": "2026-08-12T15:15:00.000-03:00",
+   "transaction_amount": 676180,
+   "collector_id": 3003,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000104,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-08-13T11:09:00.000-03:00",
+   "date_approved": "2026-08-13T11:09:00.000-03:00",
+   "date_last_updated": "2026-08-13T11:09:00.000-03:00",
+   "transaction_amount": 992833,
+   "collector_id": 3036,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000207,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "CLINICA DENTAL SONRISA SRL",
+   "date_created": "2026-08-13T15:02:00.000-03:00",
+   "date_approved": "2026-08-13T15:02:00.000-03:00",
+   "date_last_updated": "2026-08-13T15:02:00.000-03:00",
+   "transaction_amount": 2254399,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2254399
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2170
+   }
+  },
+  {
+   "id": 95000106,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-08-13T17:22:00.000-03:00",
+   "date_approved": "2026-08-13T17:22:00.000-03:00",
+   "date_last_updated": "2026-08-13T17:22:00.000-03:00",
+   "transaction_amount": 316700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 297666.33
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2245
+   }
+  },
+  {
+   "id": 95000107,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-08-14T10:36:00.000-03:00",
+   "date_approved": "2026-08-14T10:36:00.000-03:00",
+   "date_last_updated": "2026-08-14T10:36:00.000-03:00",
+   "transaction_amount": 83800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 78763.62
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2361
+   }
+  },
+  {
+   "id": 95000108,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-08-14T16:52:00.000-03:00",
+   "date_approved": "2026-08-14T16:52:00.000-03:00",
+   "date_last_updated": "2026-08-14T16:52:00.000-03:00",
+   "transaction_amount": 92900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 87316.71
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2131
+   }
+  },
+  {
+   "id": 95000109,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-08-15T12:07:00.000-03:00",
+   "date_approved": "2026-08-15T12:07:00.000-03:00",
+   "date_last_updated": "2026-08-15T12:07:00.000-03:00",
+   "transaction_amount": 79500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 74722.05
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2470
+   }
+  },
+  {
+   "id": 95000110,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-08-15T16:44:00.000-03:00",
+   "date_approved": "2026-08-15T16:44:00.000-03:00",
+   "date_last_updated": "2026-08-15T16:44:00.000-03:00",
+   "transaction_amount": 89300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 83933.07
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2299
+   }
+  },
+  {
+   "id": 95000111,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-08-18T09:00:00.000-03:00",
+   "date_approved": "2026-08-18T09:00:00.000-03:00",
+   "date_last_updated": "2026-08-18T09:00:00.000-03:00",
+   "transaction_amount": 99600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 93614.04
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2155
+   }
+  },
+  {
+   "id": 96000113,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HERRAJES CORDOBA SRL CUIT 30715551114",
+   "date_created": "2026-08-18T11:04:00.000-03:00",
+   "date_approved": "2026-08-18T11:04:00.000-03:00",
+   "date_last_updated": "2026-08-18T11:04:00.000-03:00",
+   "transaction_amount": 736993,
+   "collector_id": 3068,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000080,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Afilado y repuestos sierra",
+   "date_created": "2026-08-18T13:20:00.000-03:00",
+   "date_approved": "2026-08-18T13:20:00.000-03:00",
+   "date_last_updated": "2026-08-18T13:20:00.000-03:00",
+   "transaction_amount": 55213,
+   "collector_id": 3030,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000046,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA IVA DDJJ",
+   "date_created": "2026-08-18T13:33:00.000-03:00",
+   "date_approved": "2026-08-18T13:33:00.000-03:00",
+   "date_last_updated": "2026-08-18T13:33:00.000-03:00",
+   "transaction_amount": 1156315,
+   "collector_id": 3009,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000138,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-08-18T15:19:00.000-03:00",
+   "date_approved": "2026-08-18T15:19:00.000-03:00",
+   "date_last_updated": "2026-08-18T15:19:00.000-03:00",
+   "transaction_amount": 198549,
+   "collector_id": 3060,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000045,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP RENTAS CBA IIBB",
+   "date_created": "2026-08-18T15:52:00.000-03:00",
+   "date_approved": "2026-08-18T15:52:00.000-03:00",
+   "date_last_updated": "2026-08-18T15:52:00.000-03:00",
+   "transaction_amount": 530239,
+   "collector_id": 3084,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000091,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-08-19T12:10:00.000-03:00",
+   "date_approved": "2026-08-19T12:10:00.000-03:00",
+   "date_last_updated": "2026-08-19T12:10:00.000-03:00",
+   "transaction_amount": 1256711,
+   "collector_id": 3042,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000112,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-08-19T17:11:00.000-03:00",
+   "date_approved": "2026-08-19T17:11:00.000-03:00",
+   "date_last_updated": "2026-08-19T17:11:00.000-03:00",
+   "transaction_amount": 370500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 348232.95
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2305
+   }
+  },
+  {
+   "id": 95000113,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - link de pago",
+   "date_created": "2026-08-20T14:25:00.000-03:00",
+   "date_approved": "2026-08-20T14:25:00.000-03:00",
+   "date_last_updated": "2026-08-20T14:25:00.000-03:00",
+   "transaction_amount": 638100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 599750.19
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2380
+   }
+  },
+  {
+   "id": 95000114,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-08-21T15:11:00.000-03:00",
+   "date_approved": "2026-08-21T15:11:00.000-03:00",
+   "date_last_updated": "2026-08-21T15:11:00.000-03:00",
+   "transaction_amount": 81800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 76883.82
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2360
+   }
+  },
+  {
+   "id": 95000115,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-08-24T09:26:00.000-03:00",
+   "date_approved": "2026-08-24T09:26:00.000-03:00",
+   "date_last_updated": "2026-08-24T09:26:00.000-03:00",
+   "transaction_amount": 193800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 182152.62
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2184
+   }
+  },
+  {
+   "id": 96000047,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "AGUAS CORDOBESAS servicio de agua",
+   "date_created": "2026-08-24T11:32:00.000-03:00",
+   "date_approved": "2026-08-24T11:32:00.000-03:00",
+   "date_last_updated": "2026-08-24T11:32:00.000-03:00",
+   "transaction_amount": 89264,
+   "collector_id": 3030,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000048,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "SEGURO integral taller y ART Sancor",
+   "date_created": "2026-08-25T12:23:00.000-03:00",
+   "date_approved": "2026-08-25T12:23:00.000-03:00",
+   "date_last_updated": "2026-08-25T12:23:00.000-03:00",
+   "transaction_amount": 205259,
+   "collector_id": 3067,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000116,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-08-26T11:38:00.000-03:00",
+   "date_approved": "2026-08-26T11:38:00.000-03:00",
+   "date_last_updated": "2026-08-26T11:38:00.000-03:00",
+   "transaction_amount": 377000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 354342.3
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2210
+   }
+  },
+  {
+   "id": 96000049,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HONORARIOS estudio contable",
+   "date_created": "2026-08-26T15:10:00.000-03:00",
+   "date_approved": "2026-08-26T15:10:00.000-03:00",
+   "date_last_updated": "2026-08-26T15:10:00.000-03:00",
+   "transaction_amount": 240534,
+   "collector_id": 3081,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000127,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "FERRETERIA INDUSTRIAL CUYO SRL CUIT 30706660018",
+   "date_created": "2026-08-27T11:23:00.000-03:00",
+   "date_approved": "2026-08-27T11:23:00.000-03:00",
+   "date_last_updated": "2026-08-27T11:23:00.000-03:00",
+   "transaction_amount": 286110,
+   "collector_id": 3037,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000105,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-08-27T14:05:00.000-03:00",
+   "date_approved": "2026-08-27T14:05:00.000-03:00",
+   "date_last_updated": "2026-08-27T14:05:00.000-03:00",
+   "transaction_amount": 893792,
+   "collector_id": 3061,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000117,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-08-27T15:50:00.000-03:00",
+   "date_approved": "2026-08-27T15:50:00.000-03:00",
+   "date_last_updated": "2026-08-27T15:50:00.000-03:00",
+   "transaction_amount": 81400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 76507.86
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2113
+   }
+  },
+  {
+   "id": 95000118,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-08-27T16:37:00.000-03:00",
+   "date_approved": "2026-08-27T16:37:00.000-03:00",
+   "date_last_updated": "2026-08-27T16:37:00.000-03:00",
+   "transaction_amount": 371400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 349078.86
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2243
+   }
+  },
+  {
+   "id": 95000119,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-08-28T10:48:00.000-03:00",
+   "date_approved": "2026-08-28T10:48:00.000-03:00",
+   "date_last_updated": "2026-08-28T10:48:00.000-03:00",
+   "transaction_amount": 557700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 524182.23
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2281
+   }
+  },
+  {
+   "id": 95000120,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-08-28T14:14:00.000-03:00",
+   "date_approved": "2026-08-28T14:14:00.000-03:00",
+   "date_last_updated": "2026-08-28T14:14:00.000-03:00",
+   "transaction_amount": 461300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 433575.87
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2037
+   }
+  },
+  {
+   "id": 96000050,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "RETIRO SOCIO TRANSF CTA PROPIA",
+   "date_created": "2026-08-28T15:19:00.000-03:00",
+   "date_approved": "2026-08-28T15:19:00.000-03:00",
+   "date_last_updated": "2026-08-28T15:19:00.000-03:00",
+   "transaction_amount": 1644881,
+   "collector_id": 3062,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000122,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-08-31T11:16:00.000-03:00",
+   "date_approved": "2026-08-31T11:16:00.000-03:00",
+   "date_last_updated": "2026-08-31T11:16:00.000-03:00",
+   "transaction_amount": 298900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 280936.11
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2134
+   }
+  },
+  {
+   "id": 95000208,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "CLINICA DENTAL SONRISA SRL",
+   "date_created": "2026-08-31T14:07:00.000-03:00",
+   "date_approved": "2026-08-31T14:07:00.000-03:00",
+   "date_last_updated": "2026-08-31T14:07:00.000-03:00",
+   "transaction_amount": 2313365,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2313365
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2180
+   }
+  },
+  {
+   "id": 95000121,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-08-31T15:07:00.000-03:00",
+   "date_approved": "2026-08-31T15:07:00.000-03:00",
+   "date_last_updated": "2026-08-31T15:07:00.000-03:00",
+   "transaction_amount": 100400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 94365.96
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2378
+   }
+  },
+  {
+   "id": 96000139,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-09-01T13:23:00.000-03:00",
+   "date_approved": "2026-09-01T13:23:00.000-03:00",
+   "date_last_updated": "2026-09-01T13:23:00.000-03:00",
+   "transaction_amount": 210747,
+   "collector_id": 3059,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000220,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HOTEL BOUTIQUE LA SERRANIA SA",
+   "date_created": "2026-09-02T10:01:00.000-03:00",
+   "date_approved": "2026-09-02T10:01:00.000-03:00",
+   "date_last_updated": "2026-09-02T10:01:00.000-03:00",
+   "transaction_amount": 2143922,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2143922
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2447
+   }
+  },
+  {
+   "id": 96000092,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-09-02T10:49:00.000-03:00",
+   "date_approved": "2026-09-02T10:49:00.000-03:00",
+   "date_last_updated": "2026-09-02T10:49:00.000-03:00",
+   "transaction_amount": 1542514,
+   "collector_id": 3045,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000123,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-09-02T11:53:00.000-03:00",
+   "date_approved": "2026-09-02T11:53:00.000-03:00",
+   "date_last_updated": "2026-09-02T11:53:00.000-03:00",
+   "transaction_amount": 423700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 398235.63
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2297
+   }
+  },
+  {
+   "id": 95000124,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - link de pago",
+   "date_created": "2026-09-02T14:54:00.000-03:00",
+   "date_approved": "2026-09-02T14:54:00.000-03:00",
+   "date_last_updated": "2026-09-02T14:54:00.000-03:00",
+   "transaction_amount": 715200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 672216.48
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2277
+   }
+  },
+  {
+   "id": 95000126,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - cobro QR",
+   "date_created": "2026-09-03T10:52:00.000-03:00",
+   "date_approved": "2026-09-03T10:52:00.000-03:00",
+   "date_last_updated": "2026-09-03T10:52:00.000-03:00",
+   "transaction_amount": 656300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 616856.37
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2333
+   }
+  },
+  {
+   "id": 95000125,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-09-03T13:34:00.000-03:00",
+   "date_approved": "2026-09-03T13:34:00.000-03:00",
+   "date_last_updated": "2026-09-03T13:34:00.000-03:00",
+   "transaction_amount": 375500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 352932.45
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2425
+   }
+  },
+  {
+   "id": 96000051,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ALQUILER taller INMOB DEL PARQUE",
+   "date_created": "2026-09-03T15:15:00.000-03:00",
+   "date_approved": "2026-09-03T15:15:00.000-03:00",
+   "date_last_updated": "2026-09-03T15:15:00.000-03:00",
+   "transaction_amount": 1431296,
+   "collector_id": 3028,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000128,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-09-04T14:31:00.000-03:00",
+   "date_approved": "2026-09-04T14:31:00.000-03:00",
+   "date_last_updated": "2026-09-04T14:31:00.000-03:00",
+   "transaction_amount": 182400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 171437.76
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2271
+   }
+  },
+  {
+   "id": 95000127,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - link de pago",
+   "date_created": "2026-09-04T16:22:00.000-03:00",
+   "date_approved": "2026-09-04T16:22:00.000-03:00",
+   "date_last_updated": "2026-09-04T16:22:00.000-03:00",
+   "transaction_amount": 71800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 67484.82
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2444
+   }
+  },
+  {
+   "id": 95000201,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ESTUDIO JURIDICO BUSTOS Y ASOCIADOS SRL",
+   "date_created": "2026-09-07T09:34:00.000-03:00",
+   "date_approved": "2026-09-07T09:34:00.000-03:00",
+   "date_last_updated": "2026-09-07T09:34:00.000-03:00",
+   "transaction_amount": 2872162,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2872162
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2229
+   }
+  },
+  {
+   "id": 96000052,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PAGO HABERES NOMINA 5 EMPL",
+   "date_created": "2026-09-07T10:00:00.000-03:00",
+   "date_approved": "2026-09-07T10:00:00.000-03:00",
+   "date_last_updated": "2026-09-07T10:00:00.000-03:00",
+   "transaction_amount": 5534705,
+   "collector_id": 3002,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000053,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TASA municipal comercio Municipalidad de Cordoba",
+   "date_created": "2026-09-07T10:10:00.000-03:00",
+   "date_approved": "2026-09-07T10:10:00.000-03:00",
+   "date_last_updated": "2026-09-07T10:10:00.000-03:00",
+   "transaction_amount": 183476,
+   "collector_id": 3042,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000129,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-09-07T16:26:00.000-03:00",
+   "date_approved": "2026-09-07T16:26:00.000-03:00",
+   "date_last_updated": "2026-09-07T16:26:00.000-03:00",
+   "transaction_amount": 402000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 377839.8
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2296
+   }
+  },
+  {
+   "id": 95000130,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-09-08T09:46:00.000-03:00",
+   "date_approved": "2026-09-08T09:46:00.000-03:00",
+   "date_last_updated": "2026-09-08T09:46:00.000-03:00",
+   "transaction_amount": 492300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 462712.77
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2073
+   }
+  },
+  {
+   "id": 95000131,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - link de pago",
+   "date_created": "2026-09-08T15:19:00.000-03:00",
+   "date_approved": "2026-09-08T15:19:00.000-03:00",
+   "date_last_updated": "2026-09-08T15:19:00.000-03:00",
+   "transaction_amount": 68600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 64477.14
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2332
+   }
+  },
+  {
+   "id": 96000054,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TELECOM internet y telefonia",
+   "date_created": "2026-09-08T15:58:00.000-03:00",
+   "date_approved": "2026-09-08T15:58:00.000-03:00",
+   "date_last_updated": "2026-09-08T15:58:00.000-03:00",
+   "transaction_amount": 78626,
+   "collector_id": 3078,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000132,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-09-09T10:28:00.000-03:00",
+   "date_approved": "2026-09-09T10:28:00.000-03:00",
+   "date_last_updated": "2026-09-09T10:28:00.000-03:00",
+   "transaction_amount": 86400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 81207.36
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2230
+   }
+  },
+  {
+   "id": 96000120,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PINTURAS ALBA SA CUIT 30718880003",
+   "date_created": "2026-09-09T14:02:00.000-03:00",
+   "date_approved": "2026-09-09T14:02:00.000-03:00",
+   "date_last_updated": "2026-09-09T14:02:00.000-03:00",
+   "transaction_amount": 590709,
+   "collector_id": 3028,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000133,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-09-09T16:17:00.000-03:00",
+   "date_approved": "2026-09-09T16:17:00.000-03:00",
+   "date_last_updated": "2026-09-09T16:17:00.000-03:00",
+   "transaction_amount": 332400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 312422.76
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2204
+   }
+  },
+  {
+   "id": 96000106,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-09-10T10:15:00.000-03:00",
+   "date_approved": "2026-09-10T10:15:00.000-03:00",
+   "date_last_updated": "2026-09-10T10:15:00.000-03:00",
+   "transaction_amount": 870214,
+   "collector_id": 3006,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000055,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA F931 CARGAS SOCIALES",
+   "date_created": "2026-09-10T12:23:00.000-03:00",
+   "date_approved": "2026-09-10T12:23:00.000-03:00",
+   "date_last_updated": "2026-09-10T12:23:00.000-03:00",
+   "transaction_amount": 1530327,
+   "collector_id": 3031,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000134,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-09-10T16:21:00.000-03:00",
+   "date_approved": "2026-09-10T16:21:00.000-03:00",
+   "date_last_updated": "2026-09-10T16:21:00.000-03:00",
+   "transaction_amount": 196800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 184972.32
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2016
+   }
+  },
+  {
+   "id": 95000136,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-09-11T11:04:00.000-03:00",
+   "date_approved": "2026-09-11T11:04:00.000-03:00",
+   "date_last_updated": "2026-09-11T11:04:00.000-03:00",
+   "transaction_amount": 400000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 375960
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2009
+   }
+  },
+  {
+   "id": 95000135,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-09-11T14:48:00.000-03:00",
+   "date_approved": "2026-09-11T14:48:00.000-03:00",
+   "date_last_updated": "2026-09-11T14:48:00.000-03:00",
+   "transaction_amount": 662900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 623059.71
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2350
+   }
+  },
+  {
+   "id": 95000137,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-09-12T15:57:00.000-03:00",
+   "date_approved": "2026-09-12T15:57:00.000-03:00",
+   "date_last_updated": "2026-09-12T15:57:00.000-03:00",
+   "transaction_amount": 330600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 310730.94
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2172
+   }
+  },
+  {
+   "id": 95000139,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-09-14T10:34:00.000-03:00",
+   "date_approved": "2026-09-14T10:34:00.000-03:00",
+   "date_last_updated": "2026-09-14T10:34:00.000-03:00",
+   "transaction_amount": 477600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 448896.24
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2274
+   }
+  },
+  {
+   "id": 96000081,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Afilado y repuestos sierra",
+   "date_created": "2026-09-14T10:42:00.000-03:00",
+   "date_approved": "2026-09-14T10:42:00.000-03:00",
+   "date_last_updated": "2026-09-14T10:42:00.000-03:00",
+   "transaction_amount": 89600,
+   "collector_id": 3053,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000138,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-09-14T13:57:00.000-03:00",
+   "date_approved": "2026-09-14T13:57:00.000-03:00",
+   "date_last_updated": "2026-09-14T13:57:00.000-03:00",
+   "transaction_amount": 564100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 530197.59
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2357
+   }
+  },
+  {
+   "id": 96000056,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "EPEC energia electrica",
+   "date_created": "2026-09-14T15:31:00.000-03:00",
+   "date_approved": "2026-09-14T15:31:00.000-03:00",
+   "date_last_updated": "2026-09-14T15:31:00.000-03:00",
+   "transaction_amount": 658535,
+   "collector_id": 3005,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000057,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP RENTAS CBA IIBB",
+   "date_created": "2026-09-15T11:43:00.000-03:00",
+   "date_approved": "2026-09-15T11:43:00.000-03:00",
+   "date_last_updated": "2026-09-15T11:43:00.000-03:00",
+   "transaction_amount": 529887,
+   "collector_id": 3007,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000140,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-09-15T14:10:00.000-03:00",
+   "date_approved": "2026-09-15T14:10:00.000-03:00",
+   "date_last_updated": "2026-09-15T14:10:00.000-03:00",
+   "transaction_amount": 417300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 392220.27
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2416
+   }
+  },
+  {
+   "id": 95000141,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-09-15T14:56:00.000-03:00",
+   "date_approved": "2026-09-15T14:56:00.000-03:00",
+   "date_last_updated": "2026-09-15T14:56:00.000-03:00",
+   "transaction_amount": 437000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 410736.3
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2109
+   }
+  },
+  {
+   "id": 95000142,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-09-16T12:58:00.000-03:00",
+   "date_approved": "2026-09-16T12:58:00.000-03:00",
+   "date_last_updated": "2026-09-16T12:58:00.000-03:00",
+   "transaction_amount": 83700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 78669.63
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2141
+   }
+  },
+  {
+   "id": 96000093,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-09-16T15:00:00.000-03:00",
+   "date_approved": "2026-09-16T15:00:00.000-03:00",
+   "date_last_updated": "2026-09-16T15:00:00.000-03:00",
+   "transaction_amount": 1364404,
+   "collector_id": 3041,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000140,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-09-16T15:01:00.000-03:00",
+   "date_approved": "2026-09-16T15:01:00.000-03:00",
+   "date_last_updated": "2026-09-16T15:01:00.000-03:00",
+   "transaction_amount": 208845,
+   "collector_id": 3011,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000143,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mueble de cocina a medida - link de pago",
+   "date_created": "2026-09-16T17:28:00.000-03:00",
+   "date_approved": "2026-09-16T17:28:00.000-03:00",
+   "date_last_updated": "2026-09-16T17:28:00.000-03:00",
+   "transaction_amount": 1212100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 1139252.79
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2026
+   }
+  },
+  {
+   "id": 96000128,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "FERRETERIA INDUSTRIAL CUYO SRL CUIT 30706660018",
+   "date_created": "2026-09-17T13:15:00.000-03:00",
+   "date_approved": "2026-09-17T13:15:00.000-03:00",
+   "date_last_updated": "2026-09-17T13:15:00.000-03:00",
+   "transaction_amount": 255373,
+   "collector_id": 3081,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000144,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-09-17T14:20:00.000-03:00",
+   "date_approved": "2026-09-17T14:20:00.000-03:00",
+   "date_last_updated": "2026-09-17T14:20:00.000-03:00",
+   "transaction_amount": 211500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 198788.85
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2042
+   }
+  },
+  {
+   "id": 96000114,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HERRAJES CORDOBA SRL CUIT 30715551114",
+   "date_created": "2026-09-17T14:25:00.000-03:00",
+   "date_approved": "2026-09-17T14:25:00.000-03:00",
+   "date_last_updated": "2026-09-17T14:25:00.000-03:00",
+   "transaction_amount": 817179,
+   "collector_id": 3052,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000058,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA IVA DDJJ",
+   "date_created": "2026-09-18T12:01:00.000-03:00",
+   "date_approved": "2026-09-18T12:01:00.000-03:00",
+   "date_last_updated": "2026-09-18T12:01:00.000-03:00",
+   "transaction_amount": 1314386,
+   "collector_id": 3000,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000145,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - link de pago",
+   "date_created": "2026-09-18T15:44:00.000-03:00",
+   "date_approved": "2026-09-18T15:44:00.000-03:00",
+   "date_last_updated": "2026-09-18T15:44:00.000-03:00",
+   "transaction_amount": 365600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 343627.44
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2398
+   }
+  },
+  {
+   "id": 95000146,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-09-19T13:17:00.000-03:00",
+   "date_approved": "2026-09-19T13:17:00.000-03:00",
+   "date_last_updated": "2026-09-19T13:17:00.000-03:00",
+   "transaction_amount": 74400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 69928.56
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2052
+   }
+  },
+  {
+   "id": 95000209,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "CLINICA DENTAL SONRISA SRL",
+   "date_created": "2026-09-21T10:28:00.000-03:00",
+   "date_approved": "2026-09-21T10:28:00.000-03:00",
+   "date_last_updated": "2026-09-21T10:28:00.000-03:00",
+   "transaction_amount": 2277817,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2277817
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2211
+   }
+  },
+  {
+   "id": 96000063,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "ECOGAS gas natural bimestral",
+   "date_created": "2026-09-21T12:26:00.000-03:00",
+   "date_approved": "2026-09-21T12:26:00.000-03:00",
+   "date_last_updated": "2026-09-21T12:26:00.000-03:00",
+   "transaction_amount": 261278,
+   "collector_id": 3034,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000214,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "OFICINAS CUYO SA",
+   "date_created": "2026-09-21T13:12:00.000-03:00",
+   "date_approved": "2026-09-21T13:12:00.000-03:00",
+   "date_last_updated": "2026-09-21T13:12:00.000-03:00",
+   "transaction_amount": 3448806,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 3448806
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2181
+   }
+  },
+  {
+   "id": 95000147,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-09-21T15:41:00.000-03:00",
+   "date_approved": "2026-09-21T15:41:00.000-03:00",
+   "date_last_updated": "2026-09-21T15:41:00.000-03:00",
+   "transaction_amount": 87000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 81771.3
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2004
+   }
+  },
+  {
+   "id": 96000059,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "AGUAS CORDOBESAS servicio de agua",
+   "date_created": "2026-09-22T11:05:00.000-03:00",
+   "date_approved": "2026-09-22T11:05:00.000-03:00",
+   "date_last_updated": "2026-09-22T11:05:00.000-03:00",
+   "transaction_amount": 92859,
+   "collector_id": 3088,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000148,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-09-22T12:54:00.000-03:00",
+   "date_approved": "2026-09-22T12:54:00.000-03:00",
+   "date_last_updated": "2026-09-22T12:54:00.000-03:00",
+   "transaction_amount": 70500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 66262.95
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2184
+   }
+  },
+  {
+   "id": 95000149,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-09-23T10:11:00.000-03:00",
+   "date_approved": "2026-09-23T10:11:00.000-03:00",
+   "date_last_updated": "2026-09-23T10:11:00.000-03:00",
+   "transaction_amount": 209500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 196909.05
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2276
+   }
+  },
+  {
+   "id": 95000150,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-09-23T11:18:00.000-03:00",
+   "date_approved": "2026-09-23T11:18:00.000-03:00",
+   "date_last_updated": "2026-09-23T11:18:00.000-03:00",
+   "transaction_amount": 96200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 90418.38
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2059
+   }
+  },
+  {
+   "id": 96000107,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-09-24T11:41:00.000-03:00",
+   "date_approved": "2026-09-24T11:41:00.000-03:00",
+   "date_last_updated": "2026-09-24T11:41:00.000-03:00",
+   "transaction_amount": 964517,
+   "collector_id": 3058,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000151,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-09-24T14:31:00.000-03:00",
+   "date_approved": "2026-09-24T14:31:00.000-03:00",
+   "date_last_updated": "2026-09-24T14:31:00.000-03:00",
+   "transaction_amount": 428400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 402653.16
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2290
+   }
+  },
+  {
+   "id": 95000153,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-09-24T17:28:00.000-03:00",
+   "date_approved": "2026-09-24T17:28:00.000-03:00",
+   "date_last_updated": "2026-09-24T17:28:00.000-03:00",
+   "transaction_amount": 71900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 67578.81
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2071
+   }
+  },
+  {
+   "id": 95000152,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-09-24T17:48:00.000-03:00",
+   "date_approved": "2026-09-24T17:48:00.000-03:00",
+   "date_last_updated": "2026-09-24T17:48:00.000-03:00",
+   "transaction_amount": 445300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 418537.47
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2449
+   }
+  },
+  {
+   "id": 95000155,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-09-25T09:02:00.000-03:00",
+   "date_approved": "2026-09-25T09:02:00.000-03:00",
+   "date_last_updated": "2026-09-25T09:02:00.000-03:00",
+   "transaction_amount": 346100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 325299.39
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2155
+   }
+  },
+  {
+   "id": 96000060,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "SEGURO integral taller y ART Sancor",
+   "date_created": "2026-09-25T13:32:00.000-03:00",
+   "date_approved": "2026-09-25T13:32:00.000-03:00",
+   "date_last_updated": "2026-09-25T13:32:00.000-03:00",
+   "transaction_amount": 212012,
+   "collector_id": 3040,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000154,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-09-25T16:34:00.000-03:00",
+   "date_approved": "2026-09-25T16:34:00.000-03:00",
+   "date_last_updated": "2026-09-25T16:34:00.000-03:00",
+   "transaction_amount": 344700,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 323983.53
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2207
+   }
+  },
+  {
+   "id": 95000157,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - link de pago",
+   "date_created": "2026-09-26T10:49:00.000-03:00",
+   "date_approved": "2026-09-26T10:49:00.000-03:00",
+   "date_last_updated": "2026-09-26T10:49:00.000-03:00",
+   "transaction_amount": 448400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 421451.16
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2488
+   }
+  },
+  {
+   "id": 95000156,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - link de pago",
+   "date_created": "2026-09-26T11:23:00.000-03:00",
+   "date_approved": "2026-09-26T11:23:00.000-03:00",
+   "date_last_updated": "2026-09-26T11:23:00.000-03:00",
+   "transaction_amount": 195200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 183468.48
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2109
+   }
+  },
+  {
+   "id": 96000061,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HONORARIOS estudio contable",
+   "date_created": "2026-09-28T10:30:00.000-03:00",
+   "date_approved": "2026-09-28T10:30:00.000-03:00",
+   "date_last_updated": "2026-09-28T10:30:00.000-03:00",
+   "transaction_amount": 226943,
+   "collector_id": 3063,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000062,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "RETIRO SOCIO TRANSF CTA PROPIA",
+   "date_created": "2026-09-28T10:43:00.000-03:00",
+   "date_approved": "2026-09-28T10:43:00.000-03:00",
+   "date_last_updated": "2026-09-28T10:43:00.000-03:00",
+   "transaction_amount": 1699185,
+   "collector_id": 3038,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000158,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-09-28T12:48:00.000-03:00",
+   "date_approved": "2026-09-28T12:48:00.000-03:00",
+   "date_last_updated": "2026-09-28T12:48:00.000-03:00",
+   "transaction_amount": 442800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 416187.72
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2366
+   }
+  },
+  {
+   "id": 95000159,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-09-29T12:37:00.000-03:00",
+   "date_approved": "2026-09-29T12:37:00.000-03:00",
+   "date_last_updated": "2026-09-29T12:37:00.000-03:00",
+   "transaction_amount": 425100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 399551.49
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2481
+   }
+  },
+  {
+   "id": 95000160,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-09-30T10:12:00.000-03:00",
+   "date_approved": "2026-09-30T10:12:00.000-03:00",
+   "date_last_updated": "2026-09-30T10:12:00.000-03:00",
+   "transaction_amount": 358800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 337236.12
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2017
+   }
+  },
+  {
+   "id": 96000094,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-09-30T11:41:00.000-03:00",
+   "date_approved": "2026-09-30T11:41:00.000-03:00",
+   "date_last_updated": "2026-09-30T11:41:00.000-03:00",
+   "transaction_amount": 1364729,
+   "collector_id": 3053,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000161,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-10-01T09:36:00.000-03:00",
+   "date_approved": "2026-10-01T09:36:00.000-03:00",
+   "date_last_updated": "2026-10-01T09:36:00.000-03:00",
+   "transaction_amount": 94300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 88632.57
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2028
+   }
+  },
+  {
+   "id": 96000141,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-10-01T10:03:00.000-03:00",
+   "date_approved": "2026-10-01T10:03:00.000-03:00",
+   "date_last_updated": "2026-10-01T10:03:00.000-03:00",
+   "transaction_amount": 180595,
+   "collector_id": 3028,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000162,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-10-02T10:41:00.000-03:00",
+   "date_approved": "2026-10-02T10:41:00.000-03:00",
+   "date_last_updated": "2026-10-02T10:41:00.000-03:00",
+   "transaction_amount": 477800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 449084.22
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2329
+   }
+  },
+  {
+   "id": 95000163,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-10-02T16:25:00.000-03:00",
+   "date_approved": "2026-10-02T16:25:00.000-03:00",
+   "date_last_updated": "2026-10-02T16:25:00.000-03:00",
+   "transaction_amount": 79600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 74816.04
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2499
+   }
+  },
+  {
+   "id": 96000065,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PAGO HABERES NOMINA 5 EMPL",
+   "date_created": "2026-10-05T10:23:00.000-03:00",
+   "date_approved": "2026-10-05T10:23:00.000-03:00",
+   "date_last_updated": "2026-10-05T10:23:00.000-03:00",
+   "transaction_amount": 5704970,
+   "collector_id": 3082,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000066,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TASA municipal comercio Municipalidad de Cordoba",
+   "date_created": "2026-10-05T10:28:00.000-03:00",
+   "date_approved": "2026-10-05T10:28:00.000-03:00",
+   "date_last_updated": "2026-10-05T10:28:00.000-03:00",
+   "transaction_amount": 182280,
+   "collector_id": 3035,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000064,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ALQUILER taller INMOB DEL PARQUE",
+   "date_created": "2026-10-05T11:04:00.000-03:00",
+   "date_approved": "2026-10-05T11:04:00.000-03:00",
+   "date_last_updated": "2026-10-05T11:04:00.000-03:00",
+   "transaction_amount": 1409006,
+   "collector_id": 3019,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000164,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-10-05T13:51:00.000-03:00",
+   "date_approved": "2026-10-05T13:51:00.000-03:00",
+   "date_last_updated": "2026-10-05T13:51:00.000-03:00",
+   "transaction_amount": 499200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 469198.08
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2044
+   }
+  },
+  {
+   "id": 95000221,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HOTEL BOUTIQUE LA SERRANIA SA",
+   "date_created": "2026-10-05T16:26:00.000-03:00",
+   "date_approved": "2026-10-05T16:26:00.000-03:00",
+   "date_last_updated": "2026-10-05T16:26:00.000-03:00",
+   "transaction_amount": 1898703,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 1898703
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2094
+   }
+  },
+  {
+   "id": 95000165,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-10-06T11:44:00.000-03:00",
+   "date_approved": "2026-10-06T11:44:00.000-03:00",
+   "date_last_updated": "2026-10-06T11:44:00.000-03:00",
+   "transaction_amount": 578200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 543450.18
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2378
+   }
+  },
+  {
+   "id": 95000202,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ESTUDIO JURIDICO BUSTOS Y ASOCIADOS SRL",
+   "date_created": "2026-10-06T14:04:00.000-03:00",
+   "date_approved": "2026-10-06T14:04:00.000-03:00",
+   "date_last_updated": "2026-10-06T14:04:00.000-03:00",
+   "transaction_amount": 2996090,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2996090
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2306
+   }
+  },
+  {
+   "id": 95000166,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-10-06T14:12:00.000-03:00",
+   "date_approved": "2026-10-06T14:12:00.000-03:00",
+   "date_last_updated": "2026-10-06T14:12:00.000-03:00",
+   "transaction_amount": 102300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 96151.77
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2065
+   }
+  },
+  {
+   "id": 95000167,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-10-07T10:03:00.000-03:00",
+   "date_approved": "2026-10-07T10:03:00.000-03:00",
+   "date_last_updated": "2026-10-07T10:03:00.000-03:00",
+   "transaction_amount": 568500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 534333.15
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2377
+   }
+  },
+  {
+   "id": 96000129,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "FERRETERIA INDUSTRIAL CUYO SRL CUIT 30706660018",
+   "date_created": "2026-10-08T13:30:00.000-03:00",
+   "date_approved": "2026-10-08T13:30:00.000-03:00",
+   "date_last_updated": "2026-10-08T13:30:00.000-03:00",
+   "transaction_amount": 282091,
+   "collector_id": 3080,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000168,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - link de pago",
+   "date_created": "2026-10-08T14:17:00.000-03:00",
+   "date_approved": "2026-10-08T14:17:00.000-03:00",
+   "date_last_updated": "2026-10-08T14:17:00.000-03:00",
+   "transaction_amount": 605600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 569203.44
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2412
+   }
+  },
+  {
+   "id": 96000108,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-10-08T14:39:00.000-03:00",
+   "date_approved": "2026-10-08T14:39:00.000-03:00",
+   "date_last_updated": "2026-10-08T14:39:00.000-03:00",
+   "transaction_amount": 1014267,
+   "collector_id": 3039,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000082,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Afilado y repuestos sierra",
+   "date_created": "2026-10-08T15:14:00.000-03:00",
+   "date_approved": "2026-10-08T15:14:00.000-03:00",
+   "date_last_updated": "2026-10-08T15:14:00.000-03:00",
+   "transaction_amount": 113697,
+   "collector_id": 3048,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000067,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "TELECOM internet y telefonia",
+   "date_created": "2026-10-08T15:53:00.000-03:00",
+   "date_approved": "2026-10-08T15:53:00.000-03:00",
+   "date_last_updated": "2026-10-08T15:53:00.000-03:00",
+   "transaction_amount": 79223,
+   "collector_id": 3027,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000169,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-10-09T10:27:00.000-03:00",
+   "date_approved": "2026-10-09T10:27:00.000-03:00",
+   "date_last_updated": "2026-10-09T10:27:00.000-03:00",
+   "transaction_amount": 505600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 475213.44
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2410
+   }
+  },
+  {
+   "id": 96000121,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "PINTURAS ALBA SA CUIT 30718880003",
+   "date_created": "2026-10-09T11:44:00.000-03:00",
+   "date_approved": "2026-10-09T11:44:00.000-03:00",
+   "date_last_updated": "2026-10-09T11:44:00.000-03:00",
+   "transaction_amount": 625065,
+   "collector_id": 3049,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000170,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-10-09T17:22:00.000-03:00",
+   "date_approved": "2026-10-09T17:22:00.000-03:00",
+   "date_last_updated": "2026-10-09T17:22:00.000-03:00",
+   "transaction_amount": 101800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 95681.82
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2011
+   }
+  },
+  {
+   "id": 95000172,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-10-10T10:47:00.000-03:00",
+   "date_approved": "2026-10-10T10:47:00.000-03:00",
+   "date_last_updated": "2026-10-10T10:47:00.000-03:00",
+   "transaction_amount": 316400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 297384.36
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2023
+   }
+  },
+  {
+   "id": 95000171,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Cama 2 plazas de pino - cobro QR",
+   "date_created": "2026-10-10T14:19:00.000-03:00",
+   "date_approved": "2026-10-10T14:19:00.000-03:00",
+   "date_last_updated": "2026-10-10T14:19:00.000-03:00",
+   "transaction_amount": 440600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 414119.94
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2401
+   }
+  },
+  {
+   "id": 95000173,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-10-13T09:27:00.000-03:00",
+   "date_approved": "2026-10-13T09:27:00.000-03:00",
+   "date_last_updated": "2026-10-13T09:27:00.000-03:00",
+   "transaction_amount": 369200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 347011.08
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2170
+   }
+  },
+  {
+   "id": 95000174,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-10-13T10:10:00.000-03:00",
+   "date_approved": "2026-10-13T10:10:00.000-03:00",
+   "date_last_updated": "2026-10-13T10:10:00.000-03:00",
+   "transaction_amount": 410900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 386204.91
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2426
+   }
+  },
+  {
+   "id": 95000210,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "CLINICA DENTAL SONRISA SRL",
+   "date_created": "2026-10-13T12:23:00.000-03:00",
+   "date_approved": "2026-10-13T12:23:00.000-03:00",
+   "date_last_updated": "2026-10-13T12:23:00.000-03:00",
+   "transaction_amount": 2318056,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2318056
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2053
+   }
+  },
+  {
+   "id": 96000069,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "EPEC energia electrica",
+   "date_created": "2026-10-13T14:42:00.000-03:00",
+   "date_approved": "2026-10-13T14:42:00.000-03:00",
+   "date_last_updated": "2026-10-13T14:42:00.000-03:00",
+   "transaction_amount": 691093,
+   "collector_id": 3085,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000068,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA F931 CARGAS SOCIALES",
+   "date_created": "2026-10-13T14:58:00.000-03:00",
+   "date_approved": "2026-10-13T14:58:00.000-03:00",
+   "date_last_updated": "2026-10-13T14:58:00.000-03:00",
+   "transaction_amount": 1578481,
+   "collector_id": 3082,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000175,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-10-14T09:31:00.000-03:00",
+   "date_approved": "2026-10-14T09:31:00.000-03:00",
+   "date_last_updated": "2026-10-14T09:31:00.000-03:00",
+   "transaction_amount": 194800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 183092.52
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2280
+   }
+  },
+  {
+   "id": 96000095,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-10-14T14:12:00.000-03:00",
+   "date_approved": "2026-10-14T14:12:00.000-03:00",
+   "date_last_updated": "2026-10-14T14:12:00.000-03:00",
+   "transaction_amount": 1373729,
+   "collector_id": 3069,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000176,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - link de pago",
+   "date_created": "2026-10-14T15:07:00.000-03:00",
+   "date_approved": "2026-10-14T15:07:00.000-03:00",
+   "date_last_updated": "2026-10-14T15:07:00.000-03:00",
+   "transaction_amount": 668400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 628229.16
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2181
+   }
+  },
+  {
+   "id": 95000177,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-10-15T11:29:00.000-03:00",
+   "date_approved": "2026-10-15T11:29:00.000-03:00",
+   "date_last_updated": "2026-10-15T11:29:00.000-03:00",
+   "transaction_amount": 205500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 193149.45
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2126
+   }
+  },
+  {
+   "id": 95000178,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - cobro QR",
+   "date_created": "2026-10-15T13:37:00.000-03:00",
+   "date_approved": "2026-10-15T13:37:00.000-03:00",
+   "date_last_updated": "2026-10-15T13:37:00.000-03:00",
+   "transaction_amount": 312500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 293718.75
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2046
+   }
+  },
+  {
+   "id": 96000070,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP RENTAS CBA IIBB",
+   "date_created": "2026-10-15T14:03:00.000-03:00",
+   "date_approved": "2026-10-15T14:03:00.000-03:00",
+   "date_last_updated": "2026-10-15T14:03:00.000-03:00",
+   "transaction_amount": 541524,
+   "collector_id": 3024,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000142,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "TRANSPORTE ANDES SRL CUIT 30714440025",
+   "date_created": "2026-10-16T15:36:00.000-03:00",
+   "date_approved": "2026-10-16T15:36:00.000-03:00",
+   "date_last_updated": "2026-10-16T15:36:00.000-03:00",
+   "transaction_amount": 204695,
+   "collector_id": 3047,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000179,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-10-16T16:16:00.000-03:00",
+   "date_approved": "2026-10-16T16:16:00.000-03:00",
+   "date_last_updated": "2026-10-16T16:16:00.000-03:00",
+   "transaction_amount": 103000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 96809.7
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2144
+   }
+  },
+  {
+   "id": 95000180,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-10-16T16:35:00.000-03:00",
+   "date_approved": "2026-10-16T16:35:00.000-03:00",
+   "date_last_updated": "2026-10-16T16:35:00.000-03:00",
+   "transaction_amount": 198500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 186570.15
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2382
+   }
+  },
+  {
+   "id": 95000181,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - link de pago",
+   "date_created": "2026-10-17T16:05:00.000-03:00",
+   "date_approved": "2026-10-17T16:05:00.000-03:00",
+   "date_last_updated": "2026-10-17T16:05:00.000-03:00",
+   "transaction_amount": 459900,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 432260.01
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2054
+   }
+  },
+  {
+   "id": 96000071,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "VEP ARCA IVA DDJJ",
+   "date_created": "2026-10-19T13:29:00.000-03:00",
+   "date_approved": "2026-10-19T13:29:00.000-03:00",
+   "date_last_updated": "2026-10-19T13:29:00.000-03:00",
+   "transaction_amount": 1337701,
+   "collector_id": 3017,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000115,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HERRAJES CORDOBA SRL CUIT 30715551114",
+   "date_created": "2026-10-19T14:24:00.000-03:00",
+   "date_approved": "2026-10-19T14:24:00.000-03:00",
+   "date_last_updated": "2026-10-19T14:24:00.000-03:00",
+   "transaction_amount": 791250,
+   "collector_id": 3073,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000183,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Placard 2 puertas - cobro QR",
+   "date_created": "2026-10-20T12:48:00.000-03:00",
+   "date_approved": "2026-10-20T12:48:00.000-03:00",
+   "date_last_updated": "2026-10-20T12:48:00.000-03:00",
+   "transaction_amount": 647500,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 608585.25
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2034
+   }
+  },
+  {
+   "id": 95000182,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-10-20T17:49:00.000-03:00",
+   "date_approved": "2026-10-20T17:49:00.000-03:00",
+   "date_last_updated": "2026-10-20T17:49:00.000-03:00",
+   "transaction_amount": 222400,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 209033.76
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2022
+   }
+  },
+  {
+   "id": 95000185,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-10-21T09:07:00.000-03:00",
+   "date_approved": "2026-10-21T09:07:00.000-03:00",
+   "date_last_updated": "2026-10-21T09:07:00.000-03:00",
+   "transaction_amount": 372100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 349736.79
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2297
+   }
+  },
+  {
+   "id": 95000184,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-10-21T16:46:00.000-03:00",
+   "date_approved": "2026-10-21T16:46:00.000-03:00",
+   "date_last_updated": "2026-10-21T16:46:00.000-03:00",
+   "transaction_amount": 81800,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 76883.82
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2383
+   }
+  },
+  {
+   "id": 96000072,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "AGUAS CORDOBESAS servicio de agua",
+   "date_created": "2026-10-22T11:05:00.000-03:00",
+   "date_approved": "2026-10-22T11:05:00.000-03:00",
+   "date_last_updated": "2026-10-22T11:05:00.000-03:00",
+   "transaction_amount": 92617,
+   "collector_id": 3063,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000109,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "ASERRADERO SIERRAS SRL CUIT 30709876542",
+   "date_created": "2026-10-22T13:37:00.000-03:00",
+   "date_approved": "2026-10-22T13:37:00.000-03:00",
+   "date_last_updated": "2026-10-22T13:37:00.000-03:00",
+   "transaction_amount": 933235,
+   "collector_id": 3008,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000186,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Escritorio melamina - link de pago",
+   "date_created": "2026-10-22T15:17:00.000-03:00",
+   "date_approved": "2026-10-22T15:17:00.000-03:00",
+   "date_last_updated": "2026-10-22T15:17:00.000-03:00",
+   "transaction_amount": 317300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 298230.27
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2107
+   }
+  },
+  {
+   "id": 95000187,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-10-23T17:38:00.000-03:00",
+   "date_approved": "2026-10-23T17:38:00.000-03:00",
+   "date_last_updated": "2026-10-23T17:38:00.000-03:00",
+   "transaction_amount": 497200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 467318.28
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2210
+   }
+  },
+  {
+   "id": 95000188,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-10-24T09:04:00.000-03:00",
+   "date_approved": "2026-10-24T09:04:00.000-03:00",
+   "date_last_updated": "2026-10-24T09:04:00.000-03:00",
+   "transaction_amount": 96100,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 90324.39
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2000
+   }
+  },
+  {
+   "id": 95000189,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-10-24T14:47:00.000-03:00",
+   "date_approved": "2026-10-24T14:47:00.000-03:00",
+   "date_last_updated": "2026-10-24T14:47:00.000-03:00",
+   "transaction_amount": 196600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 184784.34
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2252
+   }
+  },
+  {
+   "id": 96000074,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HONORARIOS estudio contable",
+   "date_created": "2026-10-26T10:04:00.000-03:00",
+   "date_approved": "2026-10-26T10:04:00.000-03:00",
+   "date_last_updated": "2026-10-26T10:04:00.000-03:00",
+   "transaction_amount": 243465,
+   "collector_id": 3044,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000190,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - link de pago",
+   "date_created": "2026-10-26T10:29:00.000-03:00",
+   "date_approved": "2026-10-26T10:29:00.000-03:00",
+   "date_last_updated": "2026-10-26T10:29:00.000-03:00",
+   "transaction_amount": 97600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 91734.24
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2428
+   }
+  },
+  {
+   "id": 96000073,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "SEGURO integral taller y ART Sancor",
+   "date_created": "2026-10-26T10:35:00.000-03:00",
+   "date_approved": "2026-10-26T10:35:00.000-03:00",
+   "date_last_updated": "2026-10-26T10:35:00.000-03:00",
+   "transaction_amount": 208262,
+   "collector_id": 3066,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000215,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "OFICINAS CUYO SA",
+   "date_created": "2026-10-26T12:41:00.000-03:00",
+   "date_approved": "2026-10-26T12:41:00.000-03:00",
+   "date_last_updated": "2026-10-26T12:41:00.000-03:00",
+   "transaction_amount": 3247542,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 3247542
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2403
+   }
+  },
+  {
+   "id": 95000192,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa ratona de paraíso - cobro QR",
+   "date_created": "2026-10-27T14:16:00.000-03:00",
+   "date_approved": "2026-10-27T14:16:00.000-03:00",
+   "date_last_updated": "2026-10-27T14:16:00.000-03:00",
+   "transaction_amount": 187000,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 175761.3
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2237
+   }
+  },
+  {
+   "id": 95000191,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - link de pago",
+   "date_created": "2026-10-27T16:58:00.000-03:00",
+   "date_approved": "2026-10-27T16:58:00.000-03:00",
+   "date_last_updated": "2026-10-27T16:58:00.000-03:00",
+   "transaction_amount": 712300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 669490.77
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2269
+   }
+  },
+  {
+   "id": 96000075,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "RETIRO SOCIO TRANSF CTA PROPIA",
+   "date_created": "2026-10-28T15:16:00.000-03:00",
+   "date_approved": "2026-10-28T15:16:00.000-03:00",
+   "date_last_updated": "2026-10-28T15:16:00.000-03:00",
+   "transaction_amount": 1700088,
+   "collector_id": 3023,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 96000096,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "MADERAS DEL SUR SA CUIT 30712345671",
+   "date_created": "2026-10-28T15:28:00.000-03:00",
+   "date_approved": "2026-10-28T15:28:00.000-03:00",
+   "date_last_updated": "2026-10-28T15:28:00.000-03:00",
+   "transaction_amount": 1535464,
+   "collector_id": 3025,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000193,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Reparación y laqueado - cobro QR",
+   "date_created": "2026-10-28T15:59:00.000-03:00",
+   "date_approved": "2026-10-28T15:59:00.000-03:00",
+   "date_last_updated": "2026-10-28T15:59:00.000-03:00",
+   "transaction_amount": 69600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 65417.04
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2314
+   }
+  },
+  {
+   "id": 95000194,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Biblioteca a medida - cobro QR",
+   "date_created": "2026-10-28T16:34:00.000-03:00",
+   "date_approved": "2026-10-28T16:34:00.000-03:00",
+   "date_last_updated": "2026-10-28T16:34:00.000-03:00",
+   "transaction_amount": 403300,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 379061.67
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2239
+   }
+  },
+  {
+   "id": 95000222,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "HOTEL BOUTIQUE LA SERRANIA SA",
+   "date_created": "2026-10-29T15:27:00.000-03:00",
+   "date_approved": "2026-10-29T15:27:00.000-03:00",
+   "date_last_updated": "2026-10-29T15:27:00.000-03:00",
+   "transaction_amount": 2567601,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 2567601
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2435
+   }
+  },
+  {
+   "id": 95000195,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Silla de roble - cobro QR",
+   "date_created": "2026-10-29T15:44:00.000-03:00",
+   "date_approved": "2026-10-29T15:44:00.000-03:00",
+   "date_last_updated": "2026-10-29T15:44:00.000-03:00",
+   "transaction_amount": 102600,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 96433.74
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2292
+   }
+  },
+  {
+   "id": 96000130,
+   "status": "approved",
+   "operation_type": "money_transfer",
+   "description": "FERRETERIA INDUSTRIAL CUYO SRL CUIT 30706660018",
+   "date_created": "2026-10-29T15:57:00.000-03:00",
+   "date_approved": "2026-10-29T15:57:00.000-03:00",
+   "date_last_updated": "2026-10-29T15:57:00.000-03:00",
+   "transaction_amount": 259360,
+   "collector_id": 3068,
+   "payer": {
+    "id": 1000
+   }
+  },
+  {
+   "id": 95000196,
+   "status": "approved",
+   "operation_type": "regular_payment",
+   "description": "Mesa de comedor de algarrobo - link de pago",
+   "date_created": "2026-10-30T11:22:00.000-03:00",
+   "date_approved": "2026-10-30T11:22:00.000-03:00",
+   "date_last_updated": "2026-10-30T11:22:00.000-03:00",
+   "transaction_amount": 683200,
+   "transaction_amount_refunded": 0,
+   "transaction_details": {
+    "net_received_amount": 642139.68
+   },
+   "collector_id": 1000,
+   "payer": {
+    "id": 2305
+   }
+  }
+ ]
+}

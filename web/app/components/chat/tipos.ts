@@ -3,8 +3,10 @@
 export type Cita = { dato: string; valor: string; periodo: string; fuente: string; tabla: string; url: string };
 export type Opcion = { id: string; titulo: string; detalle: string; costo: number; cubre: boolean };
 export type Horizonte = { dias: number; saldoFinal: number; minimo: number; fechaMinimo: string };
+export type Alerta = { id: string; nivel: 'critica' | 'atencion' | 'info'; titulo: string; detalle: string };
 export type Analisis = {
-  resumen: { movimientos: number; recibidos: number; emitidos: number; ignorados: string[]; insumos: { nombre: string; sha256: string }[] };
+  alertas: { alertas: Alerta[]; resumen: { vencidas: number; vence7: number; vence30: number; criticas: number } };
+  resumen: { movimientos: number; recibidos: number; emitidos: number; boletas: number; empleados: number; ignorados: string[]; insumos: { nombre: string; sha256: string }[]; mercadopago?: 'api' | 'simulacion' | 'mixto' };
   pronostico: {
     hoy: string; saldoInicial: number; serie: { fecha: string; saldo: number }[];
     horizontes: Horizonte[];

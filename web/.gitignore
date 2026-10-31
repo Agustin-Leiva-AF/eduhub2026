@@ -3,3 +3,5 @@ node_modules/
 .env*
 data/registro_local.json
 data/carpetas/
+data/avisos.json
+!.env.example

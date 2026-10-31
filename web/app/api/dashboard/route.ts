@@ -8,6 +8,7 @@ import { detectar, parseComprobantes, parseExtracto } from '@/lib/parse';
 import { pronosticar, sumar } from '@/lib/forecast';
 import { recomendar } from '@/lib/advice';
 import { contexto } from '@/lib/openarg';
+import { calcularExcedente } from '@/lib/excedente';
 import { categorizar, ETIQUETA, type Categoria } from '@/lib/categorias';
 
 export const runtime = 'nodejs';
@@ -32,7 +33,9 @@ export async function POST(req: Request) {
   } else {
     demo = true;
     pyme = PYME_DEMO;
-    archivos = await Promise.all(DEMO.map(async nombre => ({ nombre, texto: await fs.readFile(path.join(process.cwd(), 'public/demo', nombre), 'utf8') })));
+    const pedido = await req.json().catch(() => ({}));
+    const dir = pedido.escenario === 'holgada' ? 'public/demo/holgada' : 'public/demo';
+    archivos = await Promise.all(DEMO.map(async nombre => ({ nombre, texto: await fs.readFile(path.join(process.cwd(), dir, nombre), 'utf8') })));
   }
 
   const movs = [], rec = [], emi = [], ignorados: string[] = [];
@@ -43,7 +46,7 @@ export async function POST(req: Request) {
     else if (t === 'emitidos') emi.push(...parseComprobantes(a.texto));
     else ignorados.push(a.nombre);
   }
-  if (!movs.length) return NextResponse.json({ error: 'No encontré un extracto bancario con columnas de fecha, débito/crédito y saldo.', ignorados }, { status: 400 });
+  if (!movs.length) return NextResponse.json({ error: 'No pude reconocer un extracto en los archivos. Necesito un CSV con fecha, importe (o débito y crédito) y saldo; también acepto reportes de Mercado Pago.', ignorados }, { status: 400 });
 
   const ctx = contexto();
   const p = pronosticar(movs, rec, emi, { ipcMensual: ctx.ipcMensual });
@@ -95,7 +98,7 @@ export async function POST(req: Request) {
     pyme: pyme || 'Mi pyme', demo, corte: p.hoy,
     resumen: { movimientos: movs.length, recibidos: rec.length, emitidos: emi.length, ignorados, insumos },
     pronostico: p, // completo: eventos con ventas, contrapartes, huecos, historia
-    recomendacion: r, citas: ctx.citas,
+    recomendacion: r, excedente: calcularExcedente(p, ctx), citas: ctx.citas,
     mensual, etiquetas: ETIQUETA, ventasMensuales,
   });
 }

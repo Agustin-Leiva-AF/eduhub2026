@@ -5,7 +5,7 @@
 //  - aguinaldo (18/12) y ventas por día de semana de las últimas 8 semanas,
 //  - todo ajustado por la inflación mensual del último dato INDEC (vía OpenARG).
 import { categorizar, type Categoria } from './categorias';
-import type { Comprobante, Movimiento } from './parse';
+import type { Boleta, Comprobante, Movimiento, Nomina } from './parse';
 
 export const HORIZONTES = [15, 30, 60, 90, 120] as const;
 
@@ -26,7 +26,7 @@ export type Contraparte = {
   cuit: string; nombre: string; lado: 'pagar' | 'cobrar'; plazoDias: number; cadenciaDias: number | null;
   montoTipico: number; pendientes: number; facturas: number;
 };
-export type Opciones = { hoy?: string; horizonte?: number; ipcMensual: number; plazoExtra?: Record<string, number>; anticipos?: { cuit: string; numero: string; fecha: string }[] };
+export type Opciones = { hoy?: string; horizonte?: number; ipcMensual: number; plazoExtra?: Record<string, number>; anticipos?: { cuit: string; numero: string; fecha: string }[]; boletas?: Boleta[]; nomina?: Nomina[] };
 
 // Feriados nacionales (aprox.; verificar el calendario oficial). Los trasladables pueden diferir.
 const FERIADOS = new Set(['2026-11-23', '2026-12-08', '2026-12-25', '2027-01-01', '2027-02-08', '2027-02-09', '2027-03-24']);
@@ -104,6 +104,37 @@ export function pronosticar(movs: Movimiento[], recibidos: Comprobante[], emitid
   conciliar(recibidos, 'pagar');
   conciliar(emitidos, 'cobrar');
 
+  // 1b) Compromisos cargados por el usuario: boletas con vencimiento y nómina. Una boleta vencida se asume
+  // paga mañana (peor caso); lo que ya está cargado desplaza al recurrente equivalente del extracto.
+  const fijos: Evento[] = [];
+  const mensuales = (dia: number) => {
+    const out: string[] = [];
+    for (let k = 0; k <= Math.ceil(H / 28) + 1; k++) {
+      const base = s2d(hoy); base.setUTCDate(1); base.setUTCMonth(base.getUTCMonth() + k);
+      const ultimoDia = new Date(Date.UTC(base.getUTCFullYear(), base.getUTCMonth() + 1, 0)).getUTCDate();
+      base.setUTCDate(Math.min(dia, ultimoDia));
+      const f = proxHabil(d2s(base));
+      if (enRango(f)) out.push(f);
+    }
+    return out;
+  };
+  for (const b of op.boletas ?? []) {
+    const f = b.vencimiento > hoy ? proxHabil(b.vencimiento) : proxHabil(sumar(hoy, 1));
+    if (!enRango(f)) continue;
+    const cat = categorizar(`${b.concepto} ${b.emisor}`, -1);
+    fijos.push({ fecha: f, concepto: `${b.concepto}${b.emisor ? ` (${b.emisor})` : ''}`, categoria: cat === 'ventas' || cat === 'cobro_clientes' ? 'otros' : cat, monto: -Math.round(b.importe), origen: b.vencimiento > hoy ? 'boleta cargada' : 'boleta vencida' });
+  }
+  const nom = op.nomina ?? [];
+  if (nom.length) {
+    const neto = nom.reduce((s, n) => s + n.neto, 0), cargas = nom.reduce((s, n) => s + n.cargas, 0);
+    const diaDe = (campo: 'fechaPago' | 'vencCargas', def: number) => { const f = nom.map(n => n[campo]).find(Boolean); return f ? +f.slice(8, 10) : def; };
+    for (const f of mensuales(diaDe('fechaPago', 5))) fijos.push({ fecha: f, concepto: `Sueldos (${nom.length} empleados, nómina cargada)`, categoria: 'sueldos', monto: -Math.round(neto * crec(f)), origen: 'nómina cargada' });
+    if (cargas > 0) for (const f of mensuales(diaDe('vencCargas', 10))) fijos.push({ fecha: f, concepto: 'Cargas sociales (F.931, nómina cargada)', categoria: 'cargas_sociales', monto: -Math.round(cargas * crec(f)), origen: 'nómina cargada' });
+    aprendizajes.push(`Nómina cargada: ${nom.length} empleados, $${fmt(neto)} netos${cargas > 0 ? ` y $${fmt(cargas)} de cargas` : ''} por mes.`);
+  }
+  eventos.push(...fijos);
+  const cubierto = (cat: Categoria, f: string) => fijos.some(e => e.categoria === cat && Math.abs(difDias(e.fecha, f)) <= 10);
+
   // 2) Recurrentes del extracto (no conciliados con facturas)
   const RECURRENTES: Categoria[] = ['sueldos', 'cargas_sociales', 'impuestos', 'alquiler', 'servicios', 'retiros', 'bancarios'];
   const ultimos4 = new Set<string>();
@@ -112,20 +143,15 @@ export function pronosticar(movs: Movimiento[], recibidos: Comprobante[], emitid
   for (const p of pool) if (!p.usado && RECURRENTES.includes(p.m.cat) && p.m.monto < 0) {
     const k = clave(p.m.desc); grupos.set(k, [...(grupos.get(k) ?? []), p.m]);
   }
-  let sueldoMensual = 0;
+  let sueldoMensual = nom.reduce((s, n) => s + n.neto, 0);
   for (const [, ms] of grupos) {
     const meses = new Set(ms.map(m => m.fecha.slice(0, 7)).filter(m => ultimos4.has(m)));
     if (meses.size < 3) continue;
     const ult = ms[ms.length - 1];
     const dia = Math.round(mediana(ms.slice(-4).map(m => +m.fecha.slice(8, 10))));
+    if (nom.length && (ult.cat === 'sueldos' || ult.cat === 'cargas_sociales')) continue; // la nómina cargada manda
     if (ult.cat === 'sueldos') sueldoMensual += -ult.monto;
-    for (let k = 0; k <= Math.ceil(H / 28) + 1; k++) {
-      const base = s2d(hoy); base.setUTCDate(1); base.setUTCMonth(base.getUTCMonth() + k);
-      const ultimoDia = new Date(Date.UTC(base.getUTCFullYear(), base.getUTCMonth() + 1, 0)).getUTCDate();
-      base.setUTCDate(Math.min(dia, ultimoDia));
-      const f = proxHabil(d2s(base));
-      if (enRango(f)) eventos.push({ fecha: f, concepto: ult.desc, categoria: ult.cat, monto: Math.round(ult.monto * crec(f)), origen: 'recurrente' });
-    }
+    for (const f of mensuales(dia)) if (!cubierto(ult.cat, f)) eventos.push({ fecha: f, concepto: ult.desc, categoria: ult.cat, monto: Math.round(ult.monto * crec(f)), origen: 'recurrente' });
     aprendizajes.push(`"${ult.desc}" se repite todos los meses cerca del día ${dia} (≈ $${fmt(-ult.monto)}).`);
   }
 

@@ -8,7 +8,8 @@
     "start": "next start",
     "demo": "next build && next start",
     "datos": "node scripts/gen-demo.mjs",
-    "test": "tsx --test lib/forecast.test.ts"
+    "vapid": "node scripts/vapid.mjs",
+    "test": "tsx --test lib/forecast.test.ts lib/excedente.test.ts lib/parse.test.ts lib/mpcookie.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.3.0",
@@ -16,11 +17,13 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "viem": "^2.21.54",
+    "web-push": "^3.6.7",
     "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/node": "^20.17.6",
     "@types/react": "^19.1.0",
+    "@types/web-push": "^3.6.4",
     "solc": "^0.8.28",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3"

@@ -30,6 +30,8 @@ export default function Pie({ archivoRef, fotoRef, ocupado, onArchivos, onFoto }
       <a className="btn secundario" href="/demo/extracto_banco_esquina.csv" download>
         ⬇ CSV de ejemplo
       </a>
+      <a className="btn secundario" href="/demo/boletas_vencimientos.csv" download>⬇ Boletas</a>
+      <a className="btn secundario" href="/demo/nomina_octubre.csv" download>⬇ Nómina</a>
     </footer>
   );
 }

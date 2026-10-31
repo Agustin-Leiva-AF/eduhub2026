@@ -1,5 +1,6 @@
+import type { ReactNode } from 'react';
 // Cabecera estilo WhatsApp con identidad del bot y estado en vivo.
-export default function Cabecera({ estado }: { estado: string }) {
+export default function Cabecera({ estado, acciones }: { estado: string; acciones?: ReactNode }) {
   return (
     <header className="cabecera">
       <div className="avatar" aria-hidden>$</div>
@@ -7,6 +8,7 @@ export default function Cabecera({ estado }: { estado: string }) {
         <strong>CFO de Bolsillo</strong>
         <small aria-live="polite">{estado}</small>
       </div>
+      {acciones}
       <span className="etiqueta">Demo</span>
     </header>
   );

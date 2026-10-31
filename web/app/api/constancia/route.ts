@@ -8,6 +8,7 @@ export const runtime = 'nodejs';
 const DESTINOS: Record<string, string> = {
   'banco-demo': 'Banco de la demo (entidad financiera)',
   'sgr-demo': 'SGR de la demo (garantía)',
+  'alyc-demo': 'Agente habilitado de la demo (derivación, sin recomendación de productos)',
 };
 
 export async function POST(req: Request) {

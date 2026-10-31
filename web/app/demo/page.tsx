@@ -1,11 +1,13 @@
 'use client';
 // Simulador de chat estilo WhatsApp: el flujo estrella de punta a punta.
 import { useEffect, useRef, useState } from 'react';
-import Burbuja from './components/chat/Burbuja';
-import Cabecera, { Escribiendo } from './components/chat/Cabecera';
-import Pie from './components/chat/Pie';
-import PanelPasos from './components/chat/PanelPasos';
-import { PYME, type Analisis, type Constancia, type Fase, type Msg, type Opcion, type Comprobante } from './components/chat/tipos';
+import Link from 'next/link';
+import Burbuja from '../components/chat/Burbuja';
+import Cabecera, { Escribiendo } from '../components/chat/Cabecera';
+import Pie from '../components/chat/Pie';
+import Avisos from '../components/chat/Avisos';
+import PanelPasos from '../components/chat/PanelPasos';
+import { PYME, type Analisis, type Constancia, type Fase, type Msg, type Opcion, type Comprobante } from '../components/chat/tipos';
 
 const sinMovimiento = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
@@ -13,7 +15,7 @@ export default function Chat() {
   const [msgs, setMsgs] = useState<Msg[]>([{
     de: 'bot', tipo: 'texto',
     texto: '¡Hola! Soy tu CFO de Bolsillo 👋\nMandame el extracto de tu banco (CSV) y lo que bajás de "Mis Comprobantes" de ARCA. En 30 segundos te digo si te va a faltar plata, cuándo y qué podés hacer.',
-    botones: [{ id: 'demo', label: '▶ Probar con la pyme demo', lleno: true }, { id: 'subir', label: '📎 Subir mis archivos' }],
+    botones: [{ id: 'demo', label: '▶ Probar con la pyme demo', lleno: true }, { id: 'mp', label: '💳 Conectar Mercado Pago (sandbox)' }, { id: 'subir', label: '📎 Subir mis archivos' }],
   }]);
   const [escribiendo, setEscribiendo] = useState(false);
   const [analisis, setAnalisis] = useState<Analisis | null>(null);
@@ -21,6 +23,10 @@ export default function Chat() {
   const fin = useRef<HTMLDivElement>(null);
   const archivo = useRef<HTMLInputElement>(null);
   const foto = useRef<HTMLInputElement>(null);
+  const previos = useRef<File[]>([]);
+  const demoActiva = useRef(false);
+  const fuenteMp = useRef(false);
+  const corridas = useRef(0);
 
   useEffect(() => {
     fin.current?.scrollIntoView({ behavior: sinMovimiento() ? 'auto' : 'smooth', block: 'end' });
@@ -30,19 +36,21 @@ export default function Chat() {
   const pausa = (ms: number) => new Promise(r => setTimeout(r, ms));
   const marcarUsado = (id: string) => setUsados(prev => new Set(prev).add(id));
 
-  async function analizar(form?: FormData, nombres?: string[]) {
-    push({ de: 'yo', tipo: 'texto', texto: nombres ? `📎 ${nombres.join('\n📎 ')}` : '📎 extracto_banco_esquina.csv\n📎 mis_comprobantes_recibidos.csv\n📎 mis_comprobantes_emitidos.csv' });
+  async function analizar(form?: FormData, nombres?: string[], compromisos = false, fuente?: 'mp') {
+    push({ de: 'yo', tipo: 'texto', texto: fuente === 'mp' ? '💳 Mercado Pago · Carpintería Los Aromos (5 empleados)\n📎 mis_comprobantes_recibidos.csv\n📎 mis_comprobantes_emitidos.csv' : nombres ? `📎 ${nombres.join('\n📎 ')}` : compromisos ? '📎 boletas_vencimientos.csv\n📎 nomina_octubre.csv' : '📎 extracto_banco_esquina.csv\n📎 mis_comprobantes_recibidos.csv\n📎 mis_comprobantes_emitidos.csv' });
     setEscribiendo(true);
     try {
-      const res = await fetch('/api/analizar', form ? { method: 'POST', body: form } : { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{"demo":true}' });
+      const res = await fetch('/api/analizar', form ? { method: 'POST', body: form } : { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ demo: true, compromisos, fuente }) });
       const a: Analisis & { error?: string } = await res.json();
       if (!res.ok) { push({ de: 'bot', tipo: 'texto', texto: `No pude leerlo: ${a.error}` }); return; }
       setAnalisis(a);
       const r = a.resumen;
-      push({ de: 'bot', tipo: 'texto', texto: `Listo. Leí ${r.movimientos} movimientos del banco y ${r.recibidos + r.emitidos} facturas (${r.recibidos} de proveedores, ${r.emitidos} a clientes).\n\nLo que aprendí de tu negocio:\n• ${a.pronostico.aprendizajes.slice(0, 4).join('\n• ')}` });
+      const extra = r.boletas || r.empleados ? ` Sumé ${r.boletas} boletas con vencimiento${r.empleados ? ` y una nómina de ${r.empleados} empleados` : ''} al flujo.` : '';
+      push({ de: 'bot', tipo: 'texto', texto: `Listo. Leí ${r.movimientos} movimientos del banco y ${r.recibidos + r.emitidos} facturas (${r.recibidos} de proveedores, ${r.emitidos} a clientes).${extra}\n\nLo que aprendí de tu negocio:\n• ${a.pronostico.aprendizajes.slice(0, 4).join('\n• ')}`,
+        botones: [{ id: `boletas${++corridas.current}`, label: '📥 Sumar boletas o nómina' }] });
       await pausa(700);
       push({ de: 'bot', tipo: 'grafico', a });
-      await pausa(900);
+      await pausa(600);
       push({ de: 'bot', tipo: 'recomendacion', a });
     } catch {
       push({ de: 'bot', tipo: 'texto', texto: 'Se cortó la conexión. Probá de nuevo en un ratito.' });
@@ -51,9 +59,13 @@ export default function Chat() {
 
   function subir(files: FileList | null) {
     if (!files?.length) return;
+    const nuevos = Array.from(files);
+    // Cada subida se suma a lo anterior: el análisis siempre se recalcula con todos los archivos.
+    const todos = [...previos.current.filter(p => !nuevos.some(n => n.name === p.name)), ...nuevos];
+    previos.current = todos;
     const f = new FormData();
-    for (const x of Array.from(files)) f.append('archivos', x);
-    analizar(f, Array.from(files).map(x => x.name));
+    for (const x of todos) f.append('archivos', x);
+    analizar(f, nuevos.map(x => x.name));
   }
 
   // Foto de comprobante: POST /api/foto (campo "foto"). 404 = endpoint todavía no disponible.
@@ -82,7 +94,13 @@ export default function Chat() {
   async function boton(id: string, label: string) {
     if (usados.has(id)) return;
     marcarUsado(id);
-    if (id === 'demo') return analizar();
+    if (id === 'demo') { demoActiva.current = true; return analizar(); }
+    if (id === 'mp') { demoActiva.current = true; fuenteMp.current = true; return analizar(undefined, undefined, false, 'mp'); }
+    if (id.startsWith('boletas')) {
+      if (demoActiva.current && !previos.current.length) return analizar(undefined, undefined, true, fuenteMp.current ? 'mp' : undefined);
+      setUsados(prev => { const n = new Set(prev); n.delete(id); return n; });
+      return archivo.current?.click();
+    }
     if (id === 'subir') {
       // El botón se reactiva: el usuario puede volver a elegir archivos.
       setUsados(prev => { const s = new Set(prev); s.delete('subir'); return s; });
@@ -133,11 +151,17 @@ export default function Chat() {
   const estadoCabecera = escribiendo ? 'escribiendo…' : constancia ? 'carpeta sellada' : 'en línea';
 
   return (
+    <div className="demo-marco">
+    <nav className="demo-barra" aria-label="Demo">
+      <Link href="/" className="demo-volver"><span aria-hidden>←</span> Volver a la app</Link>
+      <strong>Demo del canal WhatsApp</strong>
+      <span className="demo-nota">Simulación: el canal real todavía no está activo</span>
+    </nav>
     <main className="escenario">
       <PanelPasos fase={fase} analisis={analisis} hash={constancia?.c.hash ?? null} />
       <div className="telefono">
         <div className="pantalla">
-          <Cabecera estado={estadoCabecera} />
+          <Cabecera estado={estadoCabecera} acciones={analisis && <Avisos alertas={analisis.alertas} />} />
           <div className="chat" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversación con CFO de Bolsillo">
             {msgs.map((m, i) => <Burbuja key={i} m={m} usados={usados} onBoton={boton} onConsentir={consentir} />)}
             {escribiendo && <Escribiendo />}
@@ -148,5 +172,6 @@ export default function Chat() {
         </div>
       </div>
     </main>
+    </div>
   );
 }
