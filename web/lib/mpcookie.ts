@@ -4,6 +4,7 @@ import { createCipheriv, createDecipheriv, createHash, randomBytes } from 'node:
 
 export const COOKIE_TOKEN = 'mp_token';
 export const COOKIE_STATE = 'mp_state';
+export const COOKIE_VERIFIER = 'mp_verifier';
 
 const clave = (secreto: string) => createHash('sha256').update(secreto).digest();
 
