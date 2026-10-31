@@ -4,7 +4,7 @@
 // categorías, nunca emisores ni productos). El perfil lo elige el usuario y el Researcher recalcula en el navegador.
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
-import { investigar, type Perfil } from '@/lib/researcher';
+import { analizarMercado, investigar, type Perfil } from '@/lib/researcher';
 import type { Vista } from './datos';
 import { fCorta, millones, pct, pesos, plural, type Tesoreria } from './formato';
 import { Icono } from './iconos';
@@ -88,9 +88,34 @@ function Diagnostico({ t, hueco }: { t: Tesoreria; hueco: boolean }) {
         {hueco && <div className={s.btnRow}><Link href="/proyeccion#cubrir" className={`${s.btn} ${s.btnPri}`}>Comparar cómo cubrir el hueco</Link></div>}
       </div>
 
+      <Mercado t={t} />
       {t.bloque && <Researcher t={t} />}
       <p className={s.legal} role="note">{t.aviso}</p>
     </>
+  );
+}
+
+/** Lectura del Researcher sobre el mercado argentino: el dato oficial con su fuente y qué significa para tu plata. */
+function Mercado({ t }: { t: Tesoreria }) {
+  const lecturas = useMemo(() => analizarMercado(t.tasas), [t]);
+  return (
+    <div className={s.research} aria-labelledby="t-mercado">
+      <div>
+        <span className={s.eyebrow}>Researcher · mercado argentino</span>
+        <h3 className={s.h3} id="t-mercado">Qué está pasando con la plata en Argentina</h3>
+        <p className={s.sub}>Datos públicos del BCRA y el INDEC vía OpenARG, del último período disponible, y qué significan para tu negocio.</p>
+      </div>
+      <div className={s.mercado}>
+        {lecturas.map(l => (
+          <article key={l.cita.dato} className={s.dato}>
+            <span>{l.cita.dato}</span>
+            <b className={`${s.num} ${l.tono === 'pos' ? s.pos : l.tono === 'neg' ? s.neg : ''}`}>{l.cita.valor}</b>
+            <p>{l.lectura}</p>
+            <small>{l.cita.periodo} · <a href={l.cita.url} target="_blank" rel="noopener noreferrer">{l.cita.fuente}</a></small>
+          </article>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -144,7 +169,6 @@ function Researcher({ t }: { t: Tesoreria }) {
         ))}
       </div>
 
-      <p className={s.sub}>{inf.equilibrio} <span title={`${t.tasas.citas.plazoFijo.fuente} · ${t.tasas.citas.ipc.fuente}`}>Fuentes: {t.tasas.citas.plazoFijo.dato} ({t.tasas.citas.plazoFijo.periodo}), {t.tasas.citas.ipc.dato} ({t.tasas.citas.ipc.periodo}), vía OpenARG.</span></p>
       <details className={s.plegable}>
         <summary>Lo que puede salir mal</summary>
         <ul>{inf.puedeSalirMal.map((x, i) => <li key={i}>{x}</li>)}</ul>

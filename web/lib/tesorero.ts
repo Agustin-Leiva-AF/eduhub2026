@@ -6,7 +6,7 @@ import type { Recomendacion } from './advice';
 import type { Alertas } from './alertas';
 import type { Excedente } from './excedente';
 import { fmt, type Pronostico } from './forecast';
-import type { Cita, Contexto } from './openarg';
+import type { Contexto } from './openarg';
 
 export type Semaforo = 'verde' | 'amarillo' | 'rojo';
 export type Indicador = { id: string; nombre: string; valor: string; puntaje: number; semaforo: Semaforo; explica: string };
@@ -34,7 +34,8 @@ export type Tesoreria = {
   veredicto: { decision: Decision; titulo: string; motivo: string };
   acciones: Accion[];
   bloque: BloqueResearcher | null;
-  tasas: { tnaPlazoFijo: number; ipcMensual: number; citas: { plazoFijo: Cita; ipc: Cita; pfReal: Cita } };
+  // Datos de mercado (BCRA/INDEC vía OpenARG) que el Researcher usa para asignar y para su lectura del mercado argentino.
+  tasas: Pick<Contexto, 'ipcMensual' | 'tnaPlazoFijo' | 'tnaAdelantos' | 'tnaDocumentos' | 'pfRealSemestre' | 'irregularidad' | 'irregularidadAntes'> & { citas: Contexto['citas'] };
   aviso: string;
 };
 
@@ -237,7 +238,8 @@ export function diagnosticar(p: Pronostico, ex: Excedente | null, r: Recomendaci
     veredicto: { decision, titulo, motivo },
     acciones: acciones.slice(0, 3),
     bloque,
-    tasas: { tnaPlazoFijo: ctx.tnaPlazoFijo, ipcMensual: ctx.ipcMensual, citas: { plazoFijo: ctx.citas.plazoFijo, ipc: ctx.citas.ipc, pfReal: ctx.citas.pfReal } },
+    tasas: { ipcMensual: ctx.ipcMensual, tnaPlazoFijo: ctx.tnaPlazoFijo, tnaAdelantos: ctx.tnaAdelantos, tnaDocumentos: ctx.tnaDocumentos,
+      pfRealSemestre: ctx.pfRealSemestre, irregularidad: ctx.irregularidad, irregularidadAntes: ctx.irregularidadAntes, citas: ctx.citas },
     aviso: AVISO,
   };
 }

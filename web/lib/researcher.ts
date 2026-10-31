@@ -1,7 +1,7 @@
 // Researcher (skill "Analista Researcher", sección 4, MODO EDUCATIVO): recibe el bloque del Tesorero y asigna cada tramo
 // de excedente a CATEGORÍAS de colocación según cuándo se necesita la plata y el perfil. Nunca nombra tickers, emisores
 // ni fondos. Puro (sin red ni Node): corre igual en el servidor y en el navegador cuando el usuario cambia su perfil.
-import type { BloqueResearcher, Categoria5, Estabilidad, ExcedenteTramo } from './tesorero';
+import type { BloqueResearcher, Categoria5, Estabilidad, ExcedenteTramo, Tesoreria } from './tesorero';
 import type { Cita } from './openarg';
 
 export type Perfil = 'conservador' | 'moderado' | 'agresivo';
@@ -18,12 +18,12 @@ export type Informe = {
   enUnaLinea: string;
   prioridades: string[];
   tramos: TramoInforme[];
-  equilibrio: string;
   puedeSalirMal: string[];
   glosario: { t: string; d: string }[];
   aviso: string;
 };
-export type Tasas = { tnaPlazoFijo: number; ipcMensual: number; citas: { plazoFijo: Cita; ipc: Cita; pfReal: Cita } };
+export type Tasas = Tesoreria['tasas'];
+export type LecturaMercado = { cita: Cita; lectura: string; tono: 'pos' | 'neg' | 'neutro' };
 
 export const AVISO_RESEARCHER = 'Esto es información educativa, no una recomendación personalizada. Las inversiones tienen riesgo y los rendimientos pasados no garantizan los futuros.';
 const ORDEN: Perfil[] = ['conservador', 'moderado', 'agresivo'];
@@ -92,12 +92,6 @@ export function investigar(b: BloqueResearcher, tasas: Tasas, tolerancia: Perfil
     return { tramo: t, horizonte: h, horizonteTexto: TEXTO_H[h], clases, noEntran, rendimiento, riesgoPrincipal: RIESGO[h] };
   });
 
-  // Inflación de equilibrio (breakeven) del plazo fijo: la inflación mensual que deja el rendimiento real en cero.
-  const pfMensual = tnaPF / 1200;
-  const ipc = tasas.ipcMensual;
-  const equilibrio = pfMensual >= ipc
-    ? `El plazo fijo paga ${dec(pfMensual * 100, 2)}% por mes y la última inflación fue ${dec(ipc * 100, 2)}%: hoy le gana por poco. Si la inflación pasa de ${dec(pfMensual * 100, 2)}% mensual, conviene lo que ajusta por CER.`
-    : `El plazo fijo paga ${dec(pfMensual * 100, 2)}% por mes y la última inflación fue ${dec(ipc * 100, 2)}%: hoy pierde contra la inflación. Para plazos de más de 3 meses, lo que ajusta por CER protege mejor.`;
 
   const partes = tramos.map(x => `${millones(x.tramo.monto)} ${x.horizonte === 'menos_30' ? 'en algo de rescate inmediato' : x.horizonte === '30_90' ? 'a plazo fijo o letra' : 'en renta fija corta en pesos'} hasta el ${dm(x.tramo.se_necesita_el)}`);
   const enUnaLinea = `Dejá ${millones(b.reserva_operativa.monto)} de reserva quieta y colocá ${partes.join('; ')}.`;
@@ -125,5 +119,29 @@ export function investigar(b: BloqueResearcher, tasas: Tasas, tolerancia: Perfil
     { t: 'Duration', d: 'Cuánto se mueve el precio de un bono si cambian las tasas.' },
   ];
 
-  return { perfil: { tolerancia, capacidad: cap, final, explica }, enUnaLinea, prioridades, tramos, equilibrio, puedeSalirMal, glosario, aviso: AVISO_RESEARCHER };
+  return { perfil: { tolerancia, capacidad: cap, final, explica }, enUnaLinea, prioridades, tramos, puedeSalirMal, glosario, aviso: AVISO_RESEARCHER };
+}
+
+/** Lectura del mercado argentino (secciones 1 y 4.6 del skill): cada dato oficial con fuente y fecha, y qué significa para la
+ *  plata de una pyme. Se muestra siempre, haya o no luz verde: las tasas activas importan también para cubrir un hueco. */
+export function analizarMercado(m: Tasas): LecturaMercado[] {
+  const pfMes = m.tnaPlazoFijo / 1200, ipc = m.ipcMensual;
+  const brecha = (pfMes - ipc) * 100;
+  const out: LecturaMercado[] = [
+    { cita: m.citas.ipc, tono: 'neutro',
+      lectura: `$1 M que dejás quieto pierde unos $${Math.round(ipc * 1e6).toLocaleString('es-AR')} de poder de compra por mes. Tener plata parada también cuesta.` },
+    { cita: m.citas.plazoFijo, tono: brecha >= 0 ? 'pos' : 'neg',
+      lectura: `Paga ${dec(pfMes * 100, 2)}% por mes: ${brecha >= 0 ? `le gana a la inflación por ${dec(brecha, 2)} puntos` : `pierde contra la inflación por ${dec(-brecha, 2)} puntos`}. Su inflación de equilibrio es ${dec(pfMes * 100, 2)}% mensual: con más inflación que eso, conviene lo que ajusta por CER.` },
+    { cita: m.citas.pfReal, tono: m.pfRealSemestre >= 0 ? 'pos' : 'neg',
+      lectura: m.pfRealSemestre >= 0 ? 'En el último semestre el plazo fijo le ganó a la inflación.'
+        : `Quien renovó plazos fijos el último semestre perdió ${dec(-m.pfRealSemestre * 100)}% de poder de compra. Para más de 3 meses, mirá instrumentos CER.` },
+    { cita: m.citas.adelantos, tono: 'neg',
+      lectura: `Es lo que cuesta cubrir un hueco con descubierto. Endeudarte al ${dec(m.tnaAdelantos)}% para colocar al ${dec(m.tnaPlazoFijo)}% es perder ${dec(m.tnaAdelantos - m.tnaPlazoFijo)} puntos: si tenés deuda así, cancelarla es la mejor inversión.` },
+    { cita: m.citas.documentos, tono: 'neutro',
+      lectura: `Descontar facturas o cheques sale ${dec(m.tnaAdelantos - m.tnaDocumentos)} puntos menos que el descubierto. Si te falta plata, conviene anticipar cobros antes que girar en descubierto.` },
+    { cita: m.citas.irregularidad, tono: m.irregularidad > m.irregularidadAntes ? 'neg' : 'pos',
+      lectura: m.irregularidad > m.irregularidadAntes ? 'Hay más deudores atrasados: los bancos prestan con más cuidado. Llegar con la caja ordenada y comprobable te da ventaja.'
+        : 'Bajó la morosidad: los bancos tienen más margen para prestar.' },
+  ];
+  return out;
 }

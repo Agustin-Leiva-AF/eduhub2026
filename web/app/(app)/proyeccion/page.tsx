@@ -1,5 +1,6 @@
 'use client';
 // Proyección: saldo diario a 15/30/60/90/120 días, huecos, qué hacer (con costo), categorías, movimientos y contrapartes.
+import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { ConDatos, SelloListo, TablaOrdenable, sellar, type Col } from '../_ui/comun';
 import { BarrasApiladas, ENT, SAL, TablaBarras, armarBarras, GraficoSaldo } from '../_ui/graficos';
@@ -90,21 +91,7 @@ function Contenido({ v }: { v: Vista }) {
         <section className={s.card} aria-labelledby="t-contra"><Contrapartes lista={p.contrapartes} /></section>
       </div>
 
-      <section className={s.card} aria-labelledby="t-macro">
-        <div><h2 className={s.h2} id="t-macro">Contexto macro</h2><p className={s.sub}>Datos públicos del BCRA y el INDEC vía OpenARG, del último período disponible.</p></div>
-        <div className={s.kpis}>
-          {(['ipc', 'adelantos', 'documentos', 'plazoFijo', 'pfReal', 'irregularidad'] as const).map(k => {
-            const c = v.citas[k];
-            return c ? (
-              <div className={s.kpi} key={k} style={{ background: 'var(--surface-2)', borderColor: 'transparent' }}>
-                <span>{c.dato}</span>
-                <b className={s.num} style={{ fontSize: 19, whiteSpace: 'normal' }}>{c.valor}</b>
-                <small>{c.periodo} · <a href={c.url} target="_blank" rel="noopener noreferrer">{c.fuente}</a></small>
-              </div>
-            ) : null;
-          })}
-        </div>
-      </section>
+      <p className={s.sub}>La lectura del mercado argentino (inflación, tasas y crédito) la hace el researcher, en <Link href="/#t-mercado" className={s.link}>Inicio</Link>.</p>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { diagnosticar, escalar, escalera } from './tesorero';
-import { investigar } from './researcher';
+import { analizarMercado, investigar } from './researcher';
 import { calcularExcedente } from './excedente';
 import { sumar, type Dia, type Evento, type Hueco, type Pronostico } from './forecast';
 import type { Recomendacion } from './advice';
@@ -73,4 +73,13 @@ test('researcher: categorías por horizonte, sin nombres propios, y el perfil lo
   assert.match(inf.aviso, /no una recomendación personalizada/);
   const fragil = investigar({ ...t.bloque!, score: { valor: 40, categoria: 'D', preliminar: true } }, t.tasas, 'agresivo');
   assert.equal(fragil.perfil.final, 'conservador');
+});
+
+test('researcher: lectura del mercado argentino con fuente en cada dato', () => {
+  const p = pron(20_000_000, [20_000_000]);
+  const t = diagnosticar(p, calcularExcedente(p, ctx), rec, null, ctx);
+  const l = analizarMercado(t.tasas);
+  assert.equal(l.length, 6);
+  assert.ok(l.every(x => x.cita.url.startsWith('http') && x.cita.periodo && x.lectura.length > 20));
+  assert.equal(l.find(x => x.cita === ctx.citas.adelantos)!.tono, 'neg');
 });
