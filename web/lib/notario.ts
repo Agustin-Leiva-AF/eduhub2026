@@ -2,6 +2,7 @@
 // Modo "testnet" si hay NOTARIO_PRIVATE_KEY + NOTARIO_CONTRACT (Base Sepolia); si no, modo "simulado" (registro local),
 // rotulado como tal en la interfaz. Nunca se mueven fondos.
 import fs from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { createPublicClient, createWalletClient, http, type Hex } from 'viem';
@@ -27,7 +28,20 @@ export function canonico(x: unknown): string {
 }
 export const sha = (s: string) => ('0x' + createHash('sha256').update(s).digest('hex')) as Hex;
 
+// Next carga .env.local solo dentro de la app; los scripts de Node (tsx) no. Lectura simple, sin dependencias.
+// No pisa variables que ya estén definidas en el entorno.
+function cargarEnvLocal() {
+  try {
+    const txt = readFileSync(path.join(process.cwd(), '.env.local'), 'utf8');
+    for (const linea of txt.split(/\r?\n/)) {
+      const m = linea.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/);
+      if (m && process.env[m[1]] === undefined) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+    }
+  } catch { /* sin .env.local: sigue en modo simulado */ }
+}
+
 const red = () => {
+  cargarEnvLocal();
   const pk = process.env.NOTARIO_PRIVATE_KEY as Hex | undefined;
   const contrato = process.env.NOTARIO_CONTRACT as Hex | undefined;
   if (!pk || !contrato) return null;

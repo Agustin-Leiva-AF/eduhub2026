@@ -1,32 +1,13 @@
 'use client';
 // Simulador de chat estilo WhatsApp: el flujo estrella de punta a punta.
 import { useEffect, useRef, useState } from 'react';
-import Grafico from './Grafico';
+import Burbuja from './components/chat/Burbuja';
+import Cabecera, { Escribiendo } from './components/chat/Cabecera';
+import Pie from './components/chat/Pie';
+import PanelPasos from './components/chat/PanelPasos';
+import { PYME, type Analisis, type Constancia, type Fase, type Msg, type Opcion, type Comprobante } from './components/chat/tipos';
 
-type Cita = { dato: string; valor: string; periodo: string; fuente: string; tabla: string; url: string };
-type Opcion = { id: string; titulo: string; detalle: string; costo: number; cubre: boolean };
-type Analisis = {
-  resumen: { movimientos: number; recibidos: number; emitidos: number; ignorados: string[]; insumos: { nombre: string; sha256: string }[] };
-  pronostico: {
-    hoy: string; saldoInicial: number; serie: { fecha: string; saldo: number }[];
-    horizontes: { dias: number; saldoFinal: number; minimo: number; fechaMinimo: string }[];
-    hueco: { inicio: string; minimo: number; dias: number } | null; aprendizajes: string[];
-  };
-  recomendacion: { alerta: string; opciones: Opcion[]; contexto: string[]; aviso: string };
-  mensaje: { texto: string; fuente: 'ia' | 'reglas' };
-  citas: Record<string, Cita>;
-};
-type Msg =
-  | { de: 'bot' | 'yo'; tipo: 'texto'; texto: string; botones?: { id: string; label: string; lleno?: boolean }[] }
-  | { de: 'bot'; tipo: 'grafico'; a: Analisis }
-  | { de: 'bot'; tipo: 'recomendacion'; a: Analisis }
-  | { de: 'bot'; tipo: 'consentimiento'; opcion: Opcion }
-  | { de: 'bot'; tipo: 'constancia'; c: { hash: string; modo: string; url?: string } };
-
-const M = (n: number) => `${n < 0 ? '-' : ''}$${(Math.abs(n) / 1e6).toFixed(1).replace('.', ',')} M`;
-const $ = (n: number) => `$${Math.round(n).toLocaleString('es-AR')}`;
-const ahora = () => new Date().toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' });
-const PYME = 'La Esquina de Nueva Córdoba (ficticia)';
+const sinMovimiento = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
 export default function Chat() {
   const [msgs, setMsgs] = useState<Msg[]>([{
@@ -39,10 +20,15 @@ export default function Chat() {
   const [usados, setUsados] = useState<Set<string>>(new Set());
   const fin = useRef<HTMLDivElement>(null);
   const archivo = useRef<HTMLInputElement>(null);
+  const foto = useRef<HTMLInputElement>(null);
 
-  useEffect(() => { fin.current?.scrollIntoView({ behavior: 'smooth' }); }, [msgs, escribiendo]);
-  const push = (...m: Msg[]) => setMsgs(prev => [...prev, ...m]);
+  useEffect(() => {
+    fin.current?.scrollIntoView({ behavior: sinMovimiento() ? 'auto' : 'smooth', block: 'end' });
+  }, [msgs, escribiendo]);
+
+  const push = (...m: Msg[]) => setMsgs(prev => [...prev, ...m.map(x => ({ ...x, hora: new Date().toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' }) }))]);
   const pausa = (ms: number) => new Promise(r => setTimeout(r, ms));
+  const marcarUsado = (id: string) => setUsados(prev => new Set(prev).add(id));
 
   async function analizar(form?: FormData, nombres?: string[]) {
     push({ de: 'yo', tipo: 'texto', texto: nombres ? `📎 ${nombres.join('\n📎 ')}` : '📎 extracto_banco_esquina.csv\n📎 mis_comprobantes_recibidos.csv\n📎 mis_comprobantes_emitidos.csv' });
@@ -70,11 +56,38 @@ export default function Chat() {
     analizar(f, Array.from(files).map(x => x.name));
   }
 
+  // Foto de comprobante: POST /api/foto (campo "foto"). 404 = endpoint todavía no disponible.
+  async function leerFoto(file: File) {
+    push({ de: 'yo', tipo: 'texto', texto: `📷 ${file.name}` });
+    setEscribiendo(true);
+    try {
+      const f = new FormData();
+      f.append('foto', file);
+      const res = await fetch('/api/foto', { method: 'POST', body: f });
+      if (res.status === 404) {
+        push({ de: 'bot', tipo: 'texto', texto: 'La lectura de fotos todavía no está disponible. Por ahora subí el CSV de "Mis Comprobantes" de ARCA.' });
+        return;
+      }
+      const d: { ok: boolean; motivo?: string; comprobante?: Comprobante } | null = await res.json().catch(() => null);
+      if (!d?.ok || !d.comprobante) {
+        push({ de: 'bot', tipo: 'texto', texto: `No pude leer la foto${d?.motivo ? `: ${d.motivo}` : '.'} Probá con una foto más de cerca y con buena luz.` });
+        return;
+      }
+      push({ de: 'bot', tipo: 'foto', c: d.comprobante });
+    } catch {
+      push({ de: 'bot', tipo: 'texto', texto: 'Se cortó la conexión al subir la foto. Probá de nuevo en un ratito.' });
+    } finally { setEscribiendo(false); }
+  }
+
   async function boton(id: string, label: string) {
     if (usados.has(id)) return;
-    setUsados(new Set(usados).add(id));
+    marcarUsado(id);
     if (id === 'demo') return analizar();
-    if (id === 'subir') { setUsados(prev => { const s = new Set(prev); s.delete('subir'); return s; }); return archivo.current?.click(); }
+    if (id === 'subir') {
+      // El botón se reactiva: el usuario puede volver a elegir archivos.
+      setUsados(prev => { const s = new Set(prev); s.delete('subir'); return s; });
+      return archivo.current?.click();
+    }
     const op = analisis?.recomendacion.opciones.find(o => o.id === id);
     if (op) {
       push({ de: 'yo', tipo: 'texto', texto: label });
@@ -93,113 +106,47 @@ export default function Chat() {
 
   async function consentir(op: Opcion) {
     if (!analisis || usados.has('consent')) return;
-    setUsados(new Set(usados).add('consent'));
+    marcarUsado('consent');
     push({ de: 'yo', tipo: 'texto', texto: '✅ Sí, autorizo compartir mi carpeta con el Banco de la demo.' });
     setEscribiendo(true);
-    const p = analisis.pronostico;
-    const res = await fetch('/api/constancia', {
-      method: 'POST', headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({
-        pyme: PYME, destino: 'banco-demo', opcion: { id: op.id, titulo: op.titulo },
-        consentimiento: 'Autorizo a CFO de Bolsillo a compartir mi proyección de caja y la evidencia que la respalda con la entidad indicada, para que me contacte con una propuesta de financiamiento.',
-        insumos: analisis.resumen.insumos,
-        pronostico: { hoy: p.hoy, saldoInicial: p.saldoInicial, horizontes: p.horizontes, hueco: p.hueco, serie: p.serie.map(d => ({ fecha: d.fecha, saldo: d.saldo })) },
-      }),
-    });
-    const c = await res.json();
-    setEscribiendo(false);
-    if (!res.ok) { push({ de: 'bot', tipo: 'texto', texto: `No pude sellar la carpeta: ${c.error}` }); return; }
-    push({ de: 'bot', tipo: 'constancia', c });
+    try {
+      const p = analisis.pronostico;
+      const res = await fetch('/api/constancia', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          pyme: PYME, destino: 'banco-demo', opcion: { id: op.id, titulo: op.titulo },
+          consentimiento: 'Autorizo a CFO de Bolsillo a compartir mi proyección de caja y la evidencia que la respalda con la entidad indicada, para que me contacte con una propuesta de financiamiento.',
+          insumos: analisis.resumen.insumos,
+          pronostico: { hoy: p.hoy, saldoInicial: p.saldoInicial, horizontes: p.horizontes, hueco: p.hueco, serie: p.serie.map(d => ({ fecha: d.fecha, saldo: d.saldo })) },
+        }),
+      });
+      const c: Constancia & { error?: string } = await res.json();
+      if (!res.ok) { push({ de: 'bot', tipo: 'texto', texto: `No pude sellar la carpeta: ${c.error}` }); return; }
+      push({ de: 'bot', tipo: 'constancia', c });
+    } catch {
+      push({ de: 'bot', tipo: 'texto', texto: 'Se cortó la conexión al sellar la carpeta. Probá de nuevo en un ratito.' });
+    } finally { setEscribiendo(false); }
   }
+
+  const constancia = [...msgs].reverse().find((m): m is Extract<Msg, { tipo: 'constancia' }> => m.tipo === 'constancia');
+  const fase: Fase = constancia ? 'sellada' : analisis ? 'listo' : escribiendo ? 'leyendo' : 'esperando';
+  const estadoCabecera = escribiendo ? 'escribiendo…' : constancia ? 'carpeta sellada' : 'en línea';
 
   return (
-    <main className="app">
-      <header className="cabecera">
-        <div className="avatar">$</div>
-        <div><strong>CFO de Bolsillo</strong><small>{escribiendo ? 'escribiendo…' : 'en línea'}</small></div>
-      </header>
-      <div className="chat">
-        {msgs.map((m, i) => <Burbuja key={i} m={m} usados={usados} onBoton={boton} onConsentir={consentir} />)}
-        {escribiendo && <div className="msg bot escribiendo">analizando tu caja…</div>}
-        <div ref={fin} />
-      </div>
-      <footer className="pie">
-        <input ref={archivo} type="file" multiple accept=".csv,text/csv" onChange={e => subir(e.target.files)} />
-        <button className="btn" onClick={() => archivo.current?.click()}>📎 Adjuntar CSV</button>
-        <a className="btn" href="/demo/extracto_banco_esquina.csv" download>⬇ CSV de ejemplo</a>
-      </footer>
-    </main>
-  );
-}
-
-function Burbuja({ m, usados, onBoton, onConsentir }: { m: Msg; usados: Set<string>; onBoton: (id: string, label: string) => void; onConsentir: (o: Opcion) => void }) {
-  const [dias, setDias] = useState(120);
-  const [ok, setOk] = useState(false);
-  if (m.tipo === 'texto') return (
-    <div className={`msg ${m.de}`}>
-      {m.texto}
-      {m.botones && <div className="botones">{m.botones.map(b => <button key={b.id} className={`btn ${b.lleno ? 'lleno' : ''}`} disabled={usados.has(b.id)} onClick={() => onBoton(b.id, b.label)}>{b.label}</button>)}</div>}
-      <div className="hora">{ahora()}</div>
-    </div>
-  );
-  if (m.tipo === 'grafico') {
-    const p = m.a.pronostico;
-    return (
-      <div className="msg bot ancho">
-        <strong>Tu caja proyectada</strong> <span className="chip">hoy {M(p.saldoInicial)}</span>
-        <div className="horizontes">
-          {p.horizontes.map(h => (
-            <button key={h.dias} className={h.dias === dias ? 'activo' : ''} onClick={() => setDias(h.dias)} aria-pressed={h.dias === dias}>
-              {h.dias} días<b className={h.minimo < 0 ? 'neg' : ''}>{M(h.minimo)}</b>mínimo
-            </button>
-          ))}
-        </div>
-        <Grafico serie={p.serie} dias={dias} />
-        <div className="fuentes">Ajustado por inflación de {m.a.citas.ipc.valor} mensual (INDEC, {m.a.citas.ipc.periodo}, vía OpenARG).</div>
-      </div>
-    );
-  }
-  if (m.tipo === 'recomendacion') {
-    const r = m.a.recomendacion;
-    return (
-      <div className="msg bot ancho">
-        {r.alerta && m.a.pronostico.hueco && <div className="alerta">{r.alerta}</div>}
-        <div style={{ whiteSpace: 'pre-wrap' }}>{m.a.mensaje.fuente === 'ia' ? m.a.mensaje.texto : r.contexto.join('\n\n')}</div>
-        {r.opciones.map(o => (
-          <div className="opcion" key={o.id}>
-            <h4>{o.titulo}</h4>
-            <p>{o.detalle}</p>
-            <span className={`chip ${o.cubre ? 'ok' : 'no'}`}>{o.cubre ? 'cubre el hueco' : 'cubre una parte'}</span>
-            <span className="chip">costo ≈ {o.costo ? $(o.costo) : '$0'}</span>
-            <div className="botones"><button className="btn lleno" disabled={usados.has(o.id)} onClick={() => onBoton(o.id, `Elijo: ${o.titulo}`)}>Elegir</button></div>
+    <main className="escenario">
+      <PanelPasos fase={fase} analisis={analisis} hash={constancia?.c.hash ?? null} />
+      <div className="telefono">
+        <div className="pantalla">
+          <Cabecera estado={estadoCabecera} />
+          <div className="chat" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversación con CFO de Bolsillo">
+            {msgs.map((m, i) => <Burbuja key={i} m={m} usados={usados} onBoton={boton} onConsentir={consentir} />)}
+            {escribiendo && <Escribiendo />}
+            <div ref={fin} />
           </div>
-        ))}
-        <div className="fuentes">
-          Fuentes (OpenARG): {Object.values(m.a.citas).filter(c => ['adelantos', 'documentos', 'irregularidad'].some(k => c === m.a.citas[k])).map((c, i) => (
-            <span key={i}>{i ? ' · ' : ''}<a href={c.url} target="_blank" rel="noreferrer">{c.dato} {c.valor} ({c.periodo})</a></span>
-          ))}
-          {m.a.mensaje.fuente === 'ia' && ' · Texto redactado con IA sobre cifras calculadas.'}
+          <Pie archivoRef={archivo} fotoRef={foto} ocupado={escribiendo}
+            onArchivos={subir} onFoto={leerFoto} />
         </div>
-        <div className="aviso">{r.aviso}</div>
       </div>
-    );
-  }
-  if (m.tipo === 'consentimiento') return (
-    <div className="msg bot ancho">
-      Para que el <strong>Banco de la demo</strong> te contacte con una propuesta, armo tu <strong>carpeta de caja</strong>: proyección a 120 días + huella digital (hash) de tus archivos. No comparto nombres de tus proveedores ni clientes.
-      <label className="consent"><input type="checkbox" checked={ok} onChange={e => setOk(e.target.checked)} /> Autorizo compartir mi carpeta con el Banco de la demo (Ley 25.326). Puedo revocarlo cuando quiera.</label>
-      <div className="botones"><button className="btn lleno" disabled={!ok || usados.has('consent')} onClick={() => onConsentir(m.opcion)}>Compartir y sellar</button></div>
-    </div>
-  );
-  return (
-    <div className="msg bot ancho">
-      ✅ <strong>Carpeta sellada.</strong> El banco puede verificar que nadie la modificó.
-      <div className="mono" style={{ margin: '6px 0' }}>{m.c.hash}</div>
-      <span className={`chip ${m.c.modo === 'testnet' ? 'ok' : ''}`}>{m.c.modo === 'testnet' ? 'registrada en Base Sepolia (testnet)' : 'registro SIMULADO (sin testnet configurada)'}</span>
-      <div className="botones">
-        <a className="btn lleno" href={`/entidad/${m.c.hash}`} target="_blank" rel="noreferrer">Ver como banco 🏦</a>
-        {m.c.url && <a className="btn" href={m.c.url} target="_blank" rel="noreferrer">Ver en el explorador</a>}
-      </div>
-    </div>
+    </main>
   );
 }

@@ -41,6 +41,9 @@ El centro de la propuesta es **"no te quedes sin caja y llegá ordenado a pedir 
 - Scripts ya hechos: `openarg.mjs` (comandos `tools`, `search`, `describe`, `query`). Reutilizalos.
 - Si la red bloquea `mcp.openarg.org`, no lo esquives: decímelo.
 
+## Base de conocimiento de costos
+Leé `KB_COSTOS_INFRA.md` antes de hablar de presupuesto o modelo de negocio. Respetá sus etiquetas ([VERIFICADO], [CÁLCULO], [SUPUESTO], [NO VERIFICADO]) y resolvé sus tareas pendientes de la sección 5. Si encontrás un dato más reciente, citá la fuente y proponé la corrección en lugar de sobrescribir.
+
 ## Tareas, en este orden
 1. Leé los archivos de la carpeta. Resumí en 10 líneas lo que entendiste, sin repetirme lo de arriba.
 2. Resolvé los puntos "no validado" 1 a 5. Entregá `VALIDACION.md` con: afirmación, evidencia, fuente con link y fecha, y nivel de confianza (verificado / parcial / no verificado).

@@ -8,6 +8,14 @@ import { createPublicClient, createWalletClient, http } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
 import { baseSepolia } from 'viem/chains';
 
+// Lee web/.env.local (Next lo carga solo dentro de la app; este script de Node no). No pisa el entorno existente.
+try {
+  for (const linea of fs.readFileSync(new URL('../.env.local', import.meta.url), 'utf8').split(/\r?\n/)) {
+    const m = linea.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*?)\s*$/);
+    if (m && process.env[m[1]] === undefined) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
+  }
+} catch { /* sin .env.local */ }
+
 const fuente = fs.readFileSync('contracts/CashProofRegistry.sol', 'utf8');
 const out = JSON.parse(solc.compile(JSON.stringify({
   language: 'Solidity',
