@@ -685,3 +685,52 @@ li[data-hecho="true"] .checkItem small { color: var(--ink-2); }
   .progresoBarra::after { left: 0; width: 100%; opacity: .6; }
   .accionGrande:hover { transform: none; }
 }
+
+/* ---------- tesorero + researcher (Inicio) ---------- */
+.h3 { font-size: 15.5px; font-weight: 650; line-height: 1.3; margin: 0 0 8px; }
+.estWarnT { background: var(--warn-soft); color: var(--warn); }
+.tesHead { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); align-items: center; }
+@media (min-width: 760px) { .tesHead { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); } }
+.score { display: flex; gap: 16px; align-items: center; min-width: 0; }
+.scoreAro {
+  flex: none; width: 96px; height: 96px; border-radius: 50%; display: grid; place-content: center; text-align: center;
+  background: radial-gradient(closest-side, var(--surface) 78%, transparent 79%), conic-gradient(var(--c) var(--p), var(--surface-2) 0);
+}
+.scoreAro b { font-family: var(--f-d); font-size: 30px; font-weight: 650; line-height: 1; letter-spacing: -.02em; }
+.scoreAro small { font-size: 11.5px; color: var(--muted); }
+.scoreTxt { display: grid; gap: 3px; justify-items: start; min-width: 0; }
+.scoreTxt strong { font-family: var(--f-d); font-size: 18px; font-weight: 650; }
+.pilares { list-style: none; margin: 0; padding: 0; display: grid; }
+.pilares li { border-top: 1px solid var(--line); }
+.pilares summary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(110px, 44%); gap: 12px; align-items: center; padding: 10px 0; cursor: pointer; font-size: 14px; font-weight: 600; min-height: 44px; }
+.pilares summary small { color: var(--muted); font-weight: 500; }
+.pilarBarra { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; }
+.pilarBarra::before { content: ''; grid-area: 1 / 1; height: 8px; border-radius: 4px; background: var(--surface-2); }
+.pilarBarra i { grid-area: 1 / 1; height: 8px; border-radius: 4px; }
+.pilarBarra b { font-size: 13px; min-width: 2ch; text-align: right; }
+.b_verde { background: var(--pos); }
+.b_amarillo { background: var(--warn); }
+.b_rojo { background: var(--neg); }
+.indicador { display: grid; gap: 2px; padding: 0 0 10px; font-size: 13.5px; }
+.indicador small { color: var(--ink-2); line-height: 1.4; }
+.acciones { margin: 0; padding-left: 20px; display: grid; gap: 10px; }
+.acciones li { display: grid; gap: 3px; font-size: 14px; }
+.acciones small { color: var(--ink-2); font-size: 13px; line-height: 1.4; }
+.research { display: grid; gap: 12px; padding: 16px; border-radius: var(--r); border: 1px solid var(--line); background: var(--surface-2); min-width: 0; }
+.enUnaLinea { font-size: 15px; font-weight: 600; line-height: 1.45; }
+.prioridades { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 13px; color: var(--ink-2); }
+.tramos { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 960px) { .tramos { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); } }
+.tramo { display: grid; gap: 10px; align-content: start; padding: 14px; border-radius: var(--r-s); background: var(--surface); border: 1px solid var(--line); min-width: 0; }
+.tramo header { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.tramoMonto { font-family: var(--f-d); font-size: 24px; font-weight: 600; letter-spacing: -.02em; }
+.catLista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.catLista li { display: grid; gap: 2px; font-size: 13.5px; padding-left: 10px; border-left: 2px solid var(--accent); }
+.catLista small { color: var(--ink-2); font-size: 12.5px; line-height: 1.4; }
+.catMeta { font-size: 12px; color: var(--muted); }
+.tramoRinde { font-size: 13px; line-height: 1.45; color: var(--ink-2); }
+.plegable summary { cursor: pointer; font-weight: 600; font-size: 14px; min-height: 44px; display: flex; align-items: center; }
+.plegable ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; font-size: 13.5px; color: var(--ink-2); }
+.plegable dl { margin: 0; display: grid; gap: 6px; font-size: 13.5px; }
+.plegable dt { font-weight: 600; }
+.plegable dd { margin: 0; color: var(--ink-2); }

@@ -4,7 +4,7 @@
 // Se guarda en localStorage (con tope de tamaño) junto con el último resultado, para pintar al instante al volver.
 // Modo demo explícito: la pyme ficticia nunca se mezcla con datos propios.
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import type { Alertas, ComprobanteIn, Excedente, Insumo, MesCat, Pronostico, Recomendacion, RespAnalizar, Sello, Cita } from './formato';
+import type { Alertas, ComprobanteIn, Excedente, Insumo, MesCat, Pronostico, Recomendacion, RespAnalizar, Sello, Cita, Tesoreria } from './formato';
 import { hoyLocal } from './formato';
 
 /* ---------- tipos del workspace ---------- */
@@ -36,6 +36,7 @@ export type Vista = {
   recomendacion: Recomendacion;
   alertas: Alertas | null;
   excedente: Excedente | null | undefined; // undefined: el servidor no lo calculó
+  tesoreria: Tesoreria | undefined;        // undefined: servidor viejo o resultado guardado antes de esta versión
   mensual: MesCat[] | null;
   ventasMensuales: number | null;
   citas: Record<string, Cita>;
@@ -151,6 +152,7 @@ function armar(w: Workspace, a: RespAnalizar, mp: MpEstado): Vista {
     recomendacion: a.recomendacion,
     alertas: a.alertas ?? null,
     excedente: a.excedente,
+    tesoreria: a.tesoreria,
     mensual: d?.mensual?.length ? d.mensual : null,
     ventasMensuales: d?.ventasMensuales ?? null,
     citas: a.citas ?? {},

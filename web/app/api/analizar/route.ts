@@ -34,6 +34,7 @@ import { recomendar } from '@/lib/advice';
 import { contexto } from '@/lib/openarg';
 import { mensajeReglas, redactar } from '@/lib/ia';
 import { calcularExcedente } from '@/lib/excedente';
+import { diagnosticar } from '@/lib/tesorero';
 import { procesarExtras } from '@/lib/extras';
 import { procesarManual } from '@/lib/manual';
 import { armarDashboard } from '@/lib/dashboard';
@@ -135,6 +136,8 @@ export async function POST(req: Request) {
   const r = recomendar(p, movs, rec, emi, ctx);
   const al = alertar(p, boletas);
   const excedente = calcularExcedente(p, ctx);
+  // Tesorero: score y luz verde/amarilla/roja para invertir; con luz verde trae el bloque que lee el Researcher (en el cliente).
+  const tesoreria = diagnosticar(p, excedente, r, al, ctx);
   // El LLM solo entra si el pedido trae ia:true (con tope duro); por defecto el mensaje sale de las reglas.
   const mensaje = pedido.ia ? await redactar(p, r, al, TIMEOUT_IA_MS) : mensajeReglas(r);
   const insumos = archivos.map(a => ({ nombre: a.nombre, sha256: createHash('sha256').update(a.texto).digest('hex') }));
@@ -143,7 +146,7 @@ export async function POST(req: Request) {
   return NextResponse.json({
     resumen: { movimientos: movs.length, recibidos: rec.length, emitidos: emi.length, boletas: boletas.length, empleados: nomina.length, ignorados, insumos, avisos, ...(extras?.ok && { extras: extras.recibidos.length + extras.emitidos.length }), ...(origenMP && { mercadopago: origenMP }) },
     pronostico: { ...p, eventos: p.eventos.filter(e => e.categoria !== 'ventas') },
-    alertas: al, recomendacion: r, excedente, mensaje, citas: ctx.citas,
+    alertas: al, recomendacion: r, excedente, tesoreria, mensaje, citas: ctx.citas,
     dashboard: armarDashboard(p, movs, pyme, simulado),
   });
 }

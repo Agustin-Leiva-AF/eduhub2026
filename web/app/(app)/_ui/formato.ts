@@ -5,8 +5,9 @@ import type { Cita } from '@/lib/openarg';
 import type { Alertas } from '@/lib/alertas';
 import type { Categoria } from '@/lib/categorias';
 import type { Excedente } from '@/lib/excedente';
+import type { Tesoreria } from '@/lib/tesorero';
 
-export type { Pronostico, Evento, Recomendacion, Cita, Alertas, Categoria, Excedente };
+export type { Pronostico, Evento, Recomendacion, Cita, Alertas, Categoria, Excedente, Tesoreria };
 
 export type Insumo = { nombre: string; sha256: string };
 export type MesCat = { mes: string; real: boolean; dias: number; diasMes: number; porCategoria: Partial<Record<Categoria, number>> };
@@ -29,6 +30,7 @@ export type RespAnalizar = {
   pronostico: Pronostico; alertas: Alertas; recomendacion: Recomendacion;
   mensaje?: { texto: string; fuente: 'ia' | 'reglas' }; citas: Record<string, Cita>;
   excedente?: Excedente;
+  tesoreria?: Tesoreria;
   dashboard?: { pyme?: string; demo?: boolean; corte?: string; mensual?: MesCat[]; etiquetas?: Record<string, string>; ventasMensuales?: number; eventos?: Evento[] };
 };
 /** Comprobante con la forma de /api/foto (y de `extras` en /api/analizar). */

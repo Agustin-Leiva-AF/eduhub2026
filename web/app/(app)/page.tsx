@@ -4,6 +4,7 @@
 import Link from 'next/link';
 import { Checklist, ConDatos, Esqueleto } from './_ui/comun';
 import { Generando } from './_ui/excedente';
+import { Tesorero } from './_ui/tesorero';
 import { GraficoSaldo } from './_ui/graficos';
 import { difDias, enDias, ETQ_ORIGEN, fCorta, fLarga, fNum, millones, pesos, plural, sumarDias, type Evento } from './_ui/formato';
 import { progreso, useDatos, type Vista } from './_ui/datos';
@@ -115,6 +116,8 @@ function Hoy({ v }: { v: Vista }) {
       </div>
 
       <div className={incompleto ? undefined : s.soloMovil}><Grafico30 v={v} id="t-30b" /></div>
+
+      <Tesorero v={v} />
     </>
   );
 }
