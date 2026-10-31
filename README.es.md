@@ -54,6 +54,24 @@ npx tsc --noEmit
 npm run build   # build de producción (descarga Google Fonts al compilar)
 ```
 
+## Setup del equipo (`.env.local` compartido)
+
+1. Pedile al dueño del proyecto el archivo `.env.local` por un canal privado y ponelo en `web/.env.local`. Tiene las claves compartidas (IA, Mercado Pago). **No lo subas al repo ni lo reenvíes.**
+2. Generá tu propia wallet de testnet (Base Sepolia, sin fondos reales). Desde `web/`:
+
+   ```bash
+   node scripts/wallet.mjs      # agrega NOTARIO_PRIVATE_KEY y NOTARIO_RPC_URL a .env.local e imprime tu dirección pública
+   ```
+
+   Nunca pisa una clave que ya exista ni imprime la clave privada.
+3. Cargale ETH de prueba a esa dirección desde un faucet de Base Sepolia, desplegá tu propio contrato registro y copiá la dirección que imprime en `.env.local` como `NOTARIO_CONTRACT`:
+
+   ```bash
+   node scripts/deploy.mjs --deploy
+   ```
+
+4. `npm run dev`. Sin los pasos 2 y 3 el sellado de carpetas queda simulado; todo lo demás funciona.
+
 ## Configuración opcional
 
 Copiá `web/.env.example` a `web/.env.local`. Todo es opcional.

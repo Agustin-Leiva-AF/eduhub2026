@@ -54,6 +54,24 @@ npx tsc --noEmit
 npm run build   # production build (downloads Google Fonts at build time)
 ```
 
+## Team setup (shared `.env.local`)
+
+1. Get the `.env.local` file the project owner shares with you privately and put it in `web/.env.local`. It holds the shared API keys (AI, Mercado Pago). **Never commit it or repost it.**
+2. Generate your own testnet wallet (Base Sepolia, no real funds). From `web/`:
+
+   ```bash
+   node scripts/wallet.mjs      # appends NOTARIO_PRIVATE_KEY and NOTARIO_RPC_URL to .env.local, prints your public address
+   ```
+
+   It never overwrites a key that is already there, and never prints the private key.
+3. Fund that address with test ETH from a Base Sepolia faucet, then deploy your own registry contract and copy the printed address into `.env.local` as `NOTARIO_CONTRACT`:
+
+   ```bash
+   node scripts/deploy.mjs --deploy
+   ```
+
+4. `npm run dev`. Without steps 2-3, folder sealing stays simulated; everything else works.
+
 ## Optional configuration
 
 Copy `web/.env.example` to `web/.env.local`. Everything is optional.
