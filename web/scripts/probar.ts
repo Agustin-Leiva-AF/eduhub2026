@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import { parseExtracto, parseComprobantes } from '../lib/parse';
+import { pronosticar, fmt } from '../lib/forecast';
+const m = parseExtracto(fs.readFileSync('public/demo/extracto_banco_esquina.csv', 'utf8'));
+const r = parseComprobantes(fs.readFileSync('public/demo/mis_comprobantes_recibidos.csv', 'utf8'));
+const e = parseComprobantes(fs.readFileSync('public/demo/mis_comprobantes_emitidos.csv', 'utf8'));
+const p = pronosticar(m, r, e, { ipcMensual: 0.0188687 });
+console.log('movs', m.length, 'rec', r.length, 'emi', e.length, 'hoy', p.hoy, 'saldo', fmt(p.saldoInicial));
+console.log(p.aprendizajes.join('\n'));
+console.log(p.horizontes.map(h => `${h.dias}d fin=${fmt(h.saldoFinal)} min=${fmt(h.minimo)} @${h.fechaMinimo}`).join('\n'));
+console.log('hueco', p.hueco);
+console.log(p.contrapartes.map(c => `${c.nombre} pend=${c.pendientes} plazo=${c.plazoDias}`).join('\n'));
+const sem = p.serie.filter((_, i) => i % 7 === 0).map(d => `${d.fecha} ${fmt(d.saldo)}`); console.log(sem.join('\n'));
+import { recomendar } from '../lib/advice';
+import { contexto } from '../lib/openarg';
+const ctx = contexto();
+const rr = recomendar(pronosticar(m, r, e, { ipcMensual: ctx.ipcMensual }), m, r, e, ctx);
+console.log(JSON.stringify(rr, (k, v) => (k === 'citas' ? undefined : v), 1));

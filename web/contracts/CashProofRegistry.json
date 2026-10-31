@@ -1,0 +1,99 @@
+{
+ "abi": [
+  {
+   "inputs": [
+    {
+     "internalType": "bytes32",
+     "name": "carpeta",
+     "type": "bytes32"
+    }
+   ],
+   "name": "YaRegistrada",
+   "type": "error"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "bytes32",
+     "name": "carpeta",
+     "type": "bytes32"
+    },
+    {
+     "indexed": true,
+     "internalType": "bytes32",
+     "name": "destinatario",
+     "type": "bytes32"
+    },
+    {
+     "indexed": false,
+     "internalType": "address",
+     "name": "emisor",
+     "type": "address"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint64",
+     "name": "fecha",
+     "type": "uint64"
+    }
+   ],
+   "name": "ConstanciaRegistrada",
+   "type": "event"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "bytes32",
+     "name": "carpeta",
+     "type": "bytes32"
+    },
+    {
+     "internalType": "bytes32",
+     "name": "destinatario",
+     "type": "bytes32"
+    }
+   ],
+   "name": "registrar",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "bytes32",
+     "name": "carpeta",
+     "type": "bytes32"
+    }
+   ],
+   "name": "verificar",
+   "outputs": [
+    {
+     "internalType": "bool",
+     "name": "existe",
+     "type": "bool"
+    },
+    {
+     "internalType": "address",
+     "name": "emisor",
+     "type": "address"
+    },
+    {
+     "internalType": "uint64",
+     "name": "fecha",
+     "type": "uint64"
+    },
+    {
+     "internalType": "bytes32",
+     "name": "destinatario",
+     "type": "bytes32"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  }
+ ],
+ "bytecode": "0x6080604052348015600e575f5ffd5b506102418061001c5f395ff3fe608060405234801561000f575f5ffd5b5060043610610034575f3560e01c80632fb967c0146100385780639b11ee87146100d3575b5f5ffd5b6100986100463660046101d4565b5f9081526020818152604091829020825160608101845281546001600160a01b038116808352600160a01b90910467ffffffffffffffff16938201849052600190920154930183905281151593909290565b6040805194151585526001600160a01b0393909316602085015267ffffffffffffffff91909116838301526060830152519081900360800190f35b6100e66100e13660046101eb565b6100e8565b005b5f82815260208190526040902054600160a01b900467ffffffffffffffff161561012c57604051632f5244d160e01b81526004810183905260240160405180910390fd5b604080516060810182523380825267ffffffffffffffff42811660208085018281528587018881525f8a8152808452889020965187549251909516600160a01b026001600160e01b03199092166001600160a01b039095169490941717855591516001909401939093558351918252810191909152829184917fd365a291f6a3f61e31bbcad0995c04b65e67bf026b2af46caee618d1724777cb910160405180910390a35050565b5f602082840312156101e4575f5ffd5b5035919050565b5f5f604083850312156101fc575f5ffd5b5050803592602090910135915056fea26469706673582212202c6a88473a24de38585f5de75597504f6b01876be44c92662503e75ea11a765364736f6c634300081c0033"
+}

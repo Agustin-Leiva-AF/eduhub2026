@@ -1,0 +1,7 @@
+cantidad de empresas empleadoras por provincia y tamaño
+pymes empleo registrado por tamaño de empresa
+IPC inflación mensual INDEC
+tasas de interés plazo fijo BCRA
+préstamos al sector privado BCRA
+crédito a pymes BCRA
+evolución cierre de empresas empleadoras

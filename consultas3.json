@@ -1,0 +1,4 @@
+[
+ {"nombre":"IPC nacional: variación mensual y acumulada (últimos datos, desde jul-2026)","tool":"obtener_datos","args":{"tabla":"cache_datos_gob_ar_ndice_de_precios_al_consumidor_n_re359d1bfbe","columnas":["indice_tiempo","ipc_ng_nacional_tasa_variacion_mensual","ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior"],"desde":"2026-07","hasta":"2026-12","limite":12}},
+ {"nombre":"Tasas BCRA % n.a. (últimos datos, desde jul-2026)","tool":"obtener_datos","args":{"tabla":"cache_datos_gob_ar_principales_tasas_de_inter_s_rf390f3b5e3","columnas":["indice_tiempo","tasas_interes_plazo_fijo_30_59_dias","tasas_interes_badlar","tasas_interes_adelantos_cc","tasas_interes_activas_documentos","tasas_interes_activas_adelantos"],"desde":"2026-07","hasta":"2026-12","limite":12}}
+]

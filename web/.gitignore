@@ -1,0 +1,5 @@
+node_modules/
+.next*/
+.env*
+data/registro_local.json
+data/carpetas/

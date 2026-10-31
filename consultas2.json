@@ -1,0 +1,5 @@
+[
+ {"nombre":"Empleadoras privadas total (último año disponible en OpenARG)","tool":"obtener_datos","args":{"tabla":"cache_datos_gob_ar_cantidad_de_empleadores_que_decl_rf583f99e01","desde":"2022-10","hasta":"2023-10","limite":20}},
+ {"nombre":"Empleadoras privadas por sector (letra CLAE), oct-2023","tool":"obtener_datos","args":{"tabla":"cache_datos_gob_ar_cantidad_de_empleadores_que_decl_rb846836031","desde":"2023-10","hasta":"2023-10","limite":30}},
+ {"nombre":"Monotributistas (miles, s.e.), jun-2025 a jun-2026","tool":"obtener_datos","args":{"tabla":"raw.cache_series_monotributo","desde":"2025-06","hasta":"2026-06","limite":20}}
+]

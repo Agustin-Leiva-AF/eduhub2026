@@ -1,0 +1,6 @@
+# Una pregunta por línea. Las líneas con # se ignoran.
+¿Cuántas pymes empleadoras hay en Argentina por provincia? Incluí la fuente y el año.
+¿Cuál fue la inflación mensual del INDEC en los últimos 12 meses y cuál fue la tasa de plazo fijo del BCRA en el mismo período?
+¿Cuál es el saldo de crédito en pesos al sector privado y qué parte corresponde a pymes según el BCRA?
+¿Cuántas empresas cerraron o dejaron de ser empleadoras en los últimos 3 años en Argentina?
+¿Qué porcentaje de pymes usa financiamiento bancario o del mercado de capitales según datos oficiales?

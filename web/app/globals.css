@@ -1,0 +1,50 @@
+:root {
+  --verde: #075e54; --verde-2: #128c7e; --acento: #25d366; --fondo: #efeae2; --burbuja-yo: #d9fdd3; --burbuja: #ffffff;
+  --texto: #111b21; --suave: #667781; --rojo: #d93025; --rojo-suave: #fde8e7; --borde: #e3ddd4; --card: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --verde: #1f2c34; --verde-2: #00a884; --fondo: #0b141a; --burbuja-yo: #005c4b; --burbuja: #202c33;
+    --texto: #e9edef; --suave: #8696a0; --rojo: #f15c6d; --rojo-suave: #3b1f24; --borde: #2a3942; --card: #111b21; }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--fondo); color: var(--texto); font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+button { font: inherit; cursor: pointer; }
+.app { max-width: 560px; margin: 0 auto; height: 100dvh; display: flex; flex-direction: column; background: var(--fondo); box-shadow: 0 0 24px rgba(0,0,0,.08); }
+.cabecera { background: var(--verde); color: #fff; padding: 10px 16px; display: flex; gap: 12px; align-items: center; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--acento); display: grid; place-items: center; font-weight: 700; color: #075e54; }
+.cabecera small { opacity: .8; display: block; font-size: 12px; }
+.chat { flex: 1; overflow-y: auto; padding: 12px 12px 24px; display: flex; flex-direction: column; gap: 8px; }
+.msg { max-width: 88%; padding: 8px 10px 6px; border-radius: 10px; background: var(--burbuja); box-shadow: 0 1px 1px rgba(0,0,0,.08); white-space: pre-wrap; }
+.msg.yo { align-self: flex-end; background: var(--burbuja-yo); border-top-right-radius: 2px; }
+.msg.bot { align-self: flex-start; border-top-left-radius: 2px; }
+.msg.ancho { max-width: 100%; width: 100%; white-space: normal; }
+.hora { font-size: 11px; color: var(--suave); text-align: right; margin-top: 2px; }
+.escribiendo { color: var(--suave); font-style: italic; }
+.botones { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.btn { border: 1px solid var(--verde-2); color: var(--verde-2); background: transparent; border-radius: 18px; padding: 6px 12px; }
+.btn.lleno { background: var(--verde-2); color: #fff; }
+.btn:disabled { opacity: .5; cursor: default; }
+.alerta { background: var(--rojo-suave); border-left: 4px solid var(--rojo); padding: 8px 10px; border-radius: 6px; margin-bottom: 8px; font-weight: 600; }
+.opcion { border: 1px solid var(--borde); border-radius: 10px; padding: 10px; margin-top: 8px; background: var(--card); }
+.opcion h4 { margin: 0 0 4px; font-size: 15px; }
+.opcion p { margin: 0 0 6px; color: var(--suave); font-size: 14px; }
+.chip { display: inline-block; font-size: 12px; border-radius: 10px; padding: 1px 8px; margin-right: 6px; background: var(--fondo); }
+.chip.ok { background: #d1f4e0; color: #0a6b3a; } .chip.no { background: var(--rojo-suave); color: var(--rojo); }
+.horizontes { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin: 8px 0; }
+.horizontes button { border: 1px solid var(--borde); background: var(--card); color: var(--texto); border-radius: 8px; padding: 4px 2px; font-size: 12px; line-height: 1.2; }
+.horizontes button.activo { border-color: var(--verde-2); box-shadow: inset 0 0 0 1px var(--verde-2); }
+.horizontes b { display: block; font-size: 13px; }
+.horizontes .neg { color: var(--rojo); }
+.grafico svg { width: 100%; height: auto; display: block; }
+.fuentes { font-size: 12px; color: var(--suave); margin-top: 6px; }
+.fuentes a { color: var(--verde-2); }
+.pie { display: flex; gap: 8px; padding: 8px 12px; background: var(--fondo); border-top: 1px solid var(--borde); }
+.pie input[type=file] { display: none; }
+.aviso { font-size: 12px; color: var(--suave); margin-top: 6px; }
+.consent { display: flex; gap: 8px; align-items: flex-start; margin-top: 8px; font-size: 14px; }
+.mono { font-family: ui-monospace, Consolas, monospace; font-size: 12px; word-break: break-all; }
+.panel { max-width: 760px; margin: 0 auto; padding: 24px 16px; }
+.panel .card { background: var(--card); border: 1px solid var(--borde); border-radius: 12px; padding: 16px; margin-bottom: 12px; }
+.panel h1 { font-size: 22px; } .estado-ok { color: #0a8a4a; font-weight: 700; } .estado-mal { color: var(--rojo); font-weight: 700; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; } td, th { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--borde); }

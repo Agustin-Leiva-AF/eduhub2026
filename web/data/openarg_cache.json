@@ -1,0 +1,863 @@
+{
+ "generado": "2026-10-31",
+ "origen": "OpenARG MCP (mcp.openarg.org), tablas de INDEC/BCRA/SIPA vía datos.gob.ar",
+ "series": [
+  {
+   "nombre": "IPC nacional: variación mensual y acumulada (jun-2025 a jun-2026)",
+   "tabla": "cache_datos_gob_ar_ndice_de_precios_al_consumidor_n_re359d1bfbe",
+   "fuente": "Índice de Precios al Consumidor Nacional (IPC). Base diciembre 2016.",
+   "url": "https://infra.datos.gob.ar/catalog/sspm/dataset/145/distribution/145.3/download/indice-precios-al-consumidor-nivel-general-base-diciembre-2016-mensual.csv",
+   "archivo": "openarg_datos.md",
+   "columnas": [
+    "indice_tiempo",
+    "ipc_ng_nacional_tasa_variacion_mensual",
+    "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior"
+   ],
+   "filas": [
+    {
+     "indice_tiempo": "2025-06-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0161892488199333,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.150969517510868
+    },
+    {
+     "indice_tiempo": "2025-07-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0190168375533128,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.1728573178541872
+    },
+    {
+     "indice_tiempo": "2025-08-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0187579351135027,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.1948576993198927
+    },
+    {
+     "indice_tiempo": "2025-09-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0207596032395136,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.2196624710854517
+    },
+    {
+     "indice_tiempo": "2025-10-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0234194310239195,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.2482262721995007
+    },
+    {
+     "indice_tiempo": "2025-11-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0247291967107856,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.2790939052242931
+    },
+    {
+     "indice_tiempo": "2025-12-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0284527193457171,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.3154876051264572
+    },
+    {
+     "indice_tiempo": "2026-01-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0288161935366171,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.0288161935366171
+    },
+    {
+     "indice_tiempo": "2026-02-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0289631907267269,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.0586139931727633
+    },
+    {
+     "indice_tiempo": "2026-03-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0338262219244152,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.0944229050381166
+    },
+    {
+     "indice_tiempo": "2026-04-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0258217956156745,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.1226828696091235
+    },
+    {
+     "indice_tiempo": "2026-05-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0214997233499085,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.1468202407154011
+    },
+    {
+     "indice_tiempo": "2026-06-01",
+     "ipc_ng_nacional_tasa_variacion_mensual": 0.0188687146882937,
+     "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior": 0.1684592646362206
+    }
+   ]
+  },
+  {
+   "nombre": "Tasas BCRA % n.a. (plazo fijo, BADLAR, adelantos, documentos), jun-2025 a jun-2026",
+   "tabla": "cache_datos_gob_ar_principales_tasas_de_inter_s_rf390f3b5e3",
+   "fuente": "Principales tasas de interés",
+   "url": "https://infra.datos.gob.ar/catalog/sspm/dataset/89/distribution/89.1/download/principales-tasas-interes.csv",
+   "archivo": "openarg_datos.md",
+   "columnas": [
+    "indice_tiempo",
+    "tasas_interes_plazo_fijo_30_59_dias",
+    "tasas_interes_badlar",
+    "tasas_interes_adelantos_cc",
+    "tasas_interes_activas_documentos",
+    "tasas_interes_activas_adelantos"
+   ],
+   "filas": [
+    {
+     "indice_tiempo": "2025-06-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 32.199473684210524,
+     "tasas_interes_badlar": 32.161184210526315,
+     "tasas_interes_adelantos_cc": 36.967894736842105,
+     "tasas_interes_activas_documentos": 40.33,
+     "tasas_interes_activas_adelantos": 45.85
+    },
+    {
+     "indice_tiempo": "2025-07-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 32.470454545454544,
+     "tasas_interes_badlar": 32.49715909090909,
+     "tasas_interes_adelantos_cc": 47.37272727272727,
+     "tasas_interes_activas_documentos": 40.09,
+     "tasas_interes_activas_adelantos": 51.48
+    },
+    {
+     "indice_tiempo": "2025-08-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 46.995000000000005,
+     "tasas_interes_badlar": 48.03125,
+     "tasas_interes_adelantos_cc": 76.30600000000001,
+     "tasas_interes_activas_documentos": 49.95,
+     "tasas_interes_activas_adelantos": 71.95
+    },
+    {
+     "indice_tiempo": "2025-09-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 48.35727272727272,
+     "tasas_interes_badlar": 48.42897727272727,
+     "tasas_interes_adelantos_cc": 57.17681818181818,
+     "tasas_interes_activas_documentos": 60.51,
+     "tasas_interes_activas_adelantos": 70.91
+    },
+    {
+     "indice_tiempo": "2025-10-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 46.33863636363636,
+     "tasas_interes_badlar": 46.16761363636363,
+     "tasas_interes_adelantos_cc": 81.10590909090911,
+     "tasas_interes_activas_documentos": 58.91,
+     "tasas_interes_activas_adelantos": 80.31
+    },
+    {
+     "indice_tiempo": "2025-11-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 32.059411764705885,
+     "tasas_interes_badlar": 32.025735294117645,
+     "tasas_interes_adelantos_cc": 38.30058823529413,
+     "tasas_interes_activas_documentos": 46.97,
+     "tasas_interes_activas_adelantos": 57.08
+    },
+    {
+     "indice_tiempo": "2025-12-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 26.28684210526316,
+     "tasas_interes_badlar": 26.460526315789476,
+     "tasas_interes_adelantos_cc": 28.73894736842105,
+     "tasas_interes_activas_documentos": 37,
+     "tasas_interes_activas_adelantos": 46.79
+    },
+    {
+     "indice_tiempo": "2026-01-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 30.730952380952377,
+     "tasas_interes_badlar": 31.202380952380956,
+     "tasas_interes_adelantos_cc": 38.60714285714286,
+     "tasas_interes_activas_documentos": 39.07,
+     "tasas_interes_activas_adelantos": 54.18
+    },
+    {
+     "indice_tiempo": "2026-02-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 30.33388888888889,
+     "tasas_interes_badlar": 30.791666666666668,
+     "tasas_interes_adelantos_cc": 36.083333333333336,
+     "tasas_interes_activas_documentos": 39.96,
+     "tasas_interes_activas_adelantos": 52.03
+    },
+    {
+     "indice_tiempo": "2026-03-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 27.488,
+     "tasas_interes_badlar": 27.56875,
+     "tasas_interes_adelantos_cc": 35.531,
+     "tasas_interes_activas_documentos": 37.35,
+     "tasas_interes_activas_adelantos": 47.31
+    },
+    {
+     "indice_tiempo": "2026-04-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 22.489000000000008,
+     "tasas_interes_badlar": 22.446875,
+     "tasas_interes_adelantos_cc": 41.1105,
+     "tasas_interes_activas_documentos": 31.18,
+     "tasas_interes_activas_adelantos": 43.68
+    },
+    {
+     "indice_tiempo": "2026-05-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 21.346842105263164,
+     "tasas_interes_badlar": 21.345394736842103,
+     "tasas_interes_adelantos_cc": 36.98473684210527,
+     "tasas_interes_activas_documentos": 30.12,
+     "tasas_interes_activas_adelantos": 41.06
+    },
+    {
+     "indice_tiempo": "2026-06-01",
+     "tasas_interes_plazo_fijo_30_59_dias": 20.89714285714286,
+     "tasas_interes_badlar": 20.69047619047619,
+     "tasas_interes_adelantos_cc": 37.0152380952381,
+     "tasas_interes_activas_documentos": 29.2,
+     "tasas_interes_activas_adelantos": 40.62
+    }
+   ]
+  },
+  {
+   "nombre": "Préstamos comerciales en pesos (adelantos y documentos), jun-2025 a jun-2026",
+   "tabla": "cache_datos_gob_ar_pr_stamos_a_las_entidades_financ_r3b7e1fe401",
+   "fuente": "Préstamos a las entidades financieras",
+   "url": "https://infra.datos.gob.ar/catalog/sspm/dataset/91/distribution/91.1/download/prestamos-entidades-financieras-sector-privado.csv",
+   "archivo": "openarg_datos.md",
+   "columnas": [
+    "indice_tiempo",
+    "prestamos_sect_priv_pesos",
+    "prestamos_sect_priv_pesos_comerciales",
+    "detalle_prestamos_sect_priv_pesos_comerciales_adelantos",
+    "detalle_prestamos_sect_priv_pesos_comerciales_documentos"
+   ],
+   "filas": [
+    {
+     "indice_tiempo": "2025-06-01",
+     "prestamos_sect_priv_pesos": 72366690.96666667,
+     "prestamos_sect_priv_pesos_comerciales": 29646238.9,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 8165037.3,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 17692022.9
+    },
+    {
+     "indice_tiempo": "2025-07-01",
+     "prestamos_sect_priv_pesos": 75815969.83870968,
+     "prestamos_sect_priv_pesos_comerciales": 31605314.51612903,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 8860721.451612903,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 18426574
+    },
+    {
+     "indice_tiempo": "2025-08-01",
+     "prestamos_sect_priv_pesos": 78745846,
+     "prestamos_sect_priv_pesos_comerciales": 31403893,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 8209765,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 18779544
+    },
+    {
+     "indice_tiempo": "2025-09-01",
+     "prestamos_sect_priv_pesos": 79790477,
+     "prestamos_sect_priv_pesos_comerciales": 31090805,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 7522412,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 18909295
+    },
+    {
+     "indice_tiempo": "2025-10-01",
+     "prestamos_sect_priv_pesos": 82328885,
+     "prestamos_sect_priv_pesos_comerciales": 31651590,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 8312291,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 18694851
+    },
+    {
+     "indice_tiempo": "2025-11-01",
+     "prestamos_sect_priv_pesos": 84408264.23333333,
+     "prestamos_sect_priv_pesos_comerciales": 32912471.166666668,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 8954486.9,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 19388173.1
+    },
+    {
+     "indice_tiempo": "2025-12-01",
+     "prestamos_sect_priv_pesos": 86968287,
+     "prestamos_sect_priv_pesos_comerciales": 33611422,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 9204559,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 19610726
+    },
+    {
+     "indice_tiempo": "2026-01-01",
+     "prestamos_sect_priv_pesos": 90150261.4516129,
+     "prestamos_sect_priv_pesos_comerciales": 36200166.548387095,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 9357868.967741936,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 20929368.80645161
+    },
+    {
+     "indice_tiempo": "2026-02-01",
+     "prestamos_sect_priv_pesos": 91170509.07142857,
+     "prestamos_sect_priv_pesos_comerciales": 36688474.53571428,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 9438993.67857143,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 21205767.17857143
+    },
+    {
+     "indice_tiempo": "2026-03-01",
+     "prestamos_sect_priv_pesos": 92395006.25806452,
+     "prestamos_sect_priv_pesos_comerciales": 37014530.25806452,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 9333888.096774194,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 21464632.80645161
+    },
+    {
+     "indice_tiempo": "2026-04-01",
+     "prestamos_sect_priv_pesos": 94877334,
+     "prestamos_sect_priv_pesos_comerciales": 37357159,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 9448216,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 21619666
+    },
+    {
+     "indice_tiempo": "2026-05-01",
+     "prestamos_sect_priv_pesos": 96577811.25806452,
+     "prestamos_sect_priv_pesos_comerciales": 38902602.61290322,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 9954232.741935484,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 22630138.93548387
+    },
+    {
+     "indice_tiempo": "2026-06-01",
+     "prestamos_sect_priv_pesos": 98777340,
+     "prestamos_sect_priv_pesos_comerciales": 39545685,
+     "detalle_prestamos_sect_priv_pesos_comerciales_adelantos": 9955643,
+     "detalle_prestamos_sect_priv_pesos_comerciales_documentos": 23023539
+    }
+   ]
+  },
+  {
+   "nombre": "Irregularidad de cartera privada (sistema financiero), 2025-04 a 2026-04",
+   "tabla": "cache_datos_gob_ar_principales_indicadores_del_sist_r8cfa80c5d5",
+   "fuente": "Principales Indicadores del Sistema Financiero",
+   "url": "https://infra.datos.gob.ar/catalog/sspm/dataset/332/distribution/332.2/download/datos-principales-indicadores-sistema-financiero-mensuales.csv",
+   "archivo": "openarg_datos.md",
+   "columnas": [
+    "indice_tiempo",
+    "sistema_finan_5_irregularidad_cartera_privada",
+    "sistema_finan_4_credito_sector_privado"
+   ],
+   "filas": [
+    {
+     "indice_tiempo": "2025-04-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 2.1881766221765626,
+     "sistema_finan_4_credito_sector_privado": 40.403229278897015
+    },
+    {
+     "indice_tiempo": "2025-05-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 2.580609533758353,
+     "sistema_finan_4_credito_sector_privado": 41.28112425310569
+    },
+    {
+     "indice_tiempo": "2025-06-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 2.909454536695638,
+     "sistema_finan_4_credito_sector_privado": 42.07136427437548
+    },
+    {
+     "indice_tiempo": "2025-07-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 3.1871426296424485,
+     "sistema_finan_4_credito_sector_privado": 43.00828860031408
+    },
+    {
+     "indice_tiempo": "2025-08-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 3.721817895764556,
+     "sistema_finan_4_credito_sector_privado": 43.75786483984028
+    },
+    {
+     "indice_tiempo": "2025-09-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 4.15609162999023,
+     "sistema_finan_4_credito_sector_privado": 43.639376273115055
+    },
+    {
+     "indice_tiempo": "2025-10-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 4.547663297387359,
+     "sistema_finan_4_credito_sector_privado": 43.84910644144095
+    },
+    {
+     "indice_tiempo": "2025-11-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 5.225654231579735,
+     "sistema_finan_4_credito_sector_privado": 43.36597461076682
+    },
+    {
+     "indice_tiempo": "2025-12-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 5.546394046676597,
+     "sistema_finan_4_credito_sector_privado": 43.7851310719596
+    },
+    {
+     "indice_tiempo": "2026-01-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 6.358001178670445,
+     "sistema_finan_4_credito_sector_privado": 44.19689622295152
+    },
+    {
+     "indice_tiempo": "2026-02-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 6.706449928481558,
+     "sistema_finan_4_credito_sector_privado": 44.3705567212873
+    },
+    {
+     "indice_tiempo": "2026-03-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 7.009230716463962,
+     "sistema_finan_4_credito_sector_privado": 44.85763277244615
+    },
+    {
+     "indice_tiempo": "2026-04-01",
+     "sistema_finan_5_irregularidad_cartera_privada": 7.297328454421397,
+     "sistema_finan_4_credito_sector_privado": 45.006072612698006
+    }
+   ]
+  },
+  {
+   "nombre": "Registro MiPyME: conteo por categoría (tabla con datos hasta 2024-04, posiblemente truncada)",
+   "tabla": "raw.produccion__registro_mipyme__c937b123__v3",
+   "fuente": "Registro MiPyME",
+   "url": "https://datos.produccion.gob.ar/dataset/registro-mipyme",
+   "archivo": "openarg_datos.md",
+   "columnas": [
+    "categoria_empresa",
+    "valor",
+    "filas_usadas"
+   ],
+   "filas": [
+    {
+     "categoria_empresa": "micro",
+     "valor": 489575,
+     "filas_usadas": 489575
+    },
+    {
+     "categoria_empresa": "peq",
+     "valor": 9115,
+     "filas_usadas": 9115
+    },
+    {
+     "categoria_empresa": "tramo1",
+     "valor": 1198,
+     "filas_usadas": 1198
+    },
+    {
+     "categoria_empresa": "tramo2",
+     "valor": 112,
+     "filas_usadas": 112
+    }
+   ]
+  },
+  {
+   "nombre": "Registro MiPyME: conteo por provincia, top (misma advertencia)",
+   "tabla": "raw.produccion__registro_mipyme__c937b123__v3",
+   "fuente": "Registro MiPyME",
+   "url": "https://datos.produccion.gob.ar/dataset/registro-mipyme",
+   "archivo": "openarg_datos.md",
+   "columnas": [
+    "provincia",
+    "valor",
+    "filas_usadas"
+   ],
+   "filas": [
+    {
+     "provincia": "BUENOS AIRES",
+     "valor": 169169,
+     "filas_usadas": 169169
+    },
+    {
+     "provincia": "CIUDAD AUTONOMA BUENOS AIRES",
+     "valor": 86305,
+     "filas_usadas": 86305
+    },
+    {
+     "provincia": "CORDOBA",
+     "valor": 54020,
+     "filas_usadas": 54020
+    },
+    {
+     "provincia": "SANTA FE",
+     "valor": 53680,
+     "filas_usadas": 53680
+    },
+    {
+     "provincia": "MENDOZA",
+     "valor": 21601,
+     "filas_usadas": 21601
+    },
+    {
+     "provincia": "ENTRE RIOS",
+     "valor": 16712,
+     "filas_usadas": 16712
+    },
+    {
+     "provincia": "RIO NEGRO",
+     "valor": 10336,
+     "filas_usadas": 10336
+    },
+    {
+     "provincia": "NEUQUEN",
+     "valor": 8756,
+     "filas_usadas": 8756
+    },
+    {
+     "provincia": "TUCUMAN",
+     "valor": 8493,
+     "filas_usadas": 8493
+    },
+    {
+     "provincia": "SALTA",
+     "valor": 8445,
+     "filas_usadas": 8445
+    }
+   ]
+  },
+  {
+   "nombre": "Puestos asalariados registrados por provincia, nov-2023 (último dato de la tabla)",
+   "tabla": "cache_datos_gob_ar_puestos_de_trabajo_asalariados_r_r5126011d99",
+   "fuente": "Puestos de trabajo asalariados registrados, por provincia y sector de actividad",
+   "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia/puestos/puestos_todos.csv",
+   "archivo": "openarg_datos.md",
+   "columnas": [
+    "fecha",
+    "zona_prov",
+    "puestos"
+   ],
+   "filas": [
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "BUENOS AIRES",
+     "puestos": 3232045
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "CAPITAL FEDERAL",
+     "puestos": 2157231
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "CATAMARCA",
+     "puestos": 108738
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "CHACO",
+     "puestos": 194704
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "CHUBUT",
+     "puestos": 165401
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "CORDOBA",
+     "puestos": 781191
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "CORRIENTES",
+     "puestos": 171374
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "ENTRE RIOS",
+     "puestos": 284123
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "FORMOSA",
+     "puestos": 90033
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "JUJUY",
+     "puestos": 160569
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "LA PAMPA",
+     "puestos": 82298
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "LA RIOJA",
+     "puestos": 96136
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "MENDOZA",
+     "puestos": 424496
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "MISIONES",
+     "puestos": 241114
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "NEUQUEN",
+     "puestos": 253764
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "RIO NEGRO",
+     "puestos": 198522
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "SALTA",
+     "puestos": 244915
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "SAN JUAN",
+     "puestos": 171570
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "SAN LUIS",
+     "puestos": 116240
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "SANTA CRUZ",
+     "puestos": 86275
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "SANTA FE",
+     "puestos": 800944
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "SANTIAGO DEL ESTERO",
+     "puestos": 147426
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "TIERRA DEL FUEGO",
+     "puestos": 71561
+    },
+    {
+     "fecha": "2023-11-01",
+     "zona_prov": "TUCUMAN",
+     "puestos": 336054
+    }
+   ]
+  },
+  {
+   "nombre": "Empleadoras privadas total (último año disponible en OpenARG)",
+   "tabla": "cache_datos_gob_ar_cantidad_de_empleadores_que_decl_rf583f99e01",
+   "fuente": "Cantidad de empleadores que declararon trabajadores, por sector de actividad",
+   "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/empleadoras/empleadoras_privadas_total.csv",
+   "archivo": "openarg_datos2.md",
+   "columnas": [
+    "fecha",
+    "empresas"
+   ],
+   "filas": [
+    {
+     "fecha": "2022-10-01",
+     "empresas": 540268
+    },
+    {
+     "fecha": "2022-11-01",
+     "empresas": 541737
+    },
+    {
+     "fecha": "2022-12-01",
+     "empresas": 542898
+    },
+    {
+     "fecha": "2023-01-01",
+     "empresas": 545169
+    },
+    {
+     "fecha": "2023-02-01",
+     "empresas": 545059
+    },
+    {
+     "fecha": "2023-03-01",
+     "empresas": 543776
+    },
+    {
+     "fecha": "2023-04-01",
+     "empresas": 543479
+    },
+    {
+     "fecha": "2023-05-01",
+     "empresas": 544052
+    },
+    {
+     "fecha": "2023-06-01",
+     "empresas": 544505
+    },
+    {
+     "fecha": "2023-07-01",
+     "empresas": 545226
+    },
+    {
+     "fecha": "2023-08-01",
+     "empresas": 545618
+    },
+    {
+     "fecha": "2023-09-01",
+     "empresas": 545000
+    },
+    {
+     "fecha": "2023-10-01",
+     "empresas": 543870
+    }
+   ]
+  },
+  {
+   "nombre": "Empleadoras privadas por sector (letra CLAE), oct-2023",
+   "tabla": "cache_datos_gob_ar_cantidad_de_empleadores_que_decl_rb846836031",
+   "fuente": "Cantidad de empleadores que declararon trabajadores, por sector de actividad",
+   "url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-actividad/empleadoras/empleadoras_privadas_por_letra.csv",
+   "archivo": "openarg_datos2.md",
+   "columnas": [
+    "fecha",
+    "letra",
+    "empresas"
+   ],
+   "filas": [
+    {
+     "fecha": "2023-10-01",
+     "letra": "A",
+     "empresas": 55219
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "B",
+     "empresas": 1347
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "C",
+     "empresas": 53284
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "D",
+     "empresas": 766
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "E",
+     "empresas": 1087
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "F",
+     "empresas": 23203
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "G",
+     "empresas": 160481
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "H",
+     "empresas": 36640
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "I",
+     "empresas": 27501
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "J",
+     "empresas": 9339
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "K",
+     "empresas": 6052
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "L",
+     "empresas": 21193
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "M",
+     "empresas": 31172
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "N",
+     "empresas": 15270
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "P",
+     "empresas": 8459
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "Q",
+     "empresas": 23881
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "R",
+     "empresas": 7904
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "S",
+     "empresas": 59812
+    },
+    {
+     "fecha": "2023-10-01",
+     "letra": "Z",
+     "empresas": 1260
+    }
+   ]
+  },
+  {
+   "nombre": "Monotributistas (miles, s.e.), jun-2025 a jun-2026",
+   "tabla": "raw.cache_series_monotributo",
+   "fuente": "Series de Tiempo — Independientes con monotributo. Sin estacionalidad.",
+   "url": "https://apis.datos.gob.ar/series/api/series?ids=151.1_IPENDIETAC_2012_M_36",
+   "archivo": "openarg_datos2.md",
+   "columnas": [
+    "fecha",
+    "Independientes con monotributo. Sin estacionalidad."
+   ],
+   "filas": [
+    {
+     "fecha": "2025-06-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2166.291
+    },
+    {
+     "fecha": "2025-07-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2156.058
+    },
+    {
+     "fecha": "2025-08-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2165.171
+    },
+    {
+     "fecha": "2025-09-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2182.206
+    },
+    {
+     "fecha": "2025-10-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2181.576
+    },
+    {
+     "fecha": "2025-11-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2185.801
+    },
+    {
+     "fecha": "2025-12-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2190.948
+    },
+    {
+     "fecha": "2026-01-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2203.163
+    },
+    {
+     "fecha": "2026-02-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2207.951
+    },
+    {
+     "fecha": "2026-03-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2205.357
+    },
+    {
+     "fecha": "2026-04-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2198.096
+    },
+    {
+     "fecha": "2026-05-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2202.428
+    },
+    {
+     "fecha": "2026-06-01T00:00:00",
+     "Independientes con monotributo. Sin estacionalidad.": 2206.788
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,473 @@
+{
+  "tools": [
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Responde una pregunta sobre datos públicos oficiales de Argentina, con fuentes.\n\nEjemplos: \"¿Cuál fue la tasa de desempleo del último trimestre?\",\n\"Evolución del IPC en 2025\", \"¿Cuántos diputados tiene cada bloque?\",\n\"Presupuesto ejecutado por el Ministerio de Salud en 2024\".\nLa respuesta incluye los datasets usados (con link al portal oficial),\nadvertencias sobre la calidad o cobertura del dato, y cuántas preguntas\nle quedan este mes al usuario. Cada respuesta descuenta 1 de sus preguntas\ndel mes (10 gratis); un error, un corte por tiempo o la misma pregunta\nrepetida dentro de los 5 minutos no descuentan. Si podés responder con\n`buscar_datasets` + `obtener_datos` o `agregar_datos`, preferí esas.",
+      "inputSchema": {
+        "properties": {
+          "pregunta": {
+            "title": "Pregunta",
+            "type": "string"
+          }
+        },
+        "required": [
+          "pregunta"
+        ],
+        "type": "object",
+        "title": "consultar_datos_publicosArguments"
+      },
+      "name": "consultar_datos_publicos",
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "type": "object",
+        "title": "consultar_datos_publicosOutput"
+      },
+      "title": "Consultar datos públicos de Argentina"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Lista los portales de datos abiertos que cubre OpenArg y cuántos datasets tiene cada uno.\n\nNo descuenta preguntas: cuenta como un pedido del modo datos.",
+      "inputSchema": {
+        "properties": {},
+        "type": "object",
+        "title": "listar_fuentesArguments"
+      },
+      "name": "listar_fuentes",
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "type": "object",
+        "title": "listar_fuentesOutput"
+      },
+      "title": "Listar fuentes de datos de OpenArg"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Busca en el catálogo de OpenArg (más de 30.000 datasets de portales oficiales).\n\nDevuelve título, portal, descripción, link a la fuente oficial y las tablas\nconsultables de cada dataset (usalas con `describir_tabla` y `obtener_datos`).\n`texto` es lo que buscás, en castellano (\"tasas de interés BCRA\", \"matrícula\nescolar CABA\"). `portal` filtra por portal (ver `listar_fuentes`).\n`limite` entre 1 y 25. No descuenta preguntas.",
+      "inputSchema": {
+        "properties": {
+          "texto": {
+            "title": "Texto",
+            "type": "string"
+          },
+          "portal": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Portal"
+          },
+          "limite": {
+            "default": 10,
+            "title": "Limite",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "texto"
+        ],
+        "type": "object",
+        "title": "buscar_datasetsArguments"
+      },
+      "name": "buscar_datasets",
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "type": "object",
+        "title": "buscar_datasetsOutput"
+      },
+      "title": "Buscar datasets públicos de Argentina"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Muestra las columnas (con su tipo), cantidad de filas, período cubierto, frescura y una muestra de una tabla.\n\n`tabla` es el nombre que devuelve `buscar_datasets`. Usalo antes de\n`obtener_datos` o `agregar_datos` para saber qué columnas pedir y qué\nfechas existen. La frescura dice cuándo leyó OpenArg la tabla de su fuente,\ncuál es el último dato y, sólo si la tabla es una foto del período en curso,\nsu fecha de corte. La fecha de lectura no es la de los datos: una tabla de\nun período pasado o sin columna de fecha no es vigente por haberse leído\nhoy. No presentes como actual un dato viejo. No descuenta preguntas.",
+      "inputSchema": {
+        "properties": {
+          "tabla": {
+            "title": "Tabla",
+            "type": "string"
+          }
+        },
+        "required": [
+          "tabla"
+        ],
+        "type": "object",
+        "title": "describir_tablaArguments"
+      },
+      "name": "describir_tabla",
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "type": "object",
+        "title": "describir_tablaOutput"
+      },
+      "title": "Describir una tabla de OpenArg"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Trae filas de una tabla, en CSV, con la fuente oficial.\n\nPara un total, promedio, conteo, mínimo, máximo o ranking NO traigas filas para\nsumarlas: usá `agregar_datos`.\n- `columnas`: las que quieras (por defecto, todas); nombres exactos de `describir_tabla`.\n- `desde` / `hasta`: período, como AAAA, AAAA-MM o AAAA-MM-DD, sobre la columna de\n  fecha (o de año).\n- `filtros`: hasta 5. Igualdad: {\"provincia\": \"Córdoba\"}. Con operador, una lista:\n  [{\"columna\": \"monto\", \"operador\": \"mayor_que\", \"valor\": \"1000000\"},\n  {\"columna\": \"provincia\", \"operador\": \"en\", \"valores\": [\"Salta\", \"Jujuy\"]}].\n  Operadores: =, !=, mayor_que, menor_que, >=, <=, contiene y en. La igualdad y\n  `contiene` no distinguen mayúsculas ni acentos (en tablas de más de un millón de\n  filas, sí: ahí la respuesta dice en `filtros_aplicados` qué se buscó tal cual).\n- `orden`: \"asc\" (por defecto: primero lo más viejo) o \"desc\" (primero lo más\n  reciente), por fecha. Para el último dato de una serie, pedí \"desc\".\n- `limite`: 1 a 500 filas. Si hay más, la respuesta lo dice y da el `offset` de la\n  página siguiente (hasta 10.000).\n- `columna_fecha`: opcional, otra columna de fecha para `desde`/`hasta` y el orden.\nSi ninguna fila cumple los filtros, la respuesta dice qué valores existen.\nNo descuenta preguntas.",
+      "inputSchema": {
+        "properties": {
+          "tabla": {
+            "title": "Tabla",
+            "type": "string"
+          },
+          "columnas": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Columnas"
+          },
+          "desde": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Desde"
+          },
+          "hasta": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Hasta"
+          },
+          "filtros": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "type": "object"
+              },
+              {
+                "items": {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Filtros"
+          },
+          "orden": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Orden"
+          },
+          "limite": {
+            "default": 100,
+            "title": "Limite",
+            "type": "integer"
+          },
+          "columna_fecha": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Columna Fecha"
+          },
+          "offset": {
+            "default": 0,
+            "title": "Offset",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "tabla"
+        ],
+        "type": "object",
+        "title": "obtener_datosArguments"
+      },
+      "name": "obtener_datos",
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "type": "object",
+        "title": "obtener_datosOutput"
+      },
+      "title": "Obtener datos de una tabla de OpenArg"
+    },
+    {
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": true,
+        "readOnlyHint": true
+      },
+      "description": "Calcula en la base una suma, promedio, conteo, mínimo o máximo, opcionalmente agrupado.\n\nUsala SIEMPRE que necesites un total, un promedio, un conteo, un mínimo/máximo o un\nranking, en vez de traer filas con `obtener_datos` y hacer la cuenta vos: es exacta,\nno tiene el tope de 500 filas y gasta muchos menos tokens.\n- `operacion`: \"suma\", \"promedio\", \"conteo\", \"minimo\" o \"maximo\".\n- `columna`: la que se suma/promedia/etc. (nombres exactos de `describir_tabla`); no\n  va con \"conteo\", que cuenta filas (si la mandás, da error). Las columnas de texto\n  con números se leen según su formato (1.234,5 o 1,234.5); si el formato es\n  ambiguo, no calcula y lo dice.\n- `agrupar_por`: hasta 3 columnas, p. ej. [\"jurisdiccion_desc\"] para un ranking.\n- `filtros`, `desde`, `hasta`, `columna_fecha`: como en `obtener_datos` (hasta 6 filtros).\n- `ordenar_por`: \"valor\" (por defecto, para rankings) o una columna de `agrupar_por`\n  (p. ej. el año, para una serie). `orden`: \"desc\" (por defecto) o \"asc\".\n- `limite`: grupos a devolver, 1 a 200.\n- `ponderar_por`: la columna de ponderación de una encuesta (con \"conteo\" da la\n  población estimada, no la cantidad de filas de la muestra).\nLa respuesta dice sobre cuántas filas se calculó (`filas_usadas`, de todos los\ngrupos) y si hay más grupos que `limite`. Si ninguna fila cumple los filtros no hay\nvalor: dice qué valores existen. No descuenta preguntas.",
+      "inputSchema": {
+        "properties": {
+          "tabla": {
+            "title": "Tabla",
+            "type": "string"
+          },
+          "operacion": {
+            "title": "Operacion",
+            "type": "string"
+          },
+          "columna": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Columna"
+          },
+          "agrupar_por": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Agrupar Por"
+          },
+          "filtros": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                },
+                "type": "object"
+              },
+              {
+                "items": {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Filtros"
+          },
+          "desde": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Desde"
+          },
+          "hasta": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Hasta"
+          },
+          "ordenar_por": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Ordenar Por"
+          },
+          "orden": {
+            "default": "desc",
+            "title": "Orden",
+            "type": "string"
+          },
+          "limite": {
+            "default": 50,
+            "title": "Limite",
+            "type": "integer"
+          },
+          "ponderar_por": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Ponderar Por"
+          },
+          "columna_fecha": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Columna Fecha"
+          }
+        },
+        "required": [
+          "tabla",
+          "operacion"
+        ],
+        "type": "object",
+        "title": "agregar_datosArguments"
+      },
+      "name": "agregar_datos",
+      "outputSchema": {
+        "properties": {
+          "result": {
+            "title": "Result",
+            "type": "string"
+          }
+        },
+        "required": [
+          "result"
+        ],
+        "type": "object",
+        "title": "agregar_datosOutput"
+      },
+      "title": "Calcular totales y rankings sobre una tabla de OpenArg"
+    }
+  ]
+}

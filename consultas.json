@@ -1,0 +1,100 @@
+[
+ {
+  "nombre": "IPC nacional: variación mensual y acumulada (jun-2025 a jun-2026)",
+  "tool": "obtener_datos",
+  "args": {
+   "tabla": "cache_datos_gob_ar_ndice_de_precios_al_consumidor_n_re359d1bfbe",
+   "columnas": [
+    "indice_tiempo",
+    "ipc_ng_nacional_tasa_variacion_mensual",
+    "ipc_ng_nacional_tasa_variacion_acumulada_dic_ano_anterior"
+   ],
+   "desde": "2025-06",
+   "hasta": "2026-06",
+   "limite": 24
+  }
+ },
+ {
+  "nombre": "Tasas BCRA % n.a. (plazo fijo, BADLAR, adelantos, documentos), jun-2025 a jun-2026",
+  "tool": "obtener_datos",
+  "args": {
+   "tabla": "cache_datos_gob_ar_principales_tasas_de_inter_s_rf390f3b5e3",
+   "columnas": [
+    "indice_tiempo",
+    "tasas_interes_plazo_fijo_30_59_dias",
+    "tasas_interes_badlar",
+    "tasas_interes_adelantos_cc",
+    "tasas_interes_activas_documentos",
+    "tasas_interes_activas_adelantos"
+   ],
+   "desde": "2025-06",
+   "hasta": "2026-06",
+   "limite": 24
+  }
+ },
+ {
+  "nombre": "Préstamos comerciales en pesos (adelantos y documentos), jun-2025 a jun-2026",
+  "tool": "obtener_datos",
+  "args": {
+   "tabla": "cache_datos_gob_ar_pr_stamos_a_las_entidades_financ_r3b7e1fe401",
+   "columnas": [
+    "indice_tiempo",
+    "prestamos_sect_priv_pesos",
+    "prestamos_sect_priv_pesos_comerciales",
+    "detalle_prestamos_sect_priv_pesos_comerciales_adelantos",
+    "detalle_prestamos_sect_priv_pesos_comerciales_documentos"
+   ],
+   "desde": "2025-06",
+   "hasta": "2026-06",
+   "limite": 24
+  }
+ },
+ {
+  "nombre": "Irregularidad de cartera privada (sistema financiero), 2025-04 a 2026-04",
+  "tool": "obtener_datos",
+  "args": {
+   "tabla": "cache_datos_gob_ar_principales_indicadores_del_sist_r8cfa80c5d5",
+   "columnas": [
+    "indice_tiempo",
+    "sistema_finan_5_irregularidad_cartera_privada",
+    "sistema_finan_4_credito_sector_privado"
+   ],
+   "desde": "2025-04",
+   "hasta": "2026-04",
+   "limite": 24
+  }
+ },
+ {
+  "nombre": "Registro MiPyME: conteo por categoría (tabla con datos hasta 2024-04, posiblemente truncada)",
+  "tool": "agregar_datos",
+  "args": {
+   "tabla": "raw.produccion__registro_mipyme__c937b123__v3",
+   "operacion": "conteo",
+   "agrupar_por": [
+    "categoria_empresa"
+   ]
+  }
+ },
+ {
+  "nombre": "Registro MiPyME: conteo por provincia, top (misma advertencia)",
+  "tool": "agregar_datos",
+  "args": {
+   "tabla": "raw.produccion__registro_mipyme__c937b123__v3",
+   "operacion": "conteo",
+   "agrupar_por": [
+    "provincia"
+   ],
+   "limite": 10
+  }
+ },
+ {
+  "nombre": "Puestos asalariados registrados por provincia, nov-2023 (último dato de la tabla)",
+  "tool": "obtener_datos",
+  "args": {
+   "tabla": "cache_datos_gob_ar_puestos_de_trabajo_asalariados_r_r5126011d99",
+   "desde": "2023-11",
+   "hasta": "2023-11",
+   "limite": 30
+  }
+ }
+]
