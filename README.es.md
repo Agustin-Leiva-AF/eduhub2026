@@ -51,7 +51,7 @@ El servidor procesa los archivos en memoria; se muestran sus huellas (SHA-256) p
 cd web
 npm test        # parsers, motor de caja, excedente, mapeo de Mercado Pago, cifrado de cookie
 npx tsc --noEmit
-npm run build   # build de producción (descarga Google Fonts al compilar)
+npm run build   # build de producción
 ```
 
 ## Setup del equipo (claves compartidas)

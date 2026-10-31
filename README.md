@@ -51,7 +51,7 @@ Files are processed in memory by the server; hashes (SHA-256) are shown so you c
 cd web
 npm test        # parsers, cash engine, surplus, Mercado Pago mapping, cookie crypto
 npx tsc --noEmit
-npm run build   # production build (downloads Google Fonts at build time)
+npm run build   # production build
 ```
 
 ## Team setup (shared keys)
