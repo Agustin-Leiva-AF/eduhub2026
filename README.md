@@ -54,23 +54,20 @@ npx tsc --noEmit
 npm run build   # production build (downloads Google Fonts at build time)
 ```
 
-## Team setup (shared `.env.local`)
+## Team setup (shared keys)
 
-1. Get the `.env.local` file the project owner shares with you privately and put it in `web/.env.local`. It holds the shared API keys (AI, Mercado Pago). **Never commit it or repost it.**
-2. Generate your own testnet wallet (Base Sepolia, no real funds). From `web/`:
-
-   ```bash
-   node scripts/wallet.mjs      # appends NOTARIO_PRIVATE_KEY and NOTARIO_RPC_URL to .env.local, prints your public address
-   ```
-
-   It never overwrites a key that is already there, and never prints the private key.
-3. Fund that address with test ETH from a Base Sepolia faucet, then deploy your own registry contract and copy the printed address into `.env.local` as `NOTARIO_CONTRACT`:
+1. Create your own testnet wallet (Base Sepolia, no real funds). From `web/`:
 
    ```bash
-   node scripts/deploy.mjs --deploy
+   node scripts/wallet.mjs      # creates web/.env.local with NOTARIO_PRIVATE_KEY and NOTARIO_RPC_URL, prints your public address
    ```
 
-4. `npm run dev`. Without steps 2-3, folder sealing stays simulated; everything else works.
+   It never overwrites a key that is already there and never prints the private key.
+2. **Then** paste the block of keys the project owner shared with you privately (OpenRouter + the Mercado Pago app) at the end of `web/.env.local`. **Never commit it or repost it.**
+3. Optional, to seal folders on-chain: fund your address with test ETH from a Base Sepolia faucet, then run `node scripts/deploy.mjs --deploy` and add the printed address to `.env.local` as `NOTARIO_CONTRACT`. Without this, sealing stays simulated.
+4. `npm run dev`. Restart it after editing `.env.local`.
+
+> The Mercado Pago OAuth keys only work with a public https redirect URL, so "connect my account" can't be completed on `localhost`. Locally, Mercado Pago shows the simulated data.
 
 ## Optional configuration
 

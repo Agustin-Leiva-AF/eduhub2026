@@ -54,23 +54,20 @@ npx tsc --noEmit
 npm run build   # build de producción (descarga Google Fonts al compilar)
 ```
 
-## Setup del equipo (`.env.local` compartido)
+## Setup del equipo (claves compartidas)
 
-1. Pedile al dueño del proyecto el archivo `.env.local` por un canal privado y ponelo en `web/.env.local`. Tiene las claves compartidas (IA, Mercado Pago). **No lo subas al repo ni lo reenvíes.**
-2. Generá tu propia wallet de testnet (Base Sepolia, sin fondos reales). Desde `web/`:
+1. Creá tu propia wallet de testnet (Base Sepolia, sin fondos reales). Desde `web/`:
 
    ```bash
-   node scripts/wallet.mjs      # agrega NOTARIO_PRIVATE_KEY y NOTARIO_RPC_URL a .env.local e imprime tu dirección pública
+   node scripts/wallet.mjs      # crea web/.env.local con NOTARIO_PRIVATE_KEY y NOTARIO_RPC_URL e imprime tu dirección pública
    ```
 
    Nunca pisa una clave que ya exista ni imprime la clave privada.
-3. Cargale ETH de prueba a esa dirección desde un faucet de Base Sepolia, desplegá tu propio contrato registro y copiá la dirección que imprime en `.env.local` como `NOTARIO_CONTRACT`:
+2. **Después** pegá al final de `web/.env.local` el bloque de claves que te pasó el dueño del proyecto por un canal privado (OpenRouter + la app de Mercado Pago). **No lo subas al repo ni lo reenvíes.**
+3. Opcional, para sellar carpetas on-chain: cargale ETH de prueba a tu dirección desde un faucet de Base Sepolia, corré `node scripts/deploy.mjs --deploy` y agregá la dirección que imprime a `.env.local` como `NOTARIO_CONTRACT`. Sin esto el sellado queda simulado.
+4. `npm run dev`. Reiniciá el servidor después de editar `.env.local`.
 
-   ```bash
-   node scripts/deploy.mjs --deploy
-   ```
-
-4. `npm run dev`. Sin los pasos 2 y 3 el sellado de carpetas queda simulado; todo lo demás funciona.
+> Las claves OAuth de Mercado Pago solo funcionan con una URL de redirect pública con https, así que "conectar mi cuenta" no se puede completar en `localhost`. Localmente, Mercado Pago muestra los datos simulados.
 
 ## Configuración opcional
 
