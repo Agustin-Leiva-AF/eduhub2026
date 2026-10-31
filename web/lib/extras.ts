@@ -23,7 +23,8 @@ export const ExtrasSchema = z.array(Extra).max(MAX_EXTRAS);
 export type ResultadoExtras = { ok: true; recibidos: Comprobante[]; emitidos: Comprobante[] } | { ok: false; error: string };
 
 // `crudo`: JSON ya parseado (o string JSON). Cada elemento: { lado: 'recibido'|'emitido', comprobante: <respuesta de /api/foto> }.
-export function procesarExtras(crudo: unknown): ResultadoExtras {
+// `prefijo` distingue las claves de contraparte cuando se combinan varias listas (extras + carga manual).
+export function procesarExtras(crudo: unknown, prefijo = 'foto'): ResultadoExtras {
   let v = crudo;
   if (typeof v === 'string') { try { v = JSON.parse(v); } catch { return { ok: false, error: 'El campo extras no es un JSON válido.' }; } }
   const r = ExtrasSchema.safeParse(v);
@@ -38,7 +39,7 @@ export function procesarExtras(crudo: unknown): ResultadoExtras {
     const cuit = c.cuit_emisor.replace(/\D/g, '');
     // La foto solo lee al emisor: en un comprobante emitido la contraparte (cliente) se desconoce, y sin CUIT no hay
     // forma de agrupar. Clave única por comprobante para que no se infiera una cadencia falsa entre fotos distintas.
-    const clave = lado === 'emitido' || !cuit ? `foto-${i}` : cuit;
+    const clave = lado === 'emitido' || !cuit ? `${prefijo}-${i}` : cuit;
     const nombre = lado === 'emitido' ? 'Cliente (comprobante por foto)' : c.razon_social_emisor || 'Proveedor (comprobante por foto)';
     (lado === 'recibido' ? recibidos : emitidos).push({ fecha: c.fecha_emision, tipo: c.tipo, numero: c.numero, cuit: clave, nombre, total, esNotaCredito: nc });
   });

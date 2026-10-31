@@ -127,7 +127,19 @@ function numerosAjenos(texto: string, datos: string): string[] {
 }
 const palabras = (t: string) => t.trim().split(/\s+/).filter(Boolean).length;
 
-export async function redactar(p: Pronostico, r: Recomendacion, al?: Alertas): Promise<{ texto: string; fuente: 'ia' | 'reglas' }> {
+// Texto armado solo con reglas (sin LLM): lo que /api/analizar devuelve por defecto.
+export const mensajeReglas = (r: Recomendacion): { texto: string; fuente: 'reglas' } => ({ texto: [r.alerta, ...r.contexto].join('\n\n'), fuente: 'reglas' });
+
+// `timeoutMs`: tope duro; si el LLM no responde a tiempo se devuelve el texto por reglas (la llamada sigue hasta su
+// propio timeout pero nadie la espera). Sin `timeoutMs` espera lo que tarde el proveedor (scripts/probar-ia.ts).
+export async function redactar(p: Pronostico, r: Recomendacion, al?: Alertas, timeoutMs?: number): Promise<{ texto: string; fuente: 'ia' | 'reglas' }> {
+  if (!timeoutMs) return redactarSinTope(p, r, al);
+  let t: ReturnType<typeof setTimeout>;
+  const tope = new Promise<{ texto: string; fuente: 'reglas' }>(ok => { t = setTimeout(() => { console.warn(`[ia:redactar] sin respuesta en ${timeoutMs} ms, uso reglas`); ok(mensajeReglas(r)); }, timeoutMs); });
+  try { return await Promise.race([redactarSinTope(p, r, al), tope]); } finally { clearTimeout(t!); }
+}
+
+async function redactarSinTope(p: Pronostico, r: Recomendacion, al?: Alertas): Promise<{ texto: string; fuente: 'ia' | 'reglas' }> {
   const base = [r.alerta, ...r.contexto].join('\n\n');
   if (!hayClave()) return { texto: base, fuente: 'reglas' };
   try {

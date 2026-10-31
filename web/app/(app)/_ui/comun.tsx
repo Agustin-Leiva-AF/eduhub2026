@@ -2,41 +2,105 @@
 // Piezas compartidas: compuerta de carga/error, tabla ordenable, sellado con consentimiento.
 import Link from 'next/link';
 import { useMemo, useState, type ReactNode } from 'react';
-import { useDatos, type Vista } from './datos';
+import { progreso, useDatos, type Vista } from './datos';
 import type { Sello } from './formato';
+import { Icono } from './iconos';
 import s from '../app.module.css';
 
-/** Muestra esqueleto mientras carga, error honesto si falla, y el contenido cuando hay datos. */
-export function ConDatos({ children }: { children: (v: Vista) => ReactNode }) {
-  const { vista, estado, error, aviso, cargarDemo } = useDatos();
-  if (!vista && (estado === 'cargando' || estado === 'inicial')) {
-    return (
-      <div className={s.esqueleto} role="status" aria-label="Analizando tu caja">
-        <span className={s.sr}>Analizando tu caja…</span>
-        <div className={s.hueso} style={{ height: 120 }} />
-        <div className={s.hueso} style={{ height: 72 }} />
-        <div className={s.hueso} style={{ height: 260 }} />
+export function Esqueleto({ etiqueta = 'Calculando tu caja' }: { etiqueta?: string }) {
+  return (
+    <div className={s.esqueleto} role="status" aria-label={etiqueta}>
+      <span className={s.sr}>{etiqueta}…</span>
+      <div className={`${s.cols} ${s.c21}`}>
+        <div className={s.hueso} style={{ height: 210 }} />
+        <div className={s.hueso} style={{ height: 210 }} />
       </div>
-    );
-  }
+      <div className={s.hueso} style={{ height: 260 }} />
+    </div>
+  );
+}
+
+/** Esqueleto mientras calcula, estado vacío si no hay datos, error honesto si falla, y el contenido cuando hay datos. */
+export function ConDatos({ children }: { children: (v: Vista) => ReactNode }) {
+  const { vista, listo, ws, calculando, error, recalcular, abrirCarga, cargarDemo } = useDatos();
+  if (!vista && (!listo || calculando || !error) && ws.modo !== 'vacio') return <Esqueleto />;
+  if (!listo) return <Esqueleto />;
+  if (!vista && ws.modo === 'vacio') return <SinDatos />;
   if (!vista) {
     return (
       <div className={s.errorBox} role="alert">
-        No pude analizar tu caja.
-        <p>{error ?? 'Error desconocido.'} Probá de nuevo o cargá otros archivos.</p>
+        No pude calcular tu caja con lo que cargaste.
+        <p>{error ?? 'Todavía no hay resultado.'}</p>
         <div className={s.btnRow}>
-          <button type="button" className={`${s.btn} ${s.btnPri}`} onClick={() => cargarDemo(false)}>Reintentar con la pyme demo</button>
-          <Link href="/datos" className={s.btn}>Cargar mis datos</Link>
+          <button type="button" className={`${s.btn} ${s.btnPri}`} onClick={() => abrirCarga('saldo')}>Cargar mi saldo de hoy</button>
+          <button type="button" className={s.btn} onClick={recalcular}>Reintentar</button>
+          {ws.modo === 'demo' ? null : <button type="button" className={s.btn} onClick={() => cargarDemo()}>Ver la demo</button>}
         </div>
       </div>
     );
   }
   return (
     <>
-      {estado === 'error' && error && <div className={s.errorBox} role="alert">No pude actualizar los datos.<p>{error} Sigo mostrando el último análisis.</p></div>}
-      {aviso && estado === 'listo' && <div className={s.avisoBox} role="status">{aviso}</div>}
-      <div style={{ display: 'contents' }} aria-busy={estado === 'cargando'}>{children(vista)}</div>
+      {error && !calculando && (
+        <div className={s.errorBox} role="alert">No pude actualizar con el último cambio.
+          <p>{error} Sigo mostrando el cálculo anterior.</p>
+          <div className={s.btnRow}><button type="button" className={s.btn} onClick={recalcular}>Reintentar</button><Link href="/datos" className={s.btn}>Revisar lo que cargué</Link></div>
+        </div>
+      )}
+      <div className={s.contenido} aria-busy={!!calculando} data-actualizando={!!calculando}>{children(vista)}</div>
     </>
+  );
+}
+
+/** Para secciones que necesitan datos y todavía no hay. */
+export function SinDatos() {
+  const { abrirCarga, cargarDemo } = useDatos();
+  return (
+    <section className={s.vacio}>
+      <h2 className={s.h2}>Todavía no cargaste datos</h2>
+      <p>Con tu saldo de hoy y lo que tenés que pagar ya podemos proyectar tu caja. Tarda menos de un minuto.</p>
+      <div className={s.btnRow}>
+        <button type="button" className={`${s.btn} ${s.btnPri}`} onClick={() => abrirCarga()}>Cargar mis datos</button>
+        <button type="button" className={s.btn} onClick={() => cargarDemo()}>Ver la demo</button>
+      </div>
+    </section>
+  );
+}
+
+/** Lo que ya está cargado y lo que falta, en 4 pasos. */
+export function Checklist({ compacto = false }: { compacto?: boolean }) {
+  const { ws, vista, abrirCarga } = useDatos();
+  const pasos = progreso(ws, vista);
+  const hechos = pasos.filter(p => p.hecho).length;
+  return (
+    <div className={`${s.checklist} ${compacto ? s.checklistCompacto : ''}`}>
+      <div className={s.checkCab}>
+        <span className={s.eyebrow}>Tus datos · {hechos} de {pasos.length}</span>
+        <span className={s.checkBarra} aria-hidden><i style={{ width: `${(hechos / pasos.length) * 100}%` }} /></span>
+      </div>
+      <ol>
+        {pasos.map(p => (
+          <li key={p.id} data-hecho={p.hecho}>
+            {p.hecho
+              ? <span className={s.checkItem}><Icono n="ok" size={20} /><span><b>{p.label}</b><small>{p.ayuda}</small></span><span className={s.sr}>: listo</span></span>
+              : <button type="button" className={s.checkItem} onClick={() => abrirCarga(p.carga)}><span className={s.checkVacio} aria-hidden /><span><b>{p.label}</b><small>{p.ayuda}</small></span><span className={s.checkMas}>Cargar</span></button>}
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+/** Qué le falta al cálculo para ser más preciso (resumen.avisos del servidor). */
+export function Faltantes({ v, titulo = 'Para que el cálculo sea más preciso' }: { v: Vista; titulo?: string }) {
+  const { abrirCarga } = useDatos();
+  if (!v.avisos.length) return null;
+  return (
+    <div className={s.faltan}>
+      <strong>{titulo}</strong>
+      <ul>{v.avisos.map((a, i) => <li key={i}>{a}</li>)}</ul>
+      <button type="button" className={s.link} onClick={() => abrirCarga()}>Cargar lo que falta</button>
+    </div>
   );
 }
 

@@ -28,3 +28,20 @@ test('leerCookie extrae por nombre', () => {
   assert.equal(leerCookie(req, 'mp_token'), 'abc=');
   assert.equal(leerCookie(req, 'zzz'), undefined);
 });
+
+test('cookie de MP: guarda vía y cuenta; sin secreto en desarrollo hay uno efímero estable, en producción null', async () => {
+  const { descifrarCookie, secretoCookie } = await import('./mpcookie');
+  const v = cifrarToken('tok', SECRETO, 3600, Date.now(), { via: 'token', cuenta: { id: 5, apodo: 'YO' } });
+  assert.deepEqual(descifrarCookie(v, SECRETO), { token: 'tok', via: 'token', cuenta: { id: 5, apodo: 'YO' } });
+  assert.equal(descifrarCookie(cifrarToken('t', SECRETO, 60), SECRETO)?.via, 'oauth');
+  const env = process.env as Record<string, string | undefined>;
+  const [s0, n0] = [env.MP_COOKIE_SECRET, env.NODE_ENV];
+  try {
+    delete env.MP_COOKIE_SECRET;
+    env.NODE_ENV = 'development';
+    const a = secretoCookie();
+    assert.ok(a && a.length >= 32 && a === secretoCookie());
+    env.NODE_ENV = 'production';
+    assert.equal(secretoCookie(), null);
+  } finally { env.MP_COOKIE_SECRET = s0; env.NODE_ENV = n0; if (s0 === undefined) delete env.MP_COOKIE_SECRET; }
+});

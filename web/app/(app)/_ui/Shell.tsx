@@ -1,30 +1,21 @@
 'use client';
 // Shell de la app: barra lateral en escritorio, cabecera compacta + pestañas abajo en el teléfono.
+// "+ Cargar" siempre a mano (botón en la barra lateral, flotante en el teléfono), aviso de demo, progreso y toasts.
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState, type ReactNode } from 'react';
 import Avisos from '../../components/chat/Avisos';
+import HojaCarga from './Cargar';
 import { nombreFuente, useDatos } from './datos';
+import { Icono, type NombreIcono } from './iconos';
 import s from '../app.module.css';
 
-const I = {
-  hoy: <path d="M4 11.5 12 5l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5h-5v5H5a1 1 0 0 1-1-1z" />,
-  proy: <path d="M4 19h16M5 15l4.5-5 3.5 3 6-7m0 0v4m0-4h-4" />,
-  exc: <><circle cx="12" cy="12" r="8" /><path d="M12 7.5v9M14.6 9.3c-.5-.8-1.5-1.3-2.7-1.3-1.6 0-2.7.9-2.7 2s1.1 1.6 2.8 2c1.7.4 2.8 1 2.8 2.1s-1.2 2-2.8 2c-1.3 0-2.4-.6-2.9-1.5" /></>,
-  datos: <><ellipse cx="12" cy="6.5" rx="7" ry="2.5" /><path d="M5 6.5v11c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-11M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" /></>,
-  sello: <><path d="M12 3.5 5 6v5.5c0 4.2 2.9 7.6 7 9 4.1-1.4 7-4.8 7-9V6z" /><path d="m9 12 2.2 2.2L15.5 10" /></>,
-};
-const Icono = ({ d }: { d: ReactNode }) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.7} strokeLinecap="round" strokeLinejoin="round" aria-hidden>{d}</svg>
-);
-
-export const SECCIONES = [
-  { href: '/', label: 'Hoy', titulo: 'Hoy', icono: I.hoy },
-  { href: '/proyeccion', label: 'Proyección', titulo: 'Proyección de caja', icono: I.proy },
-  { href: '/excedente', label: 'Excedente', titulo: 'Excedente', icono: I.exc },
-  { href: '/datos', label: 'Datos', titulo: 'Datos y avisos', icono: I.datos },
-  { href: '/sello', label: 'Sello', titulo: 'Sello verificable', icono: I.sello },
-] as const;
+export const SECCIONES: readonly { href: string; label: string; titulo: string; icono: NombreIcono }[] = [
+  { href: '/', label: 'Inicio', titulo: 'Inicio', icono: 'hoy' },
+  { href: '/proyeccion', label: 'Proyección', titulo: 'Proyección de caja', icono: 'proy' },
+  { href: '/excedente', label: 'Excedente', titulo: 'Excedente', icono: 'exc' },
+  { href: '/datos', label: 'Datos', titulo: 'Tus datos', icono: 'datos' },
+];
 
 type Tema = 'auto' | 'light' | 'dark';
 function useTema(): [Tema, () => void] {
@@ -56,17 +47,76 @@ function BotonTema() {
   );
 }
 
+/** Progreso honesto: qué se está mandando y cuánto lleva. */
+function Progreso() {
+  const { calculando } = useDatos();
+  const [, tic] = useState(0);
+  useEffect(() => {
+    if (!calculando) return;
+    const id = setInterval(() => tic(x => x + 1), 1000);
+    return () => clearInterval(id);
+  }, [calculando]);
+  if (!calculando) return null;
+  const seg = Math.floor((Date.now() - calculando.desde) / 1000);
+  const fuentes = calculando.fuentes.join(', ');
+  return (
+    <div className={s.progreso}>
+      <span className={s.progresoBarra} aria-hidden />
+      <span className={s.progresoTxt}>
+        <span role="status">{seg < 8 ? `Recalculando tu caja con ${fuentes}…` : 'Sigue trabajando. Mercado Pago o archivos grandes pueden tardar un poco más.'}</span>
+        {seg >= 2 && <span aria-hidden>{seg} s</span>}
+      </span>
+    </div>
+  );
+}
+
+function Toast() {
+  const { toast, cerrarToast } = useDatos();
+  useEffect(() => {
+    if (!toast) return;
+    const id = setTimeout(cerrarToast, toast.deshacer ? 7000 : 4500);
+    return () => clearTimeout(id);
+  }, [toast, cerrarToast]);
+  return (
+    <div className={s.toastZona} role="status" aria-live="polite">
+      {toast && (
+        <div className={`${s.toast} ${toast.tono === 'error' ? s.toastErr : ''}`} key={toast.id}>
+          <Icono n={toast.tono === 'error' ? 'alerta' : 'ok'} size={20} />
+          <span>{toast.texto}</span>
+          {toast.deshacer && <button type="button" className={s.toastBtn} onClick={() => { toast.deshacer!(); cerrarToast(); }}>Deshacer</button>}
+          <button type="button" className={s.toastX} onClick={cerrarToast} aria-label="Cerrar aviso"><Icono n="cerrar" size={18} /></button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function BannerDemo() {
+  const { ws, empezarPropio, cargarDemo } = useDatos();
+  if (ws.modo !== 'demo') return null;
+  return (
+    <div className={s.bannerDemo} role="note">
+      <span><b>Estás viendo datos de demo</b> <span className={s.bannerExtra}>de un negocio inventado.</span></span>
+      <div className={s.btnRow}>
+        {!ws.demo?.escenario && !ws.demo?.mp && <button type="button" className={s.btnChico} onClick={() => cargarDemo({ escenario: 'holgada' })}>Caso con sobrante</button>}
+        {ws.demo?.escenario && <button type="button" className={s.btnChico} onClick={() => cargarDemo()}>Caso con hueco</button>}
+        <button type="button" className={`${s.btnChico} ${s.btnChicoPri}`} onClick={empezarPropio}>Empezar con los míos</button>
+      </div>
+    </div>
+  );
+}
+
 export default function Shell({ children }: { children: ReactNode }) {
   const ruta = usePathname();
-  const { vista, fuente, estado, completando } = useDatos();
-  const actual = SECCIONES.find(x => x.href === ruta) ?? SECCIONES[0];
+  const { vista, ws, calculando, abrirCarga } = useDatos();
+  const actual = SECCIONES.find(x => x.href === ruta) ?? (ruta === '/sello' ? { titulo: 'Sello verificable' } : SECCIONES[0]);
 
   // Registra el service worker para que la app sea instalable y reciba avisos.
   useEffect(() => {
     if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});
   }, []);
 
-  const subtitulo = estado === 'cargando' ? 'Analizando tu caja…' : completando ? 'Completando avisos y excedente…' : vista ? `${vista.pyme}${vista.ficticia ? ' · demo' : ''}` : 'Sin datos';
+  const subtitulo = calculando ? 'Recalculando…' : vista ? `${vista.pyme}${vista.ficticia ? ' · demo' : ''}` : ws.modo === 'vacio' ? 'Empezá cargando tus datos' : 'Tus datos';
 
   return (
     <div className={s.app}>
@@ -75,50 +125,60 @@ export default function Shell({ children }: { children: ReactNode }) {
         <aside className={s.sidebar} aria-label="Navegación principal">
           <div className={s.marca}>
             <span className={s.logo} aria-hidden>CB</span>
-            <div><strong>CFO de Bolsillo</strong><small>Caja a 120 días</small></div>
+            <div><strong>CFO de Bolsillo</strong><small>Tu caja a 120 días</small></div>
           </div>
+          <button type="button" className={`${s.btn} ${s.btnPri} ${s.btnBloque} ${s.btnCargar}`} onClick={() => abrirCarga()}>
+            <Icono n="mas" size={20} />Cargar datos
+          </button>
           <nav className={s.nav} aria-label="Secciones">
             {SECCIONES.map(x => (
               <Link key={x.href} href={x.href} className={s.navItem} aria-current={x.href === ruta ? 'page' : undefined}>
-                <Icono d={x.icono} />{x.label}
+                <Icono n={x.icono} size={20} />{x.label}
               </Link>
             ))}
           </nav>
           <div className={s.sideFoot}>
             <div className={s.fuentePill}>
-              <span>Fuente de datos</span>
-              <b>{nombreFuente(fuente)}</b>
-              {vista && <span>{vista.pyme}{vista.ficticia ? ' (ficticia)' : ''}</span>}
+              <span>Calculando con</span>
+              <b>{nombreFuente(ws)}</b>
             </div>
             <Link href="/demo">Demo del canal WhatsApp →</Link>
           </div>
         </aside>
 
-        <div>
+        <div className={s.columna}>
           <header className={s.top}>
             <div className={s.topFila}>
               <span className={s.logo} aria-hidden>CB</span>
               <div className={s.topTexto}>
                 <strong>{actual.titulo}</strong>
-                <small aria-live="polite">{subtitulo}</small>
+                <small>{subtitulo}</small>
               </div>
               <div className={`${s.topAcc} ${s.avisosAqui}`}>
                 {vista?.alertas && <Avisos alertas={vista.alertas} />}
                 <BotonTema />
               </div>
             </div>
+            <Progreso />
           </header>
+          <BannerDemo />
           <main id="contenido" className={s.main} tabIndex={-1}>{children}</main>
         </div>
       </div>
 
+      <button type="button" className={s.fab} onClick={() => abrirCarga()} aria-label="Cargar datos">
+        <Icono n="mas" size={22} /><span>Cargar</span>
+      </button>
+
       <nav className={s.tabbar} aria-label="Secciones">
         {SECCIONES.map(x => (
           <Link key={x.href} href={x.href} className={s.tab} aria-current={x.href === ruta ? 'page' : undefined}>
-            <Icono d={x.icono} /><span>{x.label}</span>
+            <Icono n={x.icono} size={22} /><span>{x.label}</span>
           </Link>
         ))}
       </nav>
+      <Toast />
+      <HojaCarga />
     </div>
   );
 }

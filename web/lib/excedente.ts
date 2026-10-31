@@ -56,7 +56,9 @@ export function calcularExcedente(p: Pronostico, ctx: Contexto): Excedente {
   // Ventana segura: hasta el último día antes de que el saldo proyectado baje del colchón (tope: el horizonte).
   let k = serie.findIndex(d => d.saldo < colchon);
   if (k < 0) k = serie.length;
-  const sinVentana = k === 0 || saldoActual < colchon;
+  // Sin egresos aprendidos la reserva da 0 y todo el saldo parecería excedente: sin historial no se calcula.
+  const sinHistorial = colchon <= 0;
+  const sinVentana = sinHistorial || k === 0 || saldoActual < colchon;
   const tramo = sinVentana ? [] : serie.slice(0, k);
   const minimoProyectado = tramo.length ? Math.min(saldoActual, ...tramo.map(d => d.saldo)) : Math.min(saldoActual, ...serie.map(d => d.saldo));
   const monto = sinVentana ? 0 : Math.max(0, minimoProyectado - colchon);
@@ -98,7 +100,8 @@ export function calcularExcedente(p: Pronostico, ctx: Contexto): Excedente {
 
   let motivo: string | undefined;
   if (!ventana) {
-    if (saldoActual < colchon || k === 0) motivo = `Hoy tu caja (${pesos(saldoActual)}) no supera la reserva de ${pesos(colchon)}, el mayor entre un mes de gastos fijos y un cuarto de tus egresos mensuales. No hay excedente para colocar.`;
+    if (sinHistorial) motivo = 'Todavía no tengo tus gastos: con solo el saldo no puedo saber cuánto te sobra de forma segura. Cargá movimientos o conectá Mercado Pago para calcularlo.';
+    else if (saldoActual < colchon || k === 0) motivo = `Hoy tu caja (${pesos(saldoActual)}) no supera la reserva de ${pesos(colchon)}, el mayor entre un mes de gastos fijos y un cuarto de tus egresos mensuales. No hay excedente para colocar.`;
     else motivo = `Tu caja no queda por encima de la reserva de ${pesos(colchon)} en el tramo seguro. No hay excedente para colocar.`;
   }
 

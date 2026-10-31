@@ -40,7 +40,9 @@ export default function Chat() {
     push({ de: 'yo', tipo: 'texto', texto: fuente === 'mp' ? '💳 Mercado Pago · Carpintería Los Aromos (5 empleados)\n📎 mis_comprobantes_recibidos.csv\n📎 mis_comprobantes_emitidos.csv' : nombres ? `📎 ${nombres.join('\n📎 ')}` : compromisos ? '📎 boletas_vencimientos.csv\n📎 nomina_octubre.csv' : '📎 extracto_banco_esquina.csv\n📎 mis_comprobantes_recibidos.csv\n📎 mis_comprobantes_emitidos.csv' });
     setEscribiendo(true);
     try {
-      const res = await fetch('/api/analizar', form ? { method: 'POST', body: form } : { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ demo: true, compromisos, fuente }) });
+      // ia:true: el chat pide la redacción con IA (puede tardar unos segundos; mientras, se ve "escribiendo…").
+      if (form && !form.has('ia')) form.append('ia', 'true');
+      const res = await fetch('/api/analizar', form ? { method: 'POST', body: form } : { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ demo: true, compromisos, fuente, ia: true }) });
       const a: Analisis & { error?: string } = await res.json();
       if (!res.ok) { push({ de: 'bot', tipo: 'texto', texto: `No pude leerlo: ${a.error}` }); return; }
       setAnalisis(a);

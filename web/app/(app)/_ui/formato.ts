@@ -19,12 +19,22 @@ export type RespDashboard = {
   mensual: MesCat[]; ventasMensuales: number;
   excedente?: Excedente;
 };
-// POST /api/analizar
+// POST /api/analizar (contrato nuevo: combina fuentes y trae `dashboard` y `resumen.avisos`; ambos opcionales para
+// tolerar el servidor viejo).
 export type RespAnalizar = {
-  resumen: { movimientos: number; recibidos: number; emitidos: number; boletas: number; empleados: number; ignorados: string[]; insumos: Insumo[]; mercadopago?: 'api' | 'simulacion' | 'mixto' };
+  resumen: {
+    movimientos: number; recibidos: number; emitidos: number; boletas: number; empleados: number; ignorados: string[]; insumos: Insumo[];
+    mercadopago?: 'api' | 'simulacion' | 'mixto'; extras?: number; avisos?: string[];
+  };
   pronostico: Pronostico; alertas: Alertas; recomendacion: Recomendacion;
-  mensaje: { texto: string; fuente: 'ia' | 'reglas' }; citas: Record<string, Cita>;
+  mensaje?: { texto: string; fuente: 'ia' | 'reglas' }; citas: Record<string, Cita>;
   excedente?: Excedente;
+  dashboard?: { pyme?: string; demo?: boolean; corte?: string; mensual?: MesCat[]; etiquetas?: Record<string, string>; ventasMensuales?: number; eventos?: Evento[] };
+};
+/** Comprobante con la forma de /api/foto (y de `extras` en /api/analizar). */
+export type ComprobanteIn = {
+  es_comprobante?: boolean; tipo?: string | null; fecha_emision?: string | null; fecha_vencimiento?: string | null;
+  cuit_emisor?: string | null; razon_social_emisor?: string | null; numero?: string | null; total?: number | null;
 };
 export type Sello = { hash: string; modo: 'testnet' | 'simulado' | string; url?: string; tx?: string; fecha?: string; motivo: string; destino: string };
 
@@ -57,6 +67,18 @@ export const sumarDias = (f: string, n: number) => new Date(dt(f).getTime() + n 
 export const difDias = (a: string, b: string) => Math.round((dt(b).getTime() - dt(a).getTime()) / 86400000);
 export const enDias = (n: number) => (n <= 0 ? 'hoy' : n === 1 ? 'mañana' : `en ${n} días`);
 export const plural = (n: number, s: string, p = s + 's') => `${n} ${n === 1 ? s : p}`;
+/** Fecha de hoy en la zona del navegador, "yyyy-mm-dd". */
+export const hoyLocal = () => { const d = new Date(); return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); };
+/** Lee un monto escrito a la argentina ("1.234.567,50", "$ 250000", "250000.5"). null si no es un número. */
+export function leerMonto(t: string): number | null {
+  let s = t.replace(/[$\s]/g, '').replace(/^\+/, '');
+  if (!s) return null;
+  if (s.includes(',')) s = s.replace(/\./g, '').replace(',', '.');
+  else if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '');
+  const n = Number(s);
+  return Number.isFinite(n) ? n : null;
+}
+export const kb = (b: number) => (b < 1024 ? `${b} B` : b < 1048576 ? `${Math.round(b / 1024)} KB` : `${(b / 1048576).toFixed(1).replace('.', ',')} MB`);
 
 export const ETQ_CAT: Record<string, string> = {
   ventas: 'Ventas', cobro_clientes: 'Cobros a clientes', sueldos: 'Sueldos', aguinaldo: 'Aguinaldo', cargas_sociales: 'Cargas sociales',

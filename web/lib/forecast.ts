@@ -26,7 +26,9 @@ export type Contraparte = {
   cuit: string; nombre: string; lado: 'pagar' | 'cobrar'; plazoDias: number; cadenciaDias: number | null;
   montoTipico: number; pendientes: number; facturas: number;
 };
-export type Opciones = { hoy?: string; horizonte?: number; ipcMensual: number; plazoExtra?: Record<string, number>; anticipos?: { cuit: string; numero: string; fecha: string }[]; boletas?: Boleta[]; nomina?: Nomina[] };
+export type Opciones = { hoy?: string; horizonte?: number; ipcMensual: number; plazoExtra?: Record<string, number>; anticipos?: { cuit: string; numero: string; fecha: string }[]; boletas?: Boleta[]; nomina?: Nomina[];
+  // Ancla de saldo cargada a mano: el saldo de caja en `fecha` es `monto`; solo los movimientos POSTERIORES se aplican encima.
+  saldoInicial?: { fecha: string; monto: number } };
 
 // Feriados nacionales (aprox.; verificar el calendario oficial). Los trasladables pueden diferir.
 const FERIADOS = new Set(['2026-11-23', '2026-12-08', '2026-12-25', '2027-01-01', '2027-02-08', '2027-02-09', '2027-03-24']);
@@ -47,9 +49,18 @@ type Cobro = { m: Movimiento & { cat: Categoria }; usado: boolean };
 export function pronosticar(movs: Movimiento[], recibidos: Comprobante[], emitidos: Comprobante[], op: Opciones): Pronostico {
   const H = op.horizonte ?? 120;
   const ordenados = [...movs].sort((a, b) => a.fecha.localeCompare(b.fecha));
-  const hoy = op.hoy ?? ordenados[ordenados.length - 1].fecha;
-  const conSaldo = ordenados.filter(m => m.saldo !== undefined);
-  const saldoInicial = conSaldo.length ? conSaldo[conSaldo.length - 1].saldo! : ordenados.reduce((s, m) => s + m.monto, 0);
+  const ancla = op.saldoInicial;
+  const ultimoMov = ordenados[ordenados.length - 1]?.fecha;
+  // Sin movimientos ni ancla (p. ej. solo facturas): el día de corte es `op.hoy` o, en su defecto, la fecha de hoy.
+  const hoy = op.hoy ?? (ancla && ultimoMov ? (ancla.fecha > ultimoMov ? ancla.fecha : ultimoMov) : ancla?.fecha ?? ultimoMov ?? d2s(new Date()));
+  let saldoInicial: number;
+  if (ancla) saldoInicial = ancla.monto + ordenados.filter(m => m.fecha > ancla.fecha).reduce((s, m) => s + m.monto, 0);
+  else {
+    // Último saldo informado por el extracto + los movimientos sin saldo que vengan después (cargas manuales, MP).
+    let k = -1;
+    ordenados.forEach((m, i) => { if (m.saldo !== undefined) k = i; });
+    saldoInicial = k >= 0 ? ordenados[k].saldo! + ordenados.slice(k + 1).reduce((s, m) => s + m.monto, 0) : ordenados.reduce((s, m) => s + m.monto, 0);
+  }
   const crec = (f: string) => Math.pow(1 + op.ipcMensual, Math.max(0, difDias(hoy, f)) / 30.4);
   const fin = sumar(hoy, H);
   const enRango = (f: string) => f > hoy && f <= fin;
@@ -75,7 +86,7 @@ export function pronosticar(movs: Movimiento[], recibidos: Comprobante[], emitid
         const hit = pool.find(p => !p.usado && p.m.fecha >= c.fecha && Math.abs(p.m.monto - signo * c.total) < 1 &&
           (p.m.desc.toUpperCase().includes(pal) || p.m.desc.includes(cuit)));
         if (hit) { hit.usado = true; plazos.push(difDias(c.fecha, hit.m.fecha)); }
-        else if (c.fecha >= ordenados[0].fecha) pendientes.push(c);
+        else if (!ordenados.length || c.fecha >= ordenados[0].fecha) pendientes.push(c);
       }
       const plazo = Math.round(mediana(plazos)) || 30;
       const fechas = lista.map(c => c.fecha);
@@ -176,7 +187,7 @@ export function pronosticar(movs: Movimiento[], recibidos: Comprobante[], emitid
     if (v > 0) eventos.push({ fecha: f, concepto: 'Acreditación de ventas (tarjeta/QR)', categoria: 'ventas', monto: Math.round(v), origen: 'proyección de ventas' });
   }
   const ventasMes = prom.reduce((s, v) => s + v, 0) * 4.33;
-  aprendizajes.unshift(`Tus ventas acreditadas promedian $${fmt(ventasMes)} por mes (últimas 8 semanas).`);
+  if (ventasMes > 0) aprendizajes.unshift(`Tus ventas acreditadas promedian $${fmt(ventasMes)} por mes (últimas 8 semanas).`);
 
   // 5) Serie diaria
   eventos.sort((a, b) => a.fecha.localeCompare(b.fecha) || b.monto - a.monto);
